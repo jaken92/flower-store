@@ -6,10 +6,14 @@ import {
 } from '@remix-run/react';
 
 export default function ProductOptions({options}) {
+  const navigation = useNavigation();
+
   const {pathname, search} = useLocation();
   const [currentSearchParams] = useSearchParams();
 
-  const searchParams = currentSearchParams;
+  const searchParams = navigation.location
+    ? new URLSearchParams(navigation.location.search)
+    : currentSearchParams;
 
   return (
     <div className="grid gap-4 mb-6">
