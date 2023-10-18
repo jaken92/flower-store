@@ -1,7 +1,8 @@
 import ProductOptions from '~/components/ProductOptions';
 import {json} from '@shopify/remix-oxygen';
 import {useLoaderData} from '@remix-run/react';
-import {Image} from '@shopify/hydrogen-react';
+import {Image, Money, ShopPayButton} from '@shopify/hydrogen-react';
+import {CartForm} from '@shopify/hydrogen';
 
 const seo = ({data}) => ({
   title: data?.product?.title,
@@ -21,7 +22,7 @@ export async function loader({params, context, request}) {
     selectedOptions.push({name, value});
   });
 
-  const {product} = await context.storefront.query(PRODUCT_QUERY, {
+  const {product, shop} = await context.storefront.query(PRODUCT_QUERY, {
     variables: {
       handle,
       selectedOptions,
@@ -36,13 +37,14 @@ export async function loader({params, context, request}) {
     product.selectedVariant ?? product?.variants?.nodes[0];
 
   return json({
+    shop,
     product,
     selectedVariant,
   });
 }
 
 export default function ProductHandle() {
-  const {product, selectedVariant} = useLoaderData();
+  const {shop, product, selectedVariant} = useLoaderData();
   console.log(product);
   return (
     <section className="w-full gap-4 md:gap-8 grid px-6 md:px-8 lg:px-12">
@@ -68,6 +70,49 @@ export default function ProductHandle() {
             options={product.options}
             selectedVariant={selectedVariant}
           />
+          <Money
+            withoutTrailingZeros
+            data={selectedVariant.price}
+            className="text-xl font-semibold mb-2"
+          />
+          {selectedVariant.availableForSale && (
+            <ShopPayButton
+              storeDomain={shop.primaryDomain.url}
+              variantIds={[selectedVariant?.id]}
+              width={'400px'}
+            />
+          )}
+          <CartForm
+            route="/cart"
+            inputs={{
+              lines: [
+                {
+                  merchandiseId: selectedVariant.id,
+                },
+              ],
+            }}
+            action={CartForm.ACTIONS.LinesAdd}
+          >
+            {(fetcher) => (
+              <>
+                <button
+                  type="submit"
+                  onClick={() => {
+                    window.location.href = window.location.href + '#cart-aside';
+                  }}
+                  disabled={
+                    !selectedVariant.availableForSale ??
+                    fetcher.state !== 'idle'
+                  }
+                  className="border border-black rounded-sm w-full px-4 py-2 text-white bg-black uppercase hover:bg-white hover:text-black transition-colors duration-150"
+                >
+                  {selectedVariant?.availableForSale
+                    ? 'Add to cart'
+                    : 'Sold out'}
+                </button>
+              </>
+            )}
+          </CartForm>
           {/* Delete this after verifying */}
           <p>Selected Variant: {product.selectedVariant?.id}</p>
           <div
