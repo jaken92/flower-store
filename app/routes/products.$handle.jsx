@@ -32,13 +32,17 @@ export async function loader({params, context, request}) {
     throw new Response(null, {status: 404});
   }
 
+  const selectedVariant =
+    product.selectedVariant ?? product?.variants?.nodes[0];
+
   return json({
     product,
+    selectedVariant,
   });
 }
 
 export default function ProductHandle() {
-  const {handle, product} = useLoaderData();
+  const {product, selectedVariant} = useLoaderData();
   console.log(product);
   return (
     <section className="w-full gap-4 md:gap-8 grid px-6 md:px-8 lg:px-12">
@@ -60,7 +64,10 @@ export default function ProductHandle() {
               {product.vendor}
             </span>
           </div>
-          <ProductOptions options={product.options} />
+          <ProductOptions
+            options={product.options}
+            selectedVariant={selectedVariant}
+          />
           {/* Delete this after verifying */}
           <p>Selected Variant: {product.selectedVariant?.id}</p>
           <div
@@ -78,6 +85,11 @@ export default function ProductHandle() {
 }
 const PRODUCT_QUERY = `#graphql
   query product($handle: String!, $selectedOptions: [SelectedOptionInput!]!) {
+    shop {
+        primaryDomain {
+          url
+        }
+      }
     product(handle: $handle) {
       id
       title
