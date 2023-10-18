@@ -119,10 +119,6 @@ export default function ProductHandle() {
             className="prose border-t border-gray-200 pt-6 text-black text-md"
             dangerouslySetInnerHTML={{__html: product.descriptionHtml}}
           />
-          <div
-            className="prose border-t border-gray-200 pt-6 text-black text-md"
-            dangerouslySetInnerHTML={{__html: product.descriptionHtml}}
-          ></div>
         </div>
       </div>
     </section>
