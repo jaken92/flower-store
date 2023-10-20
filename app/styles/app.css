@@ -1,3 +1,9 @@
+@font-face {
+  font-family:'Playfair Display';
+  src: local('Playfair Display'),
+  url('public/fonts/PlayfairDisplay-Regular.woff2'); /* IE9 Compat Modes */
+  font-weight: 900;
+}
 
 :root {
   --aside-width: 400px;
@@ -7,7 +13,7 @@
   --header-height: 100px;
   --color-dark: #000;
   --color-light: #fff;
-  font-family: 'Playfair Display', serif;
+ 
 }
 
 img {
