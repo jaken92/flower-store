@@ -35,7 +35,8 @@ export default function ProductOptions({options, selectedVariant}) {
   return (
     <div className="grid gap-4 mb-6">
       {options.map((option) => {
-        if (!option.values.length) {
+        //this check works, since prod without options automatically get one default option value.
+        if (option.values.length == 1) {
           return;
         }
 
