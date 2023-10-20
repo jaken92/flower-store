@@ -1,7 +1,7 @@
 @font-face {
-  font-family:'Playfair Display';
+  font-family: 'Playfair Display';
   src: local('Playfair Display'),
-  url('public/fonts/PlayfairDisplay-Regular.woff2'); /* IE9 Compat Modes */
+    url('public/fonts/PlayfairDisplay-Regular.woff2'); /* IE9 Compat Modes */
   font-weight: 900;
 }
 
@@ -13,9 +13,14 @@
   --header-height: 100px;
   --color-dark: #000;
   --color-light: #fff;
- 
+  font-family: 'Playfair Display';
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 img {
   border-radius: 4px;
 }
@@ -137,7 +142,7 @@ aside li {
 */
 .header {
   align-items: center;
-  background: #720f60;
+  background: whitesmoke;
   opacity: 50%;
   display: flex;
   height: var(--header-height);
