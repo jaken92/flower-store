@@ -1,11 +1,13 @@
+
 :root {
   --aside-width: 400px;
   --cart-aside-summary-height-with-discount: 300px;
   --cart-aside-summary-height: 250px;
   --grid-item-width: 355px;
-  --header-height: 64px;
+  --header-height: 100px;
   --color-dark: #000;
   --color-light: #fff;
+  font-family: 'Playfair Display', serif;
 }
 
 img {
@@ -129,7 +131,8 @@ aside li {
 */
 .header {
   align-items: center;
-  background: #fff;
+  background: #720f60;
+  opacity: 50%;
   display: flex;
   height: var(--header-height);
   padding: 0 1rem;
