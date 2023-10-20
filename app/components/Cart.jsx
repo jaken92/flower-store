@@ -81,15 +81,20 @@ function CartLineItem({layout, line}) {
           </p>
         </Link>
         <CartLinePrice line={line} as="span" />
-        <ul>
-          {selectedOptions.map((option) => (
-            <li key={option.name}>
-              <small>
-                {option.name}: {option.value}
-              </small>
-            </li>
-          ))}
-        </ul>
+
+        {!selectedOptions.some((option) => option.name == 'Title') && (
+          //temporary solution, implementing check on name for title, since its the default name for products without options.
+          <ul>
+            {selectedOptions.map((option) => (
+              <li key={option.name}>
+                <small>
+                  {option.name}: {option.value}
+                </small>
+              </li>
+            ))}
+          </ul>
+        )}
+
         <CartLineQuantity line={line} />
       </div>
     </li>

@@ -63,7 +63,7 @@ export default function ProductHandle() {
               {product.title}
             </h1>
             <span className="max-w-prose whitespace-pre-wrap inherit text-copy opacity-50 font-medium">
-              {product.vendor}
+              {/* {product.vendor} */} Mouaflowers
             </span>
           </div>
           <ProductOptions
