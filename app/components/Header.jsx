@@ -1,5 +1,6 @@
-import {Await, NavLink, useMatches} from '@remix-run/react';
+import {Await, Link, NavLink, useMatches} from '@remix-run/react';
 import {Suspense} from 'react';
+import {useState, useEffect} from 'react';
 
 export function Header({header, isLoggedIn, cart}) {
   const {shop, menu} = header;
@@ -18,6 +19,7 @@ export function HeaderMenu({menu, viewport}) {
   const [root] = useMatches();
   const publicStoreDomain = root?.data?.publicStoreDomain;
   const className = `header-menu-${viewport}`;
+  const [setToggleDropdown, toggleDropdown] = useState(false);
 
   function closeAside(event) {
     if (viewport === 'mobile') {
@@ -42,25 +44,58 @@ export function HeaderMenu({menu, viewport}) {
       {(menu || FALLBACK_HEADER_MENU).items.map((item) => {
         if (!item.url) return null;
 
-        // if the url is internal, we strip the domain
         const url =
           item.url.includes('myshopify.com') ||
           item.url.includes(publicStoreDomain)
             ? new URL(item.url).pathname
             : item.url;
-        return (
-          <NavLink
-            className="header-menu-item"
-            end
-            key={item.id}
-            onClick={closeAside}
-            prefetch="intent"
-            style={activeLinkStyle}
-            to={url}
-          >
-            {item.title}
-          </NavLink>
-        );
+
+        // Conditionally render a div or NavLink based on the length of item.items
+        const navMenu =
+          item.items && item.items.length > 0 ? (
+            // Render a div if item has sub-items
+            <div className="header-sub" key={item.id}>
+              {item.title}
+              {item.items.map((submenu) => {
+                if (!submenu.url) return null;
+
+                const submenuUrl =
+                  submenu.url.includes('myshopify.com') ||
+                  submenu.url.includes(publicStoreDomain)
+                    ? new URL(submenu.url).pathname
+                    : submenu.url;
+
+                return (
+                  <h1 key={submenu.id}>
+                    <NavLink
+                      className="submenu-link"
+                      onClick={closeAside}
+                      prefetch="intent"
+                      style={activeLinkStyle}
+                      to={submenuUrl}
+                    >
+                      {submenu.title}
+                    </NavLink>
+                  </h1>
+                );
+              })}
+            </div>
+          ) : (
+            // Render a NavLink if item does not have sub-items
+            <NavLink
+              className="header-menu-item"
+              end
+              key={item.id}
+              onClick={closeAside}
+              prefetch="intent"
+              style={activeLinkStyle}
+              to={url}
+            >
+              {item.title}
+            </NavLink>
+          );
+
+        return navMenu;
       })}
     </nav>
   );

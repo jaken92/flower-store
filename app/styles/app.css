@@ -176,6 +176,10 @@ aside li {
 
 .header-menu-item {
   cursor: pointer;
+  position: relative;
+}
+.header-sub-menu-item {
+  position: absolute;
 }
 
 .header-ctas {
