@@ -19,13 +19,17 @@ export function HeaderMenu({menu, viewport}) {
   const [root] = useMatches();
   const publicStoreDomain = root?.data?.publicStoreDomain;
   const className = `header-menu-${viewport}`;
-  const [setToggleDropdown, toggleDropdown] = useState(false);
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   function closeAside(event) {
     if (viewport === 'mobile') {
       event.preventDefault();
       window.location.href = event.currentTarget.href;
     }
+  }
+
+  function toggleDropdown() {
+    setVisibleDropdown(!visibleDropdown);
   }
 
   return (
@@ -54,7 +58,11 @@ export function HeaderMenu({menu, viewport}) {
         const navMenu =
           item.items && item.items.length > 0 ? (
             // Render a div if item has sub-items
-            <div className="header-sub" key={item.id}>
+            <div
+              className={`header-sub`}
+              onClick={() => setIsDropdownVisible(!isDropdownVisible)}
+              key={item.id}
+            >
               {item.title}
               {item.items.map((submenu) => {
                 if (!submenu.url) return null;
@@ -68,7 +76,9 @@ export function HeaderMenu({menu, viewport}) {
                 return (
                   <h1 key={submenu.id}>
                     <NavLink
-                      className="submenu-link"
+                      className={`submenu-link ${
+                        isDropdownVisible ? 'visible' : 'hidden'
+                      }`}
                       onClick={closeAside}
                       prefetch="intent"
                       style={activeLinkStyle}
