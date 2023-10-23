@@ -485,3 +485,9 @@ aside li {
 .account-logout {
   display: inline-block;
 }
+
+.image-size {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
