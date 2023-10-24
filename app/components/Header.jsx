@@ -71,7 +71,7 @@ export function HeaderMenu({menu, viewport}) {
                       ? new URL(submenu.url).pathname
                       : submenu.url;
                   {
-                    console.log(item);
+                    // console.log(item);
                   }
                   return (
                     <h1 key={submenu.id}>
