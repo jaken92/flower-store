@@ -1,7 +1,11 @@
 import {useLoaderData} from '@remix-run/react';
 import {json} from '@shopify/remix-oxygen';
 import AboutPage from '~/components/AboutPage';
+import WeddingsPage from '~/components/WeddingsPage';
+import SubscriptionsPage from '~/components/SubscriptionsPage';
+import ContactPage from '~/components/ContactPage';
 
+//dont forget to send SEO(see collections)
 export async function loader({params, context}) {
   const {handle} = params;
   const {page} = await context.storefront.query(PAGE_QUERY, {
@@ -21,12 +25,17 @@ export async function loader({params, context}) {
 
 export default function Page() {
   const {page} = useLoaderData();
-  // console.log(page);
-  // const text = page.body;
+
   return (
     <>
       {page.title === 'About' ? (
         <AboutPage content={page.body} title={page.title} />
+      ) : page.title === 'Contact' ? (
+        <ContactPage content={page.body} title={page.title} />
+      ) : page.title === 'Weddings' ? (
+        <WeddingsPage content={page.body} title={page.title} />
+      ) : page.title === 'Subscriptions' ? (
+        <SubscriptionsPage content={page.body} title={page.title} />
       ) : (
         <div
           dangerouslySetInnerHTML={{__html: page.body}}
