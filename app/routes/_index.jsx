@@ -1,6 +1,4 @@
-import {useLoaderData} from '@remix-run/react';
 import {Link} from 'react-router-dom';
-import {Image} from '@shopify/hydrogen';
 
 export function meta() {
   return [
@@ -8,10 +6,6 @@ export function meta() {
     {description: 'A graduation work creating a shopify store with Hydrogen'},
   ];
 }
-
-// export async function loader({context}) {
-//   return await context.storefront.query(COLLECTIONS_QUERY);
-// }
 
 export default function Index() {
   return (
@@ -32,7 +26,7 @@ export default function Index() {
             />
           </Link>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
-            <h2>Order flowers</h2>
+            <p className="text-white">Order flowers</p>
             <button className="bg-white hover:bg-transparent  hover:text-white text-black border-2  border-white font-bold py-2 px-4 rounded">
               <Link to={`/collections`}>Order now</Link>
             </button>
@@ -47,7 +41,7 @@ export default function Index() {
             />
           </Link>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
-            <p>Weddings</p>
+            <p className="text-white">Weddings</p>
             <button className="bg-white hover:bg-transparent hover:text-white text-black  border-2 border-white font-bold py-2 px-4 rounded">
               <Link to={`/pages/weddings`}>Learn more</Link>
             </button>
@@ -62,7 +56,7 @@ export default function Index() {
             />
           </Link>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
-            <p>Subscriptions</p>
+            <p className="text-white">Subscriptions</p>
             <button className="bg-white hover:bg-transparent hover:text-white text-black  border-2  border-white  font-bold py-2 px-4 rounded">
               <Link to={`/pages/subscriptions`}>Inquire</Link>
             </button>

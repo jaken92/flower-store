@@ -1,5 +1,6 @@
 import {useLoaderData} from '@remix-run/react';
 import {json} from '@shopify/remix-oxygen';
+import AboutPage from '~/components/AboutPage';
 
 export async function loader({params, context}) {
   const {handle} = params;
@@ -23,10 +24,15 @@ export default function Page() {
 
   return (
     <>
-      <div
-        dangerouslySetInnerHTML={{__html: page.body}}
-        className="prose dark:prose-invert"
-      />
+      {console.log(page.handle)}
+      {page.handle === 'about' ? (
+        <AboutPage dangerouslySetInnerHTML={{__html: page.body}} />
+      ) : (
+        <div
+          dangerouslySetInnerHTML={{__html: page.body}}
+          className="prose dark:prose-invert"
+        />
+      )}
     </>
   );
 }
