@@ -25,7 +25,14 @@ export default function Page() {
   // const text = page.body;
   return (
     <>
-      <AboutPage content={page.body} title={page.title} />
+      {page.title === 'About' ? (
+        <AboutPage content={page.body} title={page.title} />
+      ) : (
+        <div
+          dangerouslySetInnerHTML={{__html: page.body}}
+          className="prose dark:prose-invert"
+        />
+      )}
     </>
   );
 }
