@@ -3,8 +3,7 @@ export default function AboutPage({content, title}) {
   console.log(title);
   return (
     <>
-      {/* <div dangerouslySetInnerHTML={{__html: page.body}}></div> */}
-      <p>WOWHOWHOWHOWHWIO</p>
+      <p>Hello from AboutPage-component</p>
     </>
   );
 }
