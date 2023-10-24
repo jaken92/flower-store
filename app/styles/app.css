@@ -142,17 +142,28 @@ aside li {
 */
 .header {
   align-items: center;
-  background: whitesmoke;
-  opacity: 50%;
+  background: rgba(54, 25, 25, 0.00004);
   display: flex;
   height: var(--header-height);
   padding: 0 1rem;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1;
+  width: 100%;
+  color: #fff;
+  font-family: 'Playfair Display';
+  transition: background-color 0.8s ease-out, color 0.8s ease-out;
+  /* transition: */
+}
+.header:hover {
+  background-color: #fff;
+  color: black;
 }
 
-.header-menu-mobile-toggle {
+.header:hover .header-menu-desktop .header-menu-item {
+  color: black;
+}
+​ .header-menu-mobile-toggle {
   @media (min-width: 48em) {
     display: none;
   }
@@ -177,6 +188,8 @@ aside li {
 .header-menu-item {
   cursor: pointer;
   position: relative;
+  color: #fff;
+  transition: color 0.8s ease-out;
 }
 .header-sub-menu-item {
   position: absolute;

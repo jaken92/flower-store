@@ -7,7 +7,10 @@ export function Header({header, isLoggedIn, cart}) {
   return (
     <header className="header">
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
-        <strong>{shop.name}</strong>
+        <img
+          className="h-[80px] opacity-100"
+          src="../images/MouaLogo.png"
+        ></img>
       </NavLink>
       <HeaderMenu menu={menu} viewport="desktop" />
       <HeaderCtas isLoggedIn={isLoggedIn} cart={cart} />
@@ -28,10 +31,6 @@ export function HeaderMenu({menu, viewport}) {
     }
   }
 
-  function toggleDropdown() {
-    setVisibleDropdown(!visibleDropdown);
-  }
-
   return (
     <nav className={className} role="navigation">
       {viewport === 'mobile' && (
@@ -41,9 +40,7 @@ export function HeaderMenu({menu, viewport}) {
           prefetch="intent"
           style={activeLinkStyle}
           to="/"
-        >
-          Home
-        </NavLink>
+        ></NavLink>
       )}
       {(menu || FALLBACK_HEADER_MENU).items.map((item) => {
         if (!item.url) return null;
@@ -59,36 +56,40 @@ export function HeaderMenu({menu, viewport}) {
           item.items && item.items.length > 0 ? (
             // Render a div if item has sub-items
             <div
-              className={`header-sub`}
+              className={`header-sub hover:cursor-pointer`}
               onClick={() => setIsDropdownVisible(!isDropdownVisible)}
               key={item.id}
             >
-              {item.title}
-              {item.items.map((submenu) => {
-                if (!submenu.url) return null;
+              {item.title + `${isDropdownVisible ? ' -' : ' +'}`}
+              <div className="absolute flex flex-col gap-3 top-full">
+                {item.items.map((submenu) => {
+                  if (!submenu.url) return null;
 
-                const submenuUrl =
-                  submenu.url.includes('myshopify.com') ||
-                  submenu.url.includes(publicStoreDomain)
-                    ? new URL(submenu.url).pathname
-                    : submenu.url;
-
-                return (
-                  <h1 key={submenu.id}>
-                    <NavLink
-                      className={`submenu-link ${
-                        isDropdownVisible ? 'visible' : 'hidden'
-                      }`}
-                      onClick={closeAside}
-                      prefetch="intent"
-                      style={activeLinkStyle}
-                      to={submenuUrl}
-                    >
-                      {submenu.title}
-                    </NavLink>
-                  </h1>
-                );
-              })}
+                  const submenuUrl =
+                    submenu.url.includes('myshopify.com') ||
+                    submenu.url.includes(publicStoreDomain)
+                      ? new URL(submenu.url).pathname
+                      : submenu.url;
+                  {
+                    console.log(item);
+                  }
+                  return (
+                    <h1 key={submenu.id}>
+                      <NavLink
+                        className={`submenu-link hover:underline ${
+                          isDropdownVisible ? 'visible' : 'hidden'
+                        }`}
+                        onClick={closeAside}
+                        prefetch="intent"
+                        style={activeLinkStyle}
+                        to={submenuUrl}
+                      >
+                        {submenu.title}
+                      </NavLink>
+                    </h1>
+                  );
+                })}
+              </div>
             </div>
           ) : (
             // Render a NavLink if item does not have sub-items
@@ -198,6 +199,6 @@ const FALLBACK_HEADER_MENU = {
 function activeLinkStyle({isActive, isPending}) {
   return {
     fontWeight: isActive ? 'bold' : undefined,
-    color: isPending ? 'grey' : 'black',
+    // color: isPending ? 'white' : 'white',
   };
 }
