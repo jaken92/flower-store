@@ -21,16 +21,19 @@ export default function Index() {
           text="Order Flowers"
           imageSrc="./images/heroes/collections.webp"
           linkTo="/collections"
+          alt="flowers in a vase"
         />
         <ImageLinkComponent
           text="Weddings"
           imageSrc="./images/heroes/weddings.webp"
           linkTo="/pages/weddings"
+          alt="a picture of two people that are getting married, the bride is carrying a bouquet of flowers"
         />
         <ImageLinkComponent
           text="Subscriptions"
           imageSrc="./images/heroes/subscriptions.webp"
           linkTo="/pages/subscriptions"
+          alt="a house with purple flowers covering it"
         />
       </div>
     </>
