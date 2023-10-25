@@ -1,11 +1,20 @@
 import {Await, Link, NavLink, useMatches} from '@remix-run/react';
 import {Suspense} from 'react';
 import {useState, useEffect} from 'react';
+import ScrollTracker from '~/components/ScrollTracker';
 
 export function Header({header, isLoggedIn, cart}) {
   const {shop, menu} = header;
+  const [whiteHeader, setWhiteHeader] = useState(false);
+
+  //updating the WhiteHeader state to apply/remove css class to header-element.
+  function headerColorChanger(trueOrFalse) {
+    setWhiteHeader(trueOrFalse);
+  }
+
   return (
-    <header className="header">
+    <header className={`header ${whiteHeader ? 'white-header' : ''}`}>
+      <ScrollTracker headerColorChanger={headerColorChanger} />
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
         <img
           className="h-[80px] opacity-100"

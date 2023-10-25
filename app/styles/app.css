@@ -189,6 +189,14 @@ aside li {
   transition: background-color 0.8s ease-out, color 0.8s ease-out;
   border-bottom: 0.5px solid white;
 }
+
+.white-header {
+  background: #fff;
+  color: black;
+}
+.white-header .header-menu-desktop .header-menu-item {
+  color: black;
+}
 .header:hover {
   background-color: #fff;
   color: black;
