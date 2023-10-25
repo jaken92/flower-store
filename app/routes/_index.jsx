@@ -22,18 +22,21 @@ export default function Index() {
           imageSrc="./images/heroes/collections.webp"
           linkTo="/collections"
           alt="flowers in a vase"
+          btnText="Order now"
         />
         <ImageLinkComponent
           text="Weddings"
           imageSrc="./images/heroes/weddings.webp"
           linkTo="/pages/weddings"
           alt="a picture of two people that are getting married, the bride is carrying a bouquet of flowers"
+          btnText="Learn more"
         />
         <ImageLinkComponent
           text="Subscriptions"
           imageSrc="./images/heroes/subscriptions.webp"
           linkTo="/pages/subscriptions"
           alt="a house with purple flowers covering it"
+          btnText="Inquire"
         />
       </div>
     </>
