@@ -19,7 +19,7 @@ export default function ContactPage({content, title}) {
         <form onSubmit={onSubmitform} className="space-y-8">
           <div>
             <label
-              for="name"
+              htmlFor="name"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
               Name
@@ -34,7 +34,7 @@ export default function ContactPage({content, title}) {
           </div>
           <div>
             <label
-              for="email"
+              htmlFor="email"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
               Email *
@@ -49,7 +49,7 @@ export default function ContactPage({content, title}) {
           </div>
           <div>
             <label
-              for="number"
+              htmlFor="number"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
               Phone number
@@ -58,13 +58,13 @@ export default function ContactPage({content, title}) {
               type="tel"
               id="number"
               className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder="Let us know how we can help you"
+              placeholder=""
               pattern="[0-9\-]*"
             />
           </div>
           <div className="sm:col-span-2">
             <label
-              for="message"
+              htmlFor="message"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
             >
               Your message
