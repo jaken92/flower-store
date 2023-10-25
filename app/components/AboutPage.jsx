@@ -12,6 +12,11 @@ export default function AboutPage({content, title}) {
       <p>{title}</p>
       <div>{content}</div>
       <p>WOWHOWHOWHOWHWIO</p>
+
+      <img
+        className="rounded-full w-96 h-96"
+        src="../images/MouaLogo.png"
+      ></img>
     </>
   );
 }

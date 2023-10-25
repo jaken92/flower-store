@@ -53,10 +53,12 @@ const PAGE_QUERY = `#graphql
         id
         title
         body
-        seo {
+      
+         seo {
           description
           title
-        }
+      
       }
+    }
     }
   `;

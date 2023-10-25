@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import ImageLinkComponent from '~/components/LinkCard';
 
 export function meta() {
   return [
@@ -17,51 +17,21 @@ export default function Index() {
         ></img>
       </section>
       <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 sm:grid-cols-3 mt-6 mb-6 px-8 ">
-        <div className="relative">
-          <Link to={`/collections`}>
-            <img
-              className="image-size"
-              src="./images/heroes/collections.webp"
-              alt="Collections"
-            />
-          </Link>
-          <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
-            <p className="text-white">Order flowers</p>
-            <button className="bg-white hover:bg-transparent  hover:text-white text-black border-2  border-white font-bold py-2 px-4 rounded">
-              <Link to={`/collections`}>Order now</Link>
-            </button>
-          </div>
-        </div>
-        <div className="relative">
-          <Link to={`/pages/weddings`}>
-            <img
-              className="image-size"
-              src="./images/heroes/weddings.webp"
-              alt="Weddings"
-            />
-          </Link>
-          <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
-            <p className="text-white">Weddings</p>
-            <button className="bg-white hover:bg-transparent hover:text-white text-black  border-2 border-white font-bold py-2 px-4 rounded">
-              <Link to={`/pages/weddings`}>Learn more</Link>
-            </button>
-          </div>
-        </div>
-        <div className="relative">
-          <Link to={`/pages/subscriptions`}>
-            <img
-              className="image-size"
-              src="./images/heroes/subscriptions.webp"
-              alt="Subscriptions"
-            />
-          </Link>
-          <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
-            <p className="text-white">Subscriptions</p>
-            <button className="bg-white hover:bg-transparent hover:text-white text-black  border-2  border-white  font-bold py-2 px-4 rounded">
-              <Link to={`/pages/subscriptions`}>Inquire</Link>
-            </button>
-          </div>
-        </div>
+        <ImageLinkComponent
+          text="Order Flowers"
+          imageSrc="./images/heroes/collections.webp"
+          linkTo="/collections"
+        />
+        <ImageLinkComponent
+          text="Weddings"
+          imageSrc="./images/heroes/weddings.webp"
+          linkTo="/pages/weddings"
+        />
+        <ImageLinkComponent
+          text="Subscriptions"
+          imageSrc="./images/heroes/subscriptions.webp"
+          linkTo="/pages/subscriptions"
+        />
       </div>
     </>
   );
