@@ -1,4 +1,4 @@
-import {useLoaderData} from '@remix-run/react';
+import {useLoaderData, useLocation} from '@remix-run/react';
 import {json} from '@shopify/remix-oxygen';
 import AboutPage from '~/components/AboutPage';
 import WeddingsPage from '~/components/WeddingsPage';
@@ -25,16 +25,17 @@ export async function loader({params, context}) {
 
 export default function Page() {
   const {page} = useLoaderData();
-  console.log(page);
+  const location = useLocation();
+  console.log(location);
   return (
     <>
-      {page.title === 'About' ? (
+      {location.pathname === '/pages/about' ? (
         <AboutPage content={page.body} title={page.title} img={page.image} />
-      ) : page.title === 'Contact' ? (
+      ) : location.pathname === '/pages/contact' ? (
         <ContactPage content={page.body} title={page.title} />
-      ) : page.title === 'Weddings' ? (
+      ) : location.pathname === '/pages/weddings' ? (
         <WeddingsPage content={page.body} title={page.title} />
-      ) : page.title === 'Subscriptions' ? (
+      ) : location.pathname === '/pages/subscriptions' ? (
         <SubscriptionsPage content={page.body} title={page.title} />
       ) : (
         <div
@@ -53,10 +54,12 @@ const PAGE_QUERY = `#graphql
         id
         title
         body
-        seo {
+      
+         seo {
           description
           title
-        }
+      
       }
+    }
     }
   `;
