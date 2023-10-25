@@ -56,12 +56,16 @@ export function HeaderMenu({menu, viewport}) {
           item.items && item.items.length > 0 ? (
             // Render a div if item has sub-items
             <div
-              className={`header-sub hover:cursor-pointer`}
+              className="header-menu-item"
               onClick={() => setIsDropdownVisible(!isDropdownVisible)}
               key={item.id}
             >
               {item.title + `${isDropdownVisible ? ' -' : ' +'}`}
-              <div className="absolute flex flex-col gap-3 top-full">
+              <div
+                className={`submenu-wrapper ${
+                  isDropdownVisible ? 'shown' : ''
+                }`}
+              >
                 {item.items.map((submenu) => {
                   if (!submenu.url) return null;
 
@@ -70,15 +74,10 @@ export function HeaderMenu({menu, viewport}) {
                     submenu.url.includes(publicStoreDomain)
                       ? new URL(submenu.url).pathname
                       : submenu.url;
-                  {
-                    // console.log(item);
-                  }
                   return (
                     <h1 key={submenu.id}>
                       <NavLink
-                        className={`submenu-link hover:underline ${
-                          isDropdownVisible ? 'visible' : 'hidden'
-                        }`}
+                        className="submenu-item"
                         onClick={closeAside}
                         prefetch="intent"
                         style={activeLinkStyle}

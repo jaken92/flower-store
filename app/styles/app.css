@@ -140,8 +140,42 @@ aside li {
 * components/Header
 * --------------------------------------------------
 */
+.header-sub {
+}
+.header-sub:hover {
+  cursor: pointer;
+}
+.submenu-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  top: 38px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  background-color: #fff;
+}
+
+/* When submenu is visible, translate it back to its original position (0%) */
+.shown {
+  visibility: visible;
+  opacity: 1;
+}
+.sub-menu-item {
+}
+
+.header-menu-item {
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  transition: color 0.8s ease-out;
+}
+
 .header {
   align-items: center;
+  justify-content: space-between;
   background: rgba(54, 25, 25, 0.00004);
   display: flex;
   height: var(--header-height);
@@ -153,7 +187,7 @@ aside li {
   color: #fff;
   font-family: 'Playfair Display';
   transition: background-color 0.8s ease-out, color 0.8s ease-out;
-  /* transition: */
+  border-bottom: 0.5px solid white;
 }
 .header:hover {
   background-color: #fff;
@@ -163,9 +197,10 @@ aside li {
 .header:hover .header-menu-desktop .header-menu-item {
   color: black;
 }
-​ .header-menu-mobile-toggle {
-  @media (min-width: 48em) {
-    display: none;
+.header-menu-mobile-toggle {
+  display: none;
+  @media (max-width: 48em) {
+    display: block; /* or any other styles you want for mobile */
   }
 }
 
@@ -178,21 +213,12 @@ aside li {
 .header-menu-desktop {
   display: none;
   grid-gap: 1rem;
-  @media (min-width: 45em) {
+  @media (min-width: 48em) {
     display: flex;
     grid-gap: 1rem;
-    margin-left: 3rem;
+    margin: 0 3rem; /* change this value to center? */
+    justify-content: center;
   }
-}
-
-.header-menu-item {
-  cursor: pointer;
-  position: relative;
-  color: #fff;
-  transition: color 0.8s ease-out;
-}
-.header-sub-menu-item {
-  position: absolute;
 }
 
 .header-ctas {
