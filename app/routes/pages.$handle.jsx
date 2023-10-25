@@ -25,11 +25,11 @@ export async function loader({params, context}) {
 
 export default function Page() {
   const {page} = useLoaderData();
-
+  console.log(page);
   return (
     <>
       {page.title === 'About' ? (
-        <AboutPage content={page.body} title={page.title} />
+        <AboutPage content={page.body} title={page.title} img={page.image} />
       ) : page.title === 'Contact' ? (
         <ContactPage content={page.body} title={page.title} />
       ) : page.title === 'Weddings' ? (
