@@ -26,6 +26,7 @@ export default function Collections() {
               <div className="grid gap-4">
                 {collection?.image && (
                   <Image
+                    className="object-cover h-96 w-96"
                     alt={`Image of ${collection.title}`}
                     data={collection.image}
                     key={collection.id}
@@ -46,7 +47,7 @@ export default function Collections() {
 }
 const COLLECTIONS_QUERY = `#graphql
     query FeaturedCollections {
-      collections(first: 2, query: "collection_type:smart") {
+      collections(first: 10, query: "collection_type:smart") {
         nodes {
           id
           title
