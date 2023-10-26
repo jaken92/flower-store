@@ -140,8 +140,6 @@ aside li {
 * components/Header
 * --------------------------------------------------
 */
-.header-sub {
-}
 .header-sub:hover {
   cursor: pointer;
 }
@@ -162,8 +160,6 @@ aside li {
 .shown {
   visibility: visible;
   opacity: 1;
-}
-.sub-menu-item {
 }
 
 .header-menu-item {
