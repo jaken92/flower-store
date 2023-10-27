@@ -19,7 +19,6 @@ export function CartMain({layout, cart}) {
 
 function CartDetails({layout, cart}) {
   const cartHasItems = !!cart && cart.totalQuantity > 0;
-  console.log(cart);
 
   return (
     <div className="cart-details">

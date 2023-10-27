@@ -1,6 +1,4 @@
 export default function ContactPage({content, title}) {
-  console.log(content);
-  console.log(title);
   const onSubmitform = (event) => {
     event.preventDefault();
     console.log(event.target);

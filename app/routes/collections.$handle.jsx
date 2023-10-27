@@ -11,13 +11,14 @@ export const handle = {
 };
 
 export async function loader({params, context}) {
+  // const {MyContext} = context;
   const {handle} = params;
   const {collection} = await context.storefront.query(COLLECTION_QUERY, {
     variables: {
       handle,
     },
   });
-
+  console.log(context.env.PUBLIC_MAILJET_API_KEY);
   if (!collection) {
     throw new Response(null, {status: 404});
   }
