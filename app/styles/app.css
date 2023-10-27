@@ -40,6 +40,7 @@ aside {
   right: calc(-1 * var(--aside-width));
   top: 0;
   transition: transform 200ms ease-in-out;
+  z-index: 100;
 }
 
 aside header {
@@ -49,6 +50,7 @@ aside header {
   height: var(--header-height);
   justify-content: space-between;
   padding: 0 20px;
+  z-index: 100;
 }
 
 aside header h3 {
@@ -98,7 +100,7 @@ aside li {
   transition: opacity 400ms ease-in-out;
   transition: opacity 400ms;
   visibility: hidden;
-  z-index: 10;
+  z-index: 100;
 }
 
 .overlay .close-outside {
@@ -178,7 +180,7 @@ aside li {
   padding: 0 1rem;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 99;
   width: 100%;
   color: #fff;
   font-family: 'Playfair Display';
