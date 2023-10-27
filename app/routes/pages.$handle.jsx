@@ -13,7 +13,7 @@ export async function loader({params, context}) {
       handle,
     },
   });
-
+  console.log(context.env.PUBLIC_MAILJET_API_KEY);
   if (!page) {
     throw new Response(null, {status: 404});
   }
@@ -32,7 +32,11 @@ export default function Page() {
       {location.pathname === '/pages/about' ? (
         <AboutPage content={page.body} title={page.title} img={page.image} />
       ) : location.pathname === '/pages/contact' ? (
-        <ContactPage content={page.body} title={page.title} />
+        <ContactPage
+          content={page.body}
+          title={page.title}
+          context={context.env.PUBLIC_MAILJET_API_KEY}
+        />
       ) : location.pathname === '/pages/weddings' ? (
         <WeddingsPage content={page.body} title={page.title} />
       ) : location.pathname === '/pages/subscriptions' ? (

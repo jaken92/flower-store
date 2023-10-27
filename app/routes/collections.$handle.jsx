@@ -18,7 +18,7 @@ export async function loader({params, context}) {
       handle,
     },
   });
-  console.log(context.env.PUBLIC_MAILJET_API_KEY);
+
   if (!collection) {
     throw new Response(null, {status: 404});
   }

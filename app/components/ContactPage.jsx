@@ -1,8 +1,10 @@
+import {useLoaderData} from '@remix-run/react';
+
 export default function ContactPage({content, title}) {
   const onSubmitform = (event) => {
     event.preventDefault();
-    console.log(event.target);
   };
+
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">

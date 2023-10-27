@@ -1,6 +1,4 @@
 export default function AboutPage({content, title}) {
-  console.log(content);
-  console.log(title);
   return (
     <>
       <section className="w-full gap-4">
