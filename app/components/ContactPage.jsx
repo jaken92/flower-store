@@ -3,6 +3,12 @@ import {useLoaderData} from '@remix-run/react';
 export default function ContactPage({content, title}) {
   const onSubmitform = (event) => {
     event.preventDefault();
+    const myForm = document.getElementById('contactForm').submit();
+
+    console.log(myForm.email.value);
+    console.log(myForm.message.value);
+    console.log(myForm.name.value);
+    console.log(myForm.number.value);
   };
 
   return (
@@ -23,7 +29,13 @@ export default function ContactPage({content, title}) {
           <br></br>
           PICK-UP + DELIVERIES: MONDAY - FRIDAY
         </p>
-        <form onSubmit={onSubmitform} className="space-y-8">
+        <form
+          onSubmit={onSubmitform}
+          id="contactForm"
+          className="space-y-8"
+          action="/ContactFormHandler.server.jsx"
+          method="POST"
+        >
           <div>
             <label
               htmlFor="name"
@@ -85,7 +97,7 @@ export default function ContactPage({content, title}) {
           </div>
           <button
             type="submit"
-            className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            className="py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
           >
             Send message
           </button>
