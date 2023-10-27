@@ -19,10 +19,12 @@ export function CartMain({layout, cart}) {
 
 function CartDetails({layout, cart}) {
   const cartHasItems = !!cart && cart.totalQuantity > 0;
+  console.log(cart);
 
   return (
     <div className="cart-details">
       <CartLines lines={cart?.lines} layout={layout} />
+      <NoteForm notes={cart?.notes} />
       {cartHasItems && (
         <CartSummary cost={cart.cost} layout={layout}>
           <CartDiscounts discountCodes={cart.discountCodes} />
@@ -281,6 +283,16 @@ function CartLineUpdateButton({children, lines}) {
       inputs={{lines}}
     >
       {children}
+    </CartForm>
+  );
+}
+
+function NoteForm() {
+  return (
+    <CartForm route="/cart" action={CartForm.ACTIONS.NoteUpdate}>
+      <p>Provide a short message for the gift tag:</p>
+      <input type="text" name="note" />
+      <button>Update note</button>
     </CartForm>
   );
 }

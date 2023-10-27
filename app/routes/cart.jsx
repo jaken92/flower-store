@@ -1,5 +1,6 @@
 import {CartForm} from '@shopify/hydrogen';
 import {json} from '@shopify/remix-oxygen';
+import NoteForm from '~/components/NoteForm';
 export async function action({request, context}) {
   // The Skeleton template already has a cart handler which is passed
   // to the loader and action context.
@@ -24,6 +25,10 @@ export async function action({request, context}) {
       break;
     case CartForm.ACTIONS.LinesRemove:
       result = await cart.removeLines(inputs.lineIds);
+      break;
+    case CartForm.ACTIONS.NoteUpdate:
+      const note = String(formData.get('note') || '');
+      result = await cart.updateNote(note);
       break;
     case CartForm.ACTIONS.DiscountCodesUpdate: {
       const formDiscountCode = inputs.discountCode;
