@@ -11,10 +11,17 @@ export default function ContactPage({content, title}) {
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
           Contact Us
         </h2>
-        <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-          Want to talk with someone directly? Feel free to call out or DM us
-          through our social media . Our current hours are Monday - Saturday,
-          10AM - 19:00PM.
+        <p className="mb-2 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+          Want to talk with someone directly? Feel free to call or DM us through
+          our social media . Our current hours are Monday - Saturday, 10AM -
+          19:00PM.
+        </p>
+        <p className="lg:mb-16 font-light  text-gray-500 dark:text-gray-400 sm:text-xl">
+          Number: (+46) 076. 748. 7401
+          <br></br>
+          Location: Göteborg, Sweden Högsbo 41111
+          <br></br>
+          PICK-UP + DELIVERIES: MONDAY - FRIDAY
         </p>
         <form onSubmit={onSubmitform} className="space-y-8">
           <div>
