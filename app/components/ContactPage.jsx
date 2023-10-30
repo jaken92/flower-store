@@ -1,14 +1,37 @@
 import {useLoaderData} from '@remix-run/react';
+import {Header, HeaderMenu} from '~/components/Header';
 
 export default function ContactPage({content, title}) {
-  const onSubmitform = (event) => {
-    event.preventDefault();
-    const myForm = document.getElementById('contactForm').submit();
+  // const onSubmitform = (event) => {
+  //   event.preventDefault();
+  //   const myForm = document.getElementById('contactForm');
+  //   myForm.submit();
+  //   console.log(myForm.email.value);
+  //   console.log(myForm.message.value);
+  //   console.log(myForm.name.value);
+  //   console.log(myForm.number.value);
+  // };
 
-    console.log(myForm.email.value);
-    console.log(myForm.message.value);
-    console.log(myForm.name.value);
-    console.log(myForm.number.value);
+  const onSubmitform = async (event) => {
+    event.preventDefault();
+    const myForm = document.getElementById('contactForm');
+
+    const name = myForm.name.value;
+    const email = myForm.email.value;
+    const message = myForm.message.value;
+
+    const response = await fetch('/ContactFormHandler.server.js', {
+      method: 'POST',
+      body: new FormData(myForm),
+    });
+
+    const data = await response.json();
+
+    if (data.status === 'success') {
+      // TODO: Display a success message
+    } else {
+      // TODO: Display an error message
+    }
   };
 
   return (
@@ -33,7 +56,7 @@ export default function ContactPage({content, title}) {
           onSubmit={onSubmitform}
           id="contactForm"
           className="space-y-8"
-          action="/ContactFormHandler.server.jsx"
+          action="/ContactFormHandler"
           method="POST"
         >
           <div>

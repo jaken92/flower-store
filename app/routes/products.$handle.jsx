@@ -114,7 +114,7 @@ export default function ProductHandle() {
             )}
           </CartForm>
           {/* Delete this after verifying */}
-          <p>Selected Variant: {product.selectedVariant?.id}</p>
+          {/* <p>Selected Variant: {product.selectedVariant?.id}</p> */}
           <div
             className="prose border-t border-gray-200 pt-6 text-black text-md"
             dangerouslySetInnerHTML={{__html: product.descriptionHtml}}

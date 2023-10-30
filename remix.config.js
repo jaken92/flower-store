@@ -1,5 +1,12 @@
 /** @type {import('@remix-run/dev').AppConfig} */
+
 module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+    amd: true,
+    node: true,
+  },
   appDirectory: 'app',
   ignoredRouteFiles: ['**/.*'],
   watchPaths: ['./public', './.env'],
