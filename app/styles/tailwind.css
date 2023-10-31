@@ -1,5 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display'),
+      url('public/fonts/PlayfairDisplay-Regular.woff2'); /* IE9 Compat Modes */
+    font-weight: 900;
+  }
+
+  @font-face {
+    font-family: 'Playfair Display SemiBold';
+    src: local('Playfair Display'),
+      url('public/fonts/PlayfairDisplay-SemiBold.woff2'); /* IE9 Compat Modes */
+    font-weight: 900;
+  }
+
+  @font-face {
+    font-family: 'Playfair Display Medium';
+    src: local('Playfair Display'),
+      url('public/fonts/PlayfairDisplay-Medium.woff2'); /* IE9 Compat Modes */
+    font-weight: 900;
+  }
+}
