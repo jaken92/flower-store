@@ -23,7 +23,7 @@ export default function Index() {
           />
         </div>
       </section>
-      <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 sm:grid-cols-3 mt-6 mb-6 px-8 ">
+      <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 sm:grid-cols-3 mt-6 mb-6 px-8 bg-white ">
         <ImageLinkComponent
           text="Order Flowers"
           imageSrc="./images/heroes/collections.webp"

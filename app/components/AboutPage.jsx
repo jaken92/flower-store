@@ -11,9 +11,9 @@ export default function AboutPage({content, title}) {
           src="../images/mouaAbtimg2.webp"
         ></img>
       </section>
-      <p>{title}</p>
-      <div>{content}</div>
-      <p>WOWHOWHOWHOWHWIO</p>
+      <p className="text-3xl font-customReg">{title}</p>
+      <div className=" text-3xl font-customSemiBold">{content}</div>
+      <p className=" text-3xl font-customMedium">Wohohohohowowowoohohoho</p>
 
       <img
         className="rounded-full w-96 h-96"

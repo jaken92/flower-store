@@ -5,4 +5,18 @@ import typographyPlugin from '@tailwindcss/typography';
 export default {
   content: ['./app/**/*.{js,ts,jsx,tsx}'],
   plugins: [formsPlugin, typographyPlugin],
+  theme: {
+    extend: {
+      colors: {
+        pink: '#FFF3F2',
+        teal: '#E7F9FA',
+        white: '#FFFFFF',
+      },
+      fontFamily: {
+        customReg: ['PlayfairDisplay-Regular', 'sans'],
+        customSemiBold: ['PlayfairDisplay-SemiBold', 'sans'],
+        customMedium: ['PlayfairDisplay-Medium', 'sans'],
+      },
+    },
+  },
 };
