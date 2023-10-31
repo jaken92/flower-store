@@ -13,9 +13,7 @@ export default {
         white: '#FFFFFF',
       },
       fontFamily: {
-        customReg: ['PlayfairDisplay-Regular', 'sans'],
-        customSemiBold: ['PlayfairDisplay-SemiBold', 'sans'],
-        customMedium: ['PlayfairDisplay-Medium', 'sans'],
+        custom: ['Playfair Display'],
       },
     },
   },
