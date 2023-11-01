@@ -2,8 +2,8 @@ import {useState, useEffect} from 'react';
 
 const Slide = ({review, client}) => (
   <div className="text-center text-black w-[80%] mx-auto">
-    <p className="text-2xl ">{review}</p>
-    <p className="text-sm">- {client}</p>
+    <p className="text-2xl font-custom">{review}</p>
+    <p className="text-sm font-custom">- {client}</p>
   </div>
 );
 
