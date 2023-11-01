@@ -301,24 +301,52 @@ function NoteForm() {
 
     setPositionLeft(`-${viewportWidth - parent.clientWidth}px`);
   }
+
+  function closeNoteForm() {
+    setPositionLeft(`${6000}px`);
+  }
   return (
     <>
       <div onClick={getNoteValues} className="hover:cursor-pointer">
         Toggle Note
       </div>
       <div
-        style={{position: 'fixed', top: '0px', left: positionLeft}}
-        className={` h-screen w-screen flex items-center justify-center z-200 bg-teal `}
+        style={{
+          position: 'fixed',
+          top: '0px',
+          left: positionLeft,
+        }}
+        className={` h-screen w-screen flex items-center justify-center z-20 bg-black bg-opacity-40`}
       >
-        <div className=" bg-pink p-7 ">
-          <CartForm route="/cart" action={CartForm.ACTIONS.NoteUpdate}>
-            <p>Provide a short message for the gift tag:</p>
-            <input
-              className="w-[500px] h-[500px]"
-              type="textarea"
-              name="note"
-            />
-            <button>Update note</button>
+        <div className=" bg-pink p-7 rounded-3xl flex flex-col">
+          <CartForm
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+            }}
+            className="flex flex-col"
+            route="/cart"
+            action={CartForm.ACTIONS.NoteUpdate}
+          >
+            <div className="flex flex-col">
+              <div className="flex flex-row-reverse">
+                <button
+                  className="p-3 bg-white rounded-md"
+                  onClick={closeNoteForm}
+                >
+                  X
+                </button>
+              </div>
+              <p className="font-custom">
+                Provide a short message for the gift tag:
+              </p>
+              <input
+                className="w-[500px] h-[500px] rounded-3xl font-custom"
+                type="textarea"
+                name="note"
+              />
+              <button className="font-custom">Update note</button>
+            </div>
           </CartForm>
         </div>
       </div>
