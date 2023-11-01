@@ -287,24 +287,52 @@ function CartLineUpdateButton({children, lines}) {
   );
 }
 
+//Custom NoteForm to enable user to leave a not with their purchase.
 function NoteForm() {
   const [positionLeft, setPositionLeft] = useState(`${6000}px`);
+  const [showNote, setShowNote] = useState(false);
 
-  useEffect(() => {
-    console.log(positionLeft);
-  }, [positionLeft]);
+  //Workaround for "window is not defined error"
+  if (typeof window !== 'undefined') {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+    //update windowWidth when window is resized.
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      // Remove event listener when the component is unmounted
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
+    useEffect(() => {
+      const parent = document.querySelector('aside');
+      if (showNote) {
+        setPositionLeft(`-${windowWidth - parent.clientWidth}px`);
+      } else {
+        setPositionLeft(`${6000}px`);
+      }
+    }, [windowWidth, showNote]);
+  }
   function getNoteValues() {
-    console.log('hej');
-    const parent = document.querySelector('aside');
-    const viewportWidth = window.innerWidth;
-
-    setPositionLeft(`-${viewportWidth - parent.clientWidth}px`);
+    //workaround for window undefined error.
+    if (typeof window !== 'undefined') {
+      const parent = document.querySelector('aside');
+      setPositionLeft(`-${window.innerWidth - parent.clientWidth}px`);
+      setShowNote(!showNote);
+    }
   }
 
   function closeNoteForm() {
     setPositionLeft(`${6000}px`);
+    setShowNote(!showNote);
   }
+
   return (
     <>
       <div onClick={getNoteValues} className="hover:cursor-pointer">
@@ -318,7 +346,7 @@ function NoteForm() {
         }}
         className={` h-screen w-screen flex items-center justify-center z-20 bg-black bg-opacity-40`}
       >
-        <div className=" bg-pink p-7 rounded-3xl flex flex-col">
+        <div className=" bg-pink p-7 rounded-3xl flex flex-col md:h-[500px]  md:w-[500px]">
           <CartForm
             style={{
               display: 'flex',
@@ -328,7 +356,7 @@ function NoteForm() {
             route="/cart"
             action={CartForm.ACTIONS.NoteUpdate}
           >
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
               <div className="flex flex-row-reverse">
                 <button
                   className="p-3 bg-white rounded-md"
@@ -340,12 +368,16 @@ function NoteForm() {
               <p className="font-custom">
                 Provide a short message for the gift tag:
               </p>
-              <input
-                className="w-[500px] h-[500px] rounded-3xl font-custom"
-                type="textarea"
+              <textarea
+                className="h-[150px] md:h-[300px] rounded-3xl font-custom"
                 name="note"
               />
-              <button className="font-custom">Update note</button>
+
+              <div className="flex justify-center">
+                <button className="rounded-2xl font-custom bg-teal border-2 border-teal p-3 mt-4">
+                  Update note
+                </button>
+              </div>
             </div>
           </CartForm>
         </div>
