@@ -1,6 +1,7 @@
 import {CartForm, Image, Money} from '@shopify/hydrogen';
 import {Link} from '@remix-run/react';
 import {useVariantUrl} from '~/utils';
+import {useState} from 'react';
 
 export function CartMain({layout, cart}) {
   const linesCount = Boolean(cart?.lines?.nodes?.length || 0);
@@ -287,11 +288,28 @@ function CartLineUpdateButton({children, lines}) {
 }
 
 function NoteForm() {
+  const [noteWindow, setNoteWindow] = useState(false);
+
+  const toggleNoteWindow = () => {
+    setNoteWindow(!noteWindow);
+  };
+
   return (
-    <CartForm route="/cart" action={CartForm.ACTIONS.NoteUpdate}>
-      <p>Provide a short message for the gift tag:</p>
-      <input type="text" name="note" />
-      <button>Update note</button>
-    </CartForm>
+    <>
+      <div onClick={toggleNoteWindow} className="hover:cursor-pointer">
+        Toggle Note
+      </div>
+      <div
+        className={`fixed top-4 -left-4 z-200 bg-pink padding p-7 ${
+          noteWindow ? 'block' : 'hidden'
+        }`}
+      >
+        <CartForm route="/cart" action={CartForm.ACTIONS.NoteUpdate}>
+          <p>Provide a short message for the gift tag:</p>
+          <input className="w-[500px] h-[500px]" type="textarea" name="note" />
+          <button>Update note</button>
+        </CartForm>
+      </div>
+    </>
   );
 }
