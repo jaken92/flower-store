@@ -1,7 +1,7 @@
 import {CartForm, Image, Money} from '@shopify/hydrogen';
 import {Link} from '@remix-run/react';
 import {useVariantUrl} from '~/utils';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 export function CartMain({layout, cart}) {
   const linesCount = Boolean(cart?.lines?.nodes?.length || 0);
@@ -288,27 +288,39 @@ function CartLineUpdateButton({children, lines}) {
 }
 
 function NoteForm() {
-  const [noteWindow, setNoteWindow] = useState(false);
+  const [positionLeft, setPositionLeft] = useState(`${6000}px`);
 
-  const toggleNoteWindow = () => {
-    setNoteWindow(!noteWindow);
-  };
+  useEffect(() => {
+    console.log(positionLeft);
+  }, [positionLeft]);
 
+  function getNoteValues() {
+    console.log('hej');
+    const parent = document.querySelector('aside');
+    const viewportWidth = window.innerWidth;
+
+    setPositionLeft(`-${viewportWidth - parent.clientWidth}px`);
+  }
   return (
     <>
-      <div onClick={toggleNoteWindow} className="hover:cursor-pointer">
+      <div onClick={getNoteValues} className="hover:cursor-pointer">
         Toggle Note
       </div>
       <div
-        className={`fixed top-4 -left-4 z-200 bg-pink padding p-7 ${
-          noteWindow ? 'block' : 'hidden'
-        }`}
+        style={{position: 'fixed', top: '0px', left: positionLeft}}
+        className={` h-screen w-screen flex items-center justify-center z-200 bg-teal `}
       >
-        <CartForm route="/cart" action={CartForm.ACTIONS.NoteUpdate}>
-          <p>Provide a short message for the gift tag:</p>
-          <input className="w-[500px] h-[500px]" type="textarea" name="note" />
-          <button>Update note</button>
-        </CartForm>
+        <div className=" bg-pink p-7 ">
+          <CartForm route="/cart" action={CartForm.ACTIONS.NoteUpdate}>
+            <p>Provide a short message for the gift tag:</p>
+            <input
+              className="w-[500px] h-[500px]"
+              type="textarea"
+              name="note"
+            />
+            <button>Update note</button>
+          </CartForm>
+        </div>
       </div>
     </>
   );
