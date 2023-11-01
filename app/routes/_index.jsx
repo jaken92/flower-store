@@ -1,4 +1,5 @@
 import ImageLinkComponent from '~/components/LinkCard';
+import Carousel from '~/components/Carousel';
 
 export function meta() {
   return [
@@ -6,6 +7,19 @@ export function meta() {
     {description: 'A graduation work creating a shopify store with Hydrogen'},
   ];
 }
+
+const reviews = [
+  {
+    review:
+      'The wedding flowers were excellent in the venue, the flowers suited the tables super nicely. And my bouquet was amazing, definitely what i expected and more',
+    client: 'Moona',
+  },
+  {
+    review:
+      'Excellent cause but above all, the quality of the arrangements are elegant and fine. They take into account all the specifications to create unique arrangements.',
+    client: 'Casandra',
+  },
+];
 
 export default function Index() {
   return (
@@ -46,6 +60,7 @@ export default function Index() {
           btnText="Inquire"
         />
       </div>
+      <Carousel reviews={reviews} />
     </>
   );
 }
