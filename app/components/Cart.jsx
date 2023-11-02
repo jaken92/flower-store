@@ -335,9 +335,13 @@ function NoteForm() {
 
   return (
     <>
-      <div onClick={getNoteValues} className="hover:cursor-pointer">
-        Toggle Note
-      </div>
+      <p>
+        Want to write a message for the giftcard or have any special requests
+        for your order?
+      </p>
+      <button onClick={getNoteValues} className="hover:cursor-pointer">
+        Add message
+      </button>
       <div
         style={{
           position: 'fixed',

@@ -7,20 +7,17 @@
     font-family: 'Playfair Display';
     src: local('Playfair Display'),
       url('public/fonts/PlayfairDisplay-Regular.woff2'); /* IE9 Compat Modes */
-    font-weight: 900;
   }
 
   @font-face {
     font-family: 'Playfair Display SemiBold';
     src: local('Playfair Display'),
       url('public/fonts/PlayfairDisplay-SemiBold.woff2'); /* IE9 Compat Modes */
-    font-weight: 900;
   }
 
   @font-face {
     font-family: 'Playfair Display Medium';
     src: local('Playfair Display'),
       url('public/fonts/PlayfairDisplay-Medium.woff2'); /* IE9 Compat Modes */
-    font-weight: 900;
   }
 }
