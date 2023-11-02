@@ -339,12 +339,12 @@ function NoteForm() {
         Want to write a message for the giftcard or have any special requests
         for your order?
       </p>
-      <button
+      <div
         onClick={getNoteValues}
         className="hover:cursor-pointer m-3 rounded-2xl font-custom bg-teal border-2 border-teal p-3"
       >
         Add message
-      </button>
+      </div>
       <div
         style={{
           position: 'fixed',
