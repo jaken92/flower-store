@@ -1,12 +1,10 @@
 import {useState, useEffect} from 'react';
-
 const Slide = ({review, client}) => (
-  <div className="text-center text-black w-[80%] mx-auto">
-    <p className="text-2xl font-custom">{review}</p>
-    <p className="text-sm font-custom">- {client}</p>
+  <div className="text-center text-black w-[80%] h-40 mx-auto">
+    <p className="text-2xl font-custom sm:text-lg lg:text-2xl">{review}</p>
+    <p className="font-custom text-lg sm:text-base lg:text-lg">- {client}</p>
   </div>
 );
-
 const Carousel = ({reviews}) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -28,7 +26,10 @@ const Carousel = ({reviews}) => {
 
   return (
     <>
-      <div className="relative w-[80%] h-64 overflow-hidden flex justify-center items-center mx-auto">
+      <div className="flex justify-center mt-10">
+        <h2 className="font-customSemiBold text-2xl">KIND WORDS</h2>
+      </div>
+      <div className="relative w-[70%] h-40 overflow-hidden flex justify-center items-center mx-auto">
         <button onClick={prevSlide} className="p-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
