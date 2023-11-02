@@ -335,11 +335,14 @@ function NoteForm() {
 
   return (
     <>
-      <p>
+      <p className="m-3 font-custom">
         Want to write a message for the giftcard or have any special requests
         for your order?
       </p>
-      <button onClick={getNoteValues} className="hover:cursor-pointer">
+      <button
+        onClick={getNoteValues}
+        className="hover:cursor-pointer m-3 rounded-2xl font-custom bg-teal border-2 border-teal p-3"
+      >
         Add message
       </button>
       <div
