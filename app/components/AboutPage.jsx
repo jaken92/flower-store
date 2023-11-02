@@ -9,7 +9,7 @@ export default function AboutPage({content, title}) {
       </section>
 
       <div class="p-4">
-        <div class="flex flex-col md:flex-row w-full p-4 md:p-20 mt-20">
+        <div class="flex flex-col md:flex-row w-full p-4 md:pl-10 md:pr-10 mt-10">
           <div class="w-full md:w-1/2 pt-20 pr-10">
             <h2 class="text-2xl font-bold mb-4 text-center font-custom">
               FLOWER JOURNEY
@@ -39,7 +39,7 @@ export default function AboutPage({content, title}) {
             </p>
           </div>
           <img
-            class="h-[500px] w-[500px] object-cover"
+            class="h-[600px] w-[50%] object-cover"
             src="../images/mouaAbtImg2.webp"
             alt="Your Image"
           />
@@ -47,14 +47,14 @@ export default function AboutPage({content, title}) {
       </div>
 
       <div class="p-4">
-        <div class="flex flex-col md:flex-row w-full p-4 md:p-20">
+        <div class="flex flex-col md:flex-row w-full p-4 md:pl-10 md:pr-10 mt-10">
           <img
-            class="object-contain w-full h-1/2"
+            class="object-cover w-[50%]"
             src="../images/example.webp"
             alt="Your Image"
           />
           <div class="w-full md:w-1/2 justify-center pl-10 mb-20">
-            <h1 class="text-2xl font-bold mb-4 text-center font-custom">
+            <h1 class="text-2xl font-bold mb-4  mt-10 text-center font-custom">
               WHO ARE WE
             </h1>
             <p class="text-gray-500 text-lg font-custom mt-2">
