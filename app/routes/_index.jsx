@@ -19,6 +19,16 @@ const reviews = [
       'Excellent cause but above all, the quality of the arrangements are elegant and fine. They take into account all the specifications to create unique arrangements.',
     client: 'Casandra',
   },
+  {
+    review:
+      'She loved the flowers! and her daughter was very excited about them too. Thank you for the excellent costum service and for fulfilling my order so perfectly. ',
+    client: 'Anaya',
+  },
+  {
+    review:
+      'Again, your flower arrangements is so unique and all flowers you choose have lovely color and beautiful unique shape. It is a joy to look at them.',
+    client: 'Xiaoyang',
+  },
 ];
 
 export default function Index() {
