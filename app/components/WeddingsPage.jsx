@@ -40,7 +40,7 @@ export default function WeddingsPage() {
         <img
           className="  md:w-[40%] md:mt-7 md:h-[30%] h-[500px]  object-cover "
           src="../images/testwedding.webp"
-          alt="Your Image"
+          alt="two people getting married, wedding, standing on and in front of a stone-wall holding a wedding-bouqet"
         />
       </div>
       <div className="flex flex-col md:flex-row gap-20 md:pl-20 md:pr-10 p-8">
@@ -53,7 +53,7 @@ export default function WeddingsPage() {
           <img
             className="  md:h-[40%] h-[500px]  object-cover "
             src="../images/weddingtest2.webp"
-            alt="Your Image"
+            alt=""
           />
           <img
             className=" hidden md:flex md:w-[100%] md:h-[30%] h-[500px]  object-cover "

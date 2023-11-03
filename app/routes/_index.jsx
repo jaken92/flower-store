@@ -41,7 +41,7 @@ export default function Index() {
             src="./images/heroes/flowerHero.jpg"
           ></img>
           <img
-            className="h-[580px] w-580px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+            className="md:h-[580px] md:w-580px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
             src="../images/WhiteLogoNoBackground.png"
             alt=""
           />
