@@ -23,6 +23,7 @@ export function Aside({children, heading, id = 'aside'}) {
           <h3>{heading}</h3>
           <CloseAside />
         </header>
+
         <main>{children}</main>
       </aside>
     </div>
