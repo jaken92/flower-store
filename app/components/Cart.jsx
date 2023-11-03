@@ -39,7 +39,7 @@ function CartLines({lines, layout}) {
   if (!lines) return null;
 
   return (
-    <div aria-labelledby="cart-lines">
+    <div className="custom-font" aria-labelledby="cart-lines">
       <ul>
         {lines.nodes.map((line) => (
           <CartLineItem key={line.id} line={line} layout={layout} />
@@ -78,7 +78,7 @@ function CartLineItem({layout, line}) {
             }
           }}
         >
-          <p>
+          <p className="font-custom">
             <strong>{product.title}</strong>
           </p>
         </Link>
@@ -86,10 +86,10 @@ function CartLineItem({layout, line}) {
 
         {!selectedOptions.some((option) => option.name == 'Title') && (
           //temporary solution, implementing check on name for title, since its the default name for products without options.
-          <ul>
+          <ul className="font-custom">
             {selectedOptions.map((option) => (
               <li key={option.name}>
-                <small>
+                <small className="font-custom">
                   {option.name}: {option.value}
                 </small>
               </li>
@@ -109,7 +109,7 @@ function CartCheckoutActions({checkoutUrl}) {
   return (
     <div>
       <a href={checkoutUrl} target="_self">
-        <button className="rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3">
+        <button className="rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3 shadow-md">
           Checkout &rarr;
         </button>
         {/* <p className="font-custom">Continue to Checkout &rarr;</p> */}
@@ -150,7 +150,14 @@ function CartLineRemoveButton({lineIds}) {
       action={CartForm.ACTIONS.LinesRemove}
       inputs={{lineIds}}
     >
-      <button type="submit">Remove</button>
+      <small>
+        <button
+          className="ml-3 rounded-2xl font-custom bg-teal border-2 border-teal p-[4px] text-xs shadow-md "
+          type="submit"
+        >
+          Remove
+        </button>
+      </small>
     </CartForm>
   );
 }
@@ -204,7 +211,12 @@ function CartLinePrice({line, priceType = 'regular', ...passthroughProps}) {
 
   return (
     <div>
-      <Money withoutTrailingZeros {...passthroughProps} data={moneyV2} />
+      <Money
+        className="font-custom"
+        withoutTrailingZeros
+        {...passthroughProps}
+        data={moneyV2}
+      />
     </div>
   );
 }
@@ -351,7 +363,7 @@ function NoteForm() {
       </p>
       <button
         onClick={getNoteValues}
-        className="hover:cursor-pointer rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3 "
+        className="hover:cursor-pointer rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3 shadow-md"
       >
         {saveNote ? 'Edit Message' : 'Add Message'}
       </button>
@@ -393,7 +405,7 @@ function NoteForm() {
               <div className="flex justify-center">
                 <button
                   onClick={saveNoteMessage}
-                  className="rounded-2xl font-custom bg-teal border-2 border-teal p-3 mt-4"
+                  className="rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3 shadow-md active:shadow-none"
                 >
                   Update note
                 </button>
