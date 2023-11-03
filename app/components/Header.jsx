@@ -69,7 +69,7 @@ export function HeaderMenu({menu, viewport}) {
               onClick={() => setIsDropdownVisible(!isDropdownVisible)}
               key={item.id}
             >
-              {item.title + `${isDropdownVisible ? ' -' : ' +'}`}
+              <h2>{item.title + `${isDropdownVisible ? ' -' : ' +'}`}</h2>
               <div
                 className={`submenu-wrapper ${
                   isDropdownVisible ? 'shown' : ''
@@ -84,7 +84,7 @@ export function HeaderMenu({menu, viewport}) {
                       ? new URL(submenu.url).pathname
                       : submenu.url;
                   return (
-                    <h1 key={submenu.id}>
+                    <h3 key={submenu.id}>
                       <NavLink
                         className="submenu-item"
                         onClick={closeAside}
@@ -94,7 +94,7 @@ export function HeaderMenu({menu, viewport}) {
                       >
                         {submenu.title}
                       </NavLink>
-                    </h1>
+                    </h3>
                   );
                 })}
               </div>

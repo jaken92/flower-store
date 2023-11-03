@@ -226,14 +226,15 @@ aside li {
 .header-menu-mobile .submenu-wrapper {
   background-color: var(--pink);
 }
+.header-menu-mobile .submenu-wrapper h3 {
+  padding-left: 20px;
+}
 
 .header-menu-mobile .header-menu-item {
   color: black;
   font-size: 20px;
 }
-.header-menu-mobile .header-menu-item:hover {
-  background-color: var(--color-teal);
-}
+
 .header-menu-desktop {
   display: none;
   grid-gap: 1rem;
