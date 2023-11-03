@@ -34,10 +34,10 @@ const reviews = [
 export default function Index() {
   return (
     <>
-      <section className="w-full gap-4">
+      <section className="md:w-full gap-4">
         <div className="relative">
           <img
-            className="w-full h-screen object-cover"
+            className="md:w-full md:h-screen object-cover"
             src="./images/heroes/flowerHero.jpg"
           ></img>
           <img

@@ -3,9 +3,9 @@ import Button from './ButtonContact';
 export default function WeddingsPage() {
   return (
     <>
-      <section className="w-full gap-4">
+      <section className="md:w-full gap-4">
         <img
-          className="w-full h-screen object-cover"
+          className="md:w-full md:h-screen object-cover"
           src="../images/heroes/weddinghero.webp"
         ></img>
       </section>
@@ -78,7 +78,7 @@ export default function WeddingsPage() {
           src="../images/bigweddingtest.webp"
         ></img>
         <div className="absolute md:top-[20%] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <Button linkTo="pages/contact" text="GET IN CONTACT"></Button>
+          <Button linkTo="/pages/contact" text="GET IN CONTACT"></Button>
         </div>
       </section>
     </>
