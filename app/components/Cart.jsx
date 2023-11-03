@@ -336,7 +336,7 @@ function NoteForm() {
   return (
     <>
       <div onClick={getNoteValues} className="hover:cursor-pointer">
-        Toggle Note
+        show Note
       </div>
       <div
         style={{
