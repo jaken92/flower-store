@@ -291,6 +291,7 @@ function CartLineUpdateButton({children, lines}) {
 function NoteForm() {
   const [positionLeft, setPositionLeft] = useState(`${6000}px`);
   const [showNote, setShowNote] = useState(false);
+  const [saveNote, setSaveNote] = useState(false);
 
   //Workaround for "window is not defined error"
   if (typeof window !== 'undefined') {
@@ -333,11 +334,22 @@ function NoteForm() {
     setShowNote(!showNote);
   }
 
+  function saveNoteMessage() {
+    setSaveNote(true);
+  }
+
   return (
     <>
-      <div onClick={getNoteValues} className="hover:cursor-pointer">
-        show Note
-      </div>
+      <p className="font-custom m-3">
+        Add a message to the gift card or write any special requests for your
+        order:{' '}
+      </p>
+      <button
+        onClick={getNoteValues}
+        className="hover:cursor-pointer rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3 "
+      >
+        {saveNote ? 'Edit Message' : 'Add Message'}
+      </button>
       <div
         style={{
           position: 'fixed',
@@ -374,7 +386,10 @@ function NoteForm() {
               />
 
               <div className="flex justify-center">
-                <button className="rounded-2xl font-custom bg-teal border-2 border-teal p-3 mt-4">
+                <button
+                  onClick={saveNoteMessage}
+                  className="rounded-2xl font-custom bg-teal border-2 border-teal p-3 mt-4"
+                >
                   Update note
                 </button>
               </div>
