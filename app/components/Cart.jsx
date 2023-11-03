@@ -5,13 +5,13 @@ import {useState, useEffect} from 'react';
 
 export function CartMain({layout, cart}) {
   const linesCount = Boolean(cart?.lines?.nodes?.length || 0);
-  const withDiscount =
-    cart &&
-    Boolean(cart.discountCodes.filter((code) => code.applicable).length);
-  const className = `cart-main ${withDiscount ? 'with-discount' : ''}`;
+  // const withDiscount =
+  //   cart &&
+  //   Boolean(cart.discountCodes.filter((code) => code.applicable).length);
+  // const className = `cart-main ${withDiscount ? 'with-discount' : ''}`;
 
   return (
-    <div className={className}>
+    <div className="cart-main">
       <CartEmpty hidden={linesCount} layout={layout} />
       <CartDetails cart={cart} layout={layout} />
     </div>
@@ -27,7 +27,7 @@ function CartDetails({layout, cart}) {
       <NoteForm notes={cart?.notes} />
       {cartHasItems && (
         <CartSummary cost={cart.cost} layout={layout}>
-          <CartDiscounts discountCodes={cart.discountCodes} />
+          {/* <CartDiscounts discountCodes={cart.discountCodes} /> */}
           <CartCheckoutActions checkoutUrl={cart.checkoutUrl} />
         </CartSummary>
       )}
@@ -109,7 +109,10 @@ function CartCheckoutActions({checkoutUrl}) {
   return (
     <div>
       <a href={checkoutUrl} target="_self">
-        <p>Continue to Checkout &rarr;</p>
+        <button className="rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3">
+          Checkout &rarr;
+        </button>
+        {/* <p className="font-custom">Continue to Checkout &rarr;</p> */}
       </a>
       <br />
     </div>
@@ -122,17 +125,19 @@ export function CartSummary({cost, layout, children = null}) {
 
   return (
     <div aria-labelledby="cart-summary" className={className}>
-      <h4>Totals</h4>
-      <dl className="cart-subtotal">
-        <dt>Subtotal</dt>
-        <dd>
+      {/* <h4 className="font-custom">Totals: </h4> */}
+      <div className="cart-subtotal ">
+        <div className="font-custom ml-3" style={{whiteSpace: 'pre-wrap'}}>
+          Total:{' '}
+        </div>
+        <p className="font-custom">
           {cost?.subtotalAmount?.amount ? (
             <Money data={cost?.subtotalAmount} />
           ) : (
             '-'
           )}
-        </dd>
-      </dl>
+        </p>
+      </div>
       {children}
     </div>
   );
@@ -227,39 +232,39 @@ export function CartEmpty({hidden = false, layout = 'aside'}) {
   );
 }
 
-function CartDiscounts({discountCodes}) {
-  const codes =
-    discountCodes
-      ?.filter((discount) => discount.applicable)
-      ?.map(({code}) => code) || [];
+// function CartDiscounts({discountCodes}) {
+//   const codes =
+//     discountCodes
+//       ?.filter((discount) => discount.applicable)
+//       ?.map(({code}) => code) || [];
 
-  return (
-    <div>
-      {/* Have existing discount, display it with a remove option */}
-      <dl hidden={!codes.length}>
-        <div>
-          <dt>Discount(s)</dt>
-          <UpdateDiscountForm>
-            <div className="cart-discount">
-              <code>{codes?.join(', ')}</code>
-              &nbsp;
-              <button>Remove</button>
-            </div>
-          </UpdateDiscountForm>
-        </div>
-      </dl>
+//   return (
+//     <div>
+//       {/* Have existing discount, display it with a remove option */}
+//       <dl hidden={!codes.length}>
+//         <div>
+//           <dt>Discount(s)</dt>
+//           <UpdateDiscountForm>
+//             <div className="cart-discount">
+//               <code>{codes?.join(', ')}</code>
+//               &nbsp;
+//               <button>Remove</button>
+//             </div>
+//           </UpdateDiscountForm>
+//         </div>
+//       </dl>
 
-      {/* Show an input to apply a discount */}
-      <UpdateDiscountForm discountCodes={codes}>
-        <div>
-          <input type="text" name="discountCode" placeholder="Discount code" />
-          &nbsp;
-          <button type="submit">Apply</button>
-        </div>
-      </UpdateDiscountForm>
-    </div>
-  );
-}
+//       {/* Show an input to apply a discount */}
+//       <UpdateDiscountForm discountCodes={codes}>
+//         <div>
+//           <input type="text" name="discountCode" placeholder="Discount code" />
+//           &nbsp;
+//           <button type="submit">Apply</button>
+//         </div>
+//       </UpdateDiscountForm>
+//     </div>
+//   );
+// }
 
 function UpdateDiscountForm({discountCodes, children}) {
   return (
