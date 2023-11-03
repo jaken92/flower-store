@@ -152,7 +152,7 @@ function CartLineRemoveButton({lineIds}) {
     >
       <small>
         <button
-          className="ml-3 rounded-2xl font-custom bg-teal border-2 border-teal p-[4px] text-xs shadow-md "
+          className="ml-3 rounded-2xl font-custom bg-teal border-2 border-teal p-[4px] text-xs shadow-md active:shadow-none "
           type="submit"
         >
           Remove
@@ -363,7 +363,7 @@ function NoteForm() {
       </p>
       <button
         onClick={getNoteValues}
-        className="hover:cursor-pointer rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3 shadow-md"
+        className="hover:cursor-pointer rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3 shadow-md active:shadow-none"
       >
         {saveNote ? 'Edit Message' : 'Add Message'}
       </button>

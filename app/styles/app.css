@@ -27,6 +27,11 @@ img {
   border-radius: 4px;
 }
 
+@media screen and (max-width: 768px) {
+  :root {
+    --aside-width: 100vw;
+  }
+}
 /*
 * --------------------------------------------------
 * components/Aside
@@ -207,7 +212,7 @@ aside li {
 }
 .header-menu-mobile-toggle {
   display: none;
-  @media (max-width: 48em) {
+  @media (max-width: 768px) {
     display: block; /* or any other styles you want for mobile */
   }
 }
@@ -218,6 +223,17 @@ aside li {
   grid-gap: 1rem;
 }
 
+.header-menu-mobile .submenu-wrapper {
+  background-color: var(--pink);
+}
+
+.header-menu-mobile .header-menu-item {
+  color: black;
+  font-size: 20px;
+}
+.header-menu-mobile .header-menu-item:hover {
+  background-color: var(--color-teal);
+}
 .header-menu-desktop {
   display: none;
   grid-gap: 1rem;

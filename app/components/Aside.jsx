@@ -8,7 +8,29 @@
  * </Aside>
  * ```
  */
+
+import React, {useState, useEffect} from 'react';
 export function Aside({children, heading, id = 'aside'}) {
+  // const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  // useEffect(() => {
+  //   // Update the viewport width when the window is resized
+  //   const handleResize = () => {
+  //     setViewportWidth(window.innerWidth);
+  //   };
+
+  //   // Add event listener for window resize
+  //   window.addEventListener('resize', handleResize);
+
+  //   // Clean up the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []); // Empty dependency array ensures the effect runs once after initial render
+
+  // const maxWidth = 768; // Set your desired maximum width
+  // const shouldApplyStyles = viewportWidth < maxWidth;
+
   return (
     <div aria-modal className="overlay" id={id} role="dialog">
       <button
