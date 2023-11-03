@@ -67,7 +67,7 @@ export default function SubscriptionsPage() {
             alt="Your Image"
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <Button linkTo="/pages/contact" text="GET IN CONTACT" />
+            <Button linkTo="/pages/contact" text="INQUIRE" />
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@ export default function SubscriptionsPage() {
             alt="Your Image"
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <Button linkTo="/pages/contact" text="GET IN CONTACT" />
+            <Button linkTo="/pages/contact" text="INQUIRE" />
           </div>
         </div>
         <div className="w-full md:w-[50%]  md:pt-20 ">
