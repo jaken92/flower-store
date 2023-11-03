@@ -1,4 +1,6 @@
-export default function WeddingsPage({content, title}) {
+import Button from './ButtonContact';
+
+export default function WeddingsPage() {
   return (
     <>
       <section className="w-full gap-4">
@@ -8,11 +10,11 @@ export default function WeddingsPage({content, title}) {
         ></img>
       </section>
 
-      <h2 className="font-custom md:mt-10 md:text-3xl uppercase text-center">
+      <h2 className="font-custom mt-5 md:mt-10 md:text-3xl text-2xl uppercase text-center">
         Wedding floral design
       </h2>
       <div className="flex flex-col md:pl-20 md:pr-20 justify-center md:gap-20 md:flex-row w-full p-8 ">
-        <div className="w-full md:w-[30%]  pt-20 ">
+        <div className="w-full md:w-[30%]  md:pt-20 ">
           <p className="font-customSemiBold md:mt-10 text-center md:text-2xl ">
             {' '}
             We know how special this day is & we would love to be part of your
@@ -70,11 +72,14 @@ export default function WeddingsPage({content, title}) {
           day.
         </p>
       </div>
-      <section className="md:w-full gap-4">
+      <section className="md:w-full  gap-4 relative">
         <img
           className="md:w-full md:h-screen object-cover"
           src="../images/bigweddingtest.webp"
         ></img>
+        <div className="absolute md:top-[20%] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <Button linkTo="pages/contact" text="GET IN CONTACT"></Button>
+        </div>
       </section>
     </>
   );
