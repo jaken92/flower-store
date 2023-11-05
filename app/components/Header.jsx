@@ -124,10 +124,10 @@ function HeaderCtas({isLoggedIn, cart}) {
   return (
     <nav className="header-ctas" role="navigation">
       <HeaderMenuMobileToggle />
-      <NavLink prefetch="intent" to="/account" style={activeLinkStyle}>
+      {/* <NavLink prefetch="intent" to="/account" style={activeLinkStyle}>
         {isLoggedIn ? 'Account' : 'Sign in'}
-      </NavLink>
-      <SearchToggle />
+      </NavLink> */}
+      {/* <SearchToggle /> */}
       <CartToggle cart={cart} />
     </nav>
   );
@@ -141,12 +141,19 @@ function HeaderMenuMobileToggle() {
   );
 }
 
-function SearchToggle() {
-  return <a href="#search-aside">Search</a>;
-}
+// function SearchToggle() {
+//   return <a href="#search-aside">Search</a>;
+// }
 
 function CartBadge({count}) {
-  return <a href="#cart-aside">Cart {count}</a>;
+  return (
+    <a href="#cart-aside">
+      <div className="flex flex-row">
+        <img className="h-[25px]" src="./images/cartSymbol.png"></img>
+        <p>{count}</p>
+      </div>
+    </a>
+  );
 }
 
 function CartToggle({cart}) {
