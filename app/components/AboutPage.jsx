@@ -1,4 +1,4 @@
-export default function AboutPage({content, title}) {
+export default function AboutPage({content, title, secondaryContent}) {
   return (
     <>
       <section className="w-full gap-4">
@@ -7,6 +7,7 @@ export default function AboutPage({content, title}) {
           src="../images/heroes/flowerHero.jpg"
         ></img>
       </section>
+      <h2>{secondaryContent}</h2>
 
       <div className="flex flex-col md:flex-wrap md:flex-row w-full p-8 ">
         <div className="w-full pt-20 ">

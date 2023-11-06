@@ -26,16 +26,28 @@ export async function loader({params, context}) {
 export default function Page() {
   const {page} = useLoaderData();
   const location = useLocation();
-  console.log(page);
+
+  const secondaryContent = page.secondaryField
+    ? page.secondaryField.value
+    : null;
 
   return (
     <>
       {location.pathname === '/pages/about' ? (
-        <AboutPage content={page.body} title={page.title} img={page.image} />
+        <AboutPage
+          content={page.body}
+          title={page.title}
+          img={page.image}
+          secondaryContent={secondaryContent}
+        />
       ) : location.pathname === '/pages/contact' ? (
         <ContactPage content={page.body} title={page.title} />
       ) : location.pathname === '/pages/weddings' ? (
-        <WeddingsPage content={page.body} title={page.title} />
+        <WeddingsPage
+          content={page.body}
+          title={page.title}
+          secondaryContent={secondaryContent}
+        />
       ) : location.pathname === '/pages/subscriptions' ? (
         <SubscriptionsPage content={page.body} title={page.title} />
       ) : (
@@ -52,7 +64,7 @@ const PAGE_QUERY = `#graphql
     query PageDetails($language: LanguageCode, $handle: String!)
     @inContext(language: $language) {
       page(handle: $handle) {
-        secondaryField: metafield(namespace: "custom.secondaryfield", key: "custom.secondaryfield") {
+        secondaryField: metafield(namespace: "custom", key: "secondaryfield") {
           value
           type
           description

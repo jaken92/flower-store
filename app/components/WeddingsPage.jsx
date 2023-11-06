@@ -1,6 +1,6 @@
 import Button from './ButtonContact';
 
-export default function WeddingsPage() {
+export default function WeddingsPage(secondaryContent) {
   return (
     <>
       <section className="md:w-full gap-4">
