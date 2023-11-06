@@ -26,6 +26,7 @@ export async function loader({params, context}) {
 export default function Page() {
   const {page} = useLoaderData();
   const location = useLocation();
+  console.log(page);
 
   return (
     <>
@@ -51,6 +52,11 @@ const PAGE_QUERY = `#graphql
     query PageDetails($language: LanguageCode, $handle: String!)
     @inContext(language: $language) {
       page(handle: $handle) {
+        secondaryField: metafield(namespace: "custom.secondaryfield", key: "custom.secondaryfield") {
+          value
+          type
+          description
+        }
         id
         title
         body
