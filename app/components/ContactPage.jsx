@@ -12,27 +12,27 @@ export default function ContactPage({content, title}) {
   //   console.log(myForm.number.value);
   // };
 
-  const onSubmitform = async (event) => {
-    event.preventDefault();
-    const myForm = document.getElementById('contactForm');
+  // const onSubmitform = async (event) => {
+  //   event.preventDefault();
+  //   const myForm = document.getElementById('contactForm');
 
-    const name = myForm.name.value;
-    const email = myForm.email.value;
-    const message = myForm.message.value;
+  //   const name = myForm.name.value;
+  //   const email = myForm.email.value;
+  //   const message = myForm.message.value;
 
-    const response = await fetch('/ContactFormHandler.server.js', {
-      method: 'POST',
-      body: new FormData(myForm),
-    });
+  //   const response = await fetch('/ContactFormHandler.server.js', {
+  //     method: 'POST',
+  //     body: new FormData(myForm),
+  //   });
 
-    const data = await response.json();
+  //   const data = await response.json();
 
-    if (data.status === 'success') {
-      // TODO: Display a success message
-    } else {
-      // TODO: Display an error message
-    }
-  };
+  //   if (data.status === 'success') {
+  //     // TODO: Display a success message
+  //   } else {
+  //     // TODO: Display an error message
+  //   }
+  // };
 
   return (
     <section className="bg-white dark:bg-gray-900">
@@ -53,10 +53,10 @@ export default function ContactPage({content, title}) {
           PICK-UP + DELIVERIES: MONDAY - FRIDAY
         </p>
         <form
-          onSubmit={onSubmitform}
-          id="contactForm"
+          // onSubmit={onSubmitform}
+          // id="contactForm"
           className="space-y-8"
-          action="/ContactFormHandler"
+          action="/contactForm"
           method="POST"
         >
           <div>
