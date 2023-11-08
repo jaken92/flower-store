@@ -3,28 +3,61 @@
 import {Form} from '@remix-run/react';
 // import {ActionFunction} from '@shopify/remix-oxygen';
 
+// export async function action({request, context}) {
+//   const apiKey = context.env.PUBLIC_MAILJET_API_KEY;
+//   const secretKey = context.env.SECRET_MAILJET_KEY;
+//   console.log(secretKey);
+//   console.log(apiKey);
+//   const formData = await request.formData();
+//   const email = formData.get('email');
+//   console.log(email);
+//   console.log(apiKey);
+//   // console.log(formData);
+
+//   const data = Object.fromEntries(formData);
+//   // console.log(JSON.stringify(data));
+//   // const response = await fetch('https://api.example.com/submit', {
+//   //   method: 'POST',
+//   //   headers: {
+//   //     'Content-Type': 'Header',
+//   //   },
+//   //   body: JSON.stringify(data),
+//   // });
+//   // return response.json();
+//   return null;
+// }
+
 export async function action({request, context}) {
   const apiKey = context.env.PUBLIC_MAILJET_API_KEY;
   const secretKey = context.env.SECRET_MAILJET_KEY;
-  console.log(secretKey);
-  console.log(apiKey);
-  const formData = await request.formData();
-  const email = formData.get('email');
-  console.log(email);
-  console.log(apiKey);
-  // console.log(formData);
 
-  const data = Object.fromEntries(formData);
-  // console.log(JSON.stringify(data));
-  // const response = await fetch('https://api.example.com/submit', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'Header',
-  //   },
-  //   body: JSON.stringify(data),
-  // });
-  // return response.json();
-  return null;
+  const formData = await request.formData();
+
+  const data = {
+    Messages: [
+      {
+        From: {Email: 'jaaakeeen@gmail.com', Name: 'Sender'},
+        To: [{Email: formData.get('email'), Name: formData.get('name')}],
+        Subject: 'Hello',
+        TextPart: 'Hello, this is the email content.',
+        HTMLPart: '<h1>Hello, this is the email content.</h1>',
+      },
+    ],
+  };
+
+  const response = await fetch('https://api.mailjet.com/v3.1/send', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Basic ${btoa(`${apiKey}:${secretKey}`)}`,
+    },
+    body: JSON.stringify(data),
+  });
+
+  const responseData = await response.json();
+  console.log(responseData);
+
+  return responseData;
 }
 
 export default function MyForm() {
