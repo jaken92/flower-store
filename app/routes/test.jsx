@@ -36,11 +36,21 @@ export async function action({request, context}) {
   const data = {
     Messages: [
       {
-        From: {Email: 'jaaakeeen@gmail.com', Name: 'Sender'},
-        To: [{Email: formData.get('email'), Name: formData.get('name')}],
-        Subject: 'Hello',
-        TextPart: 'Hello, this is the email content.',
-        HTMLPart: '<h1>Hello, this is the email content.</h1>',
+        From: {Email: 'jaaakeeen@gmail.com', Name: formData.get('name')},
+        To: [{Email: 'petjak0627@skola.goteborg.se', Name: 'Ana Laura'}],
+        Subject: 'Inquiry from contact form',
+        TextPart: `name: ${formData.get('name')} email: ${formData.get(
+          'email',
+        )} phone: ${formData.get('number')} message: ${formData.get(
+          'message',
+        )}`,
+        HTMLPart: `
+          <h3>Message from: ${formData.get('name')}</p>
+          <h3>Email: ${formData.get('email')}</p>
+          <h3>Phone-number: ${formData.get('number')}</p>
+          <p>Message: ${formData.get('message')}</p>
+
+        `,
       },
     ],
   };
