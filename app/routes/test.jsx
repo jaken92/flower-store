@@ -1,6 +1,6 @@
 import {Form} from '@remix-run/react';
 
-//single page for contact without rendering it as a component. Not used, saved for backup
+//single page for contact without rendering it as a component. Not used, saved for back
 export async function action({request, context}) {
   const apiKey = context.env.PUBLIC_MAILJET_API_KEY;
   const secretKey = context.env.SECRET_MAILJET_KEY;

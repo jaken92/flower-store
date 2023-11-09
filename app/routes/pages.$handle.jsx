@@ -5,7 +5,7 @@ import WeddingsPage from '~/components/WeddingsPage';
 import SubscriptionsPage from '~/components/SubscriptionsPage';
 import ContactPage from '~/components/ContactPage';
 
-//action only used from contactPage component
+//action called from contactPage component upon form submission.
 
 export async function action({request, context}) {
   const apiKey = context.env.PUBLIC_MAILJET_API_KEY;
@@ -13,22 +13,24 @@ export async function action({request, context}) {
 
   const formData = await request.formData();
 
+  //trimming inputs
+  const name = formData.get('name').trim();
+  const email = formData.get('email').trim();
+  const phonenumber = formData.get('phonenumber').trim();
+  const message = formData.get('message').trim();
+
   const data = {
     Messages: [
       {
-        From: {Email: 'jaaakeeen@gmail.com', Name: formData.get('name')},
+        From: {Email: 'jaaakeeen@gmail.com', Name: name},
         To: [{Email: 'petjak0627@skola.goteborg.se', Name: 'Ana Laura'}],
         Subject: 'Inquiry from contact form',
-        TextPart: `name: ${formData.get('name')} email: ${formData.get(
-          'email',
-        )} phone: ${formData.get('number')} message: ${formData.get(
-          'message',
-        )}`,
+        TextPart: `name: ${name} email: ${email} phone: ${phonenumber} message: ${message}`,
         HTMLPart: `
-          <h3>Message from: ${formData.get('name')}</p>
-          <h3>Email: ${formData.get('email')}</p>
-          <h3>Phone-number: ${formData.get('number')}</p>
-          <p>Message: ${formData.get('message')}</p>
+          <h3>Message from: ${name}</p>
+          <h3>Email: ${email}</p>
+          <h3>Phone-number: ${phonenumber}</p>
+          <p>Message: ${message}</p>
 
         `,
       },
