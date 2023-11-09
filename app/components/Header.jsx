@@ -19,6 +19,7 @@ export function Header({header, isLoggedIn, cart}) {
         <img
           className="h-[80px] opacity-100"
           src="../images/MouaLogo.png"
+          alt="cart-logo"
         ></img>
       </NavLink>
       <HeaderMenu menu={menu} viewport="desktop" />
