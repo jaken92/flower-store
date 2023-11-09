@@ -49,7 +49,11 @@ export async function action({request, context}) {
   const responseData = await response.json();
   console.log(responseData);
 
-  return responseData;
+  //response string for prod url
+  //const url = new URL(request.url);
+  //`${url.protocol}//${url.hostname}/formSubmitted`
+
+  return Response.redirect('http://localhost:3000/formSubmitted');
 }
 
 //dont forget to send SEO(see collections)
