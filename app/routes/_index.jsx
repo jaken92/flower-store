@@ -39,11 +39,12 @@ export default function Index() {
           <img
             className="md:w-full md:h-screen object-cover"
             src="./images/heroes/flowerHero.jpg"
+            alt="hero image with flowers on a table"
           ></img>
           <img
             className="md:h-[580px] md:w-580px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
             src="../images/WhiteLogoNoBackground.png"
-            alt=""
+            alt="Moua flowers with a cause"
           />
         </div>
       </section>
