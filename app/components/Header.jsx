@@ -149,7 +149,7 @@ function CartBadge({count}) {
   return (
     <a href="#cart-aside">
       <div className="flex flex-row">
-        <img className="h-[25px]" src="./images/cartSymbol.png"></img>
+        <img className="h-[25px]" src="../images/cartSymbol.png"></img>
         <p>{count}</p>
       </div>
     </a>

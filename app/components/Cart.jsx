@@ -130,13 +130,14 @@ export function CartSummary({cost, layout, children = null}) {
         <div className="font-custom ml-3" style={{whiteSpace: 'pre-wrap'}}>
           Total:{' '}
         </div>
-        <p className="font-custom">
+        {/* ändrade från p tag till div tag pga många felmeddelande consolen, verkar funka likadnt */}
+        <div className="font-custom">
           {cost?.subtotalAmount?.amount ? (
             <Money data={cost?.subtotalAmount} />
           ) : (
             '-'
           )}
-        </p>
+        </div>
       </div>
       {children}
     </div>
