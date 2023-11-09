@@ -32,7 +32,7 @@ const Carousel = ({reviews}) => {
         </h2>
       </div>
       <div className="relative md:w-[70%] h-40 overflow-hidden flex justify-center items-center mx-auto">
-        <button onClick={prevSlide} className="p-2">
+        <button onClick={prevSlide} className="p-2" aria-label="PreviousSlide">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -58,7 +58,7 @@ const Carousel = ({reviews}) => {
               />
             ),
         )}
-        <button onClick={nextSlide} className="p-2">
+        <button onClick={nextSlide} className="p-2" aria-label="NextSlide">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
