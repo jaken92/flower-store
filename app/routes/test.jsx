@@ -1,35 +1,10 @@
-// import {json} from '@shopify/remix-oxygen';
-// import {redirect} from '@shopify/remix-oxygen';
 import {Form} from '@remix-run/react';
-// import {ActionFunction} from '@shopify/remix-oxygen';
 
-// export async function action({request, context}) {
-//   const apiKey = context.env.PUBLIC_MAILJET_API_KEY;
-//   const secretKey = context.env.SECRET_MAILJET_KEY;
-//   console.log(secretKey);
-//   console.log(apiKey);
-//   const formData = await request.formData();
-//   const email = formData.get('email');
-//   console.log(email);
-//   console.log(apiKey);
-//   // console.log(formData);
-
-//   const data = Object.fromEntries(formData);
-//   // console.log(JSON.stringify(data));
-//   // const response = await fetch('https://api.example.com/submit', {
-//   //   method: 'POST',
-//   //   headers: {
-//   //     'Content-Type': 'Header',
-//   //   },
-//   //   body: JSON.stringify(data),
-//   // });
-//   // return response.json();
-//   return null;
-// }
-
+//single page for contact without rendering it as a component. Not used, saved for backup
 export async function action({request, context}) {
   const apiKey = context.env.PUBLIC_MAILJET_API_KEY;
   const secretKey = context.env.SECRET_MAILJET_KEY;
+  console.log('Action component called');
 
   const formData = await request.formData();
 

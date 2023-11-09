@@ -5,6 +5,51 @@ import WeddingsPage from '~/components/WeddingsPage';
 import SubscriptionsPage from '~/components/SubscriptionsPage';
 import ContactPage from '~/components/ContactPage';
 
+//action only used from contactPage component
+
+export async function action({request, context}) {
+  const apiKey = context.env.PUBLIC_MAILJET_API_KEY;
+  const secretKey = context.env.SECRET_MAILJET_KEY;
+
+  const formData = await request.formData();
+
+  const data = {
+    Messages: [
+      {
+        From: {Email: 'jaaakeeen@gmail.com', Name: formData.get('name')},
+        To: [{Email: 'petjak0627@skola.goteborg.se', Name: 'Ana Laura'}],
+        Subject: 'Inquiry from contact form',
+        TextPart: `name: ${formData.get('name')} email: ${formData.get(
+          'email',
+        )} phone: ${formData.get('number')} message: ${formData.get(
+          'message',
+        )}`,
+        HTMLPart: `
+          <h3>Message from: ${formData.get('name')}</p>
+          <h3>Email: ${formData.get('email')}</p>
+          <h3>Phone-number: ${formData.get('number')}</p>
+          <p>Message: ${formData.get('message')}</p>
+
+        `,
+      },
+    ],
+  };
+
+  const response = await fetch('https://api.mailjet.com/v3.1/send', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Basic ${btoa(`${apiKey}:${secretKey}`)}`,
+    },
+    body: JSON.stringify(data),
+  });
+
+  const responseData = await response.json();
+  console.log(responseData);
+
+  return responseData;
+}
+
 //dont forget to send SEO(see collections)
 export async function loader({params, context}) {
   const {handle} = params;
