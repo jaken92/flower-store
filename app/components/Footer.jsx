@@ -33,21 +33,26 @@ function FooterMenu({menu}) {
               {item.title}
             </a>
           ) : (
-            <div className="flex flex-col md:flex-row">
-              <NavLink
-                end
-                key={item.id}
-                prefetch="intent"
-                to={url}
-                style={activeLinkStyle}
-                className="text-black hover:text-gray-500"
-              >
-                {item.title}
-              </NavLink>
-            </div>
+            <NavLink
+              end
+              key={item.id}
+              prefetch="intent"
+              to={url}
+              style={activeLinkStyle}
+            >
+              {item.title}
+            </NavLink>
           );
         })}
       </nav>
+      <div className="footer-container gap-4 md:m-10 m-4 md:w[50%]">
+        <a href="https://www.instagram.com/mouaflowerswithcause/">
+          <img src="../images/instagram.svg" className="w-8 md:w-10" />
+        </a>
+        <a href="https://www.facebook.com/mouaflowerswithcause">
+          <img src="../images/facebook.png" className=" w-8 md:w-10 " />
+        </a>
+      </div>
     </>
   );
 }
@@ -97,6 +102,6 @@ const FALLBACK_FOOTER_MENU = {
 function activeLinkStyle({isActive, isPending}) {
   return {
     fontWeight: isActive ? 'bold' : undefined,
-    color: isPending ? 'grey' : 'white',
+    color: isPending ? 'grey' : 'black',
   };
 }

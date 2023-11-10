@@ -259,9 +259,12 @@ aside li {
 * --------------------------------------------------
 */
 .footer {
-  background: var(--color-dark);
   margin-top: auto;
+  background-color: #FFF3F2;
+
 }
+
+
 
 .footer-menu-missing {
   display: inline-block;
@@ -272,13 +275,34 @@ aside li {
   align-items: center;
   display: flex;
   grid-gap: 1rem;
-  padding: 1rem;
-  background-color: #FFF3F2;
-}
+  padding: 3rem;
+  font-size:18px;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+    font-size:16px;
+   
 
-.footer-menu a {
-  color: black;
-}
+   }
+  }
+
+   .footer-container {
+    display: flex;
+    flex-direction:row;
+   justify-content: right;
+  
+   }
+
+   .footer a:hover {
+    text-decoration: underline;
+  
+   }
+
+
+
+
+
 
 
 /*
