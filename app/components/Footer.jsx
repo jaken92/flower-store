@@ -12,33 +12,43 @@ function FooterMenu({menu}) {
   const [root] = useMatches();
   const publicStoreDomain = root?.data?.publicStoreDomain;
   return (
-    <nav className="footer-menu" role="navigation">
-      {(menu || FALLBACK_FOOTER_MENU).items.map((item) => {
-        if (!item.url) return null;
-        // if the url is internal, we strip the domain
-        const url =
-          item.url.includes('myshopify.com') ||
-          item.url.includes(publicStoreDomain)
-            ? new URL(item.url).pathname
-            : item.url;
-        const isExternal = !url.startsWith('/');
-        return isExternal ? (
-          <a href={url} key={item.id} rel="noopener noreferrer" target="_blank">
-            {item.title}
-          </a>
-        ) : (
-          <NavLink
-            end
-            key={item.id}
-            prefetch="intent"
-            style={activeLinkStyle}
-            to={url}
-          >
-            {item.title}
-          </NavLink>
-        );
-      })}
-    </nav>
+    <>
+      <nav className="footer-menu" role="navigation">
+        {(menu || FALLBACK_FOOTER_MENU).items.map((item) => {
+          if (!item.url) return null;
+          // if the url is internal, we strip the domain
+          const url =
+            item.url.includes('myshopify.com') ||
+            item.url.includes(publicStoreDomain)
+              ? new URL(item.url).pathname
+              : item.url;
+          const isExternal = !url.startsWith('/');
+          return isExternal ? (
+            <a
+              href={url}
+              key={item.id}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {item.title}
+            </a>
+          ) : (
+            <div className="flex flex-col md:flex-row">
+              <NavLink
+                end
+                key={item.id}
+                prefetch="intent"
+                to={url}
+                style={activeLinkStyle}
+                className="text-black hover:text-gray-500"
+              >
+                {item.title}
+              </NavLink>
+            </div>
+          );
+        })}
+      </nav>
+    </>
   );
 }
 

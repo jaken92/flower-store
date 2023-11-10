@@ -273,11 +273,13 @@ aside li {
   display: flex;
   grid-gap: 1rem;
   padding: 1rem;
+  background-color: #FFF3F2;
 }
 
 .footer-menu a {
-  color: var(--color-light);
+  color: black;
 }
+
 
 /*
 * --------------------------------------------------
