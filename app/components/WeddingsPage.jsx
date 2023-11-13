@@ -49,14 +49,14 @@ export default function WeddingsPage(secondaryContent) {
           src="../images/testwedding3.png"
           alt="Your Image"
         />
-        <div className="flex md:w-[50%] gap-12 flex-col md:flex-col">
+        <div className="flex md:w-[50%] md:h-[50%] gap-12 flex-col md:flex-col">
           <img
             className="  md:h-[40%] h-[500px]  object-cover "
             src="../images/weddingtest2.webp"
             alt=""
           />
           <img
-            className=" hidden md:flex md:w-[100%] md:h-[30%] h-[500px]  object-cover "
+            className=" hidden md:flex md:w-[900px] md:h-[400px] h-[500px]  object-cover "
             src="../images/testbouqet.webp"
             alt="Your Image"
           />

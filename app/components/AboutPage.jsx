@@ -8,32 +8,34 @@ export default function AboutPage({content, title, secondaryContent}) {
         ></img>
       </section>
       <h2>{secondaryContent}</h2>
+      <div className="flex flex-col md:flex-wrap justify-center items-center md:flex-row w-full p-8 ">
+        <img
+          className=" md:w-[60%] w-[100%] h-[300px] rounded-full md:h-[400px] object-cover "
+          src="../images/mouaAbtImg2.webp"
+          alt="
+          Your Image"
+        />
 
-      <div className="flex flex-col md:flex-wrap md:flex-row w-full p-8 ">
-        <div className="w-full pt-20 ">
-          <h2 className="md:text-4xl font-bold uppercase text-center font-custom">
+        <div className="w-full md:pt-15 pt-10 ">
+          <h2 className="md:text-4xl text-3xl font-bold uppercase text-center font-custom">
             Ana Laura Galicia
           </h2>
-          <p className="font-custom text-center md:text-3xl uppercase ">
+          <p className="font-custom mb-1 text-center md:text-3xl text-2xl uppercase ">
             Founder/designer
           </p>
-          <div className="flex -8">
-            <p className="font-custom float-left md:text-2xl">
+          <div className="flex">
+            <p className="font-custom md:pt-6  text-gray-500 md:pl-10 md:pr-10 text-center text-lg md:text-2xl">
               Hey! My name is Ana and im the creator of Moua flowers with a
               cause. Flowers fill my soul & I passionatly design arrangment
               hoping to make you feel a sense of elegance, beauty and simplicity
               through flowers, while encourage & inspire you to help nature in
               the way i can
             </p>
-            <img
-              className=" md:w-[600px] float-right rounded-full md:h-[500px] object-cover "
-              src="../images/mouaAbtImg2.webp"
-              alt="Your Image"
-            />
           </div>
         </div>
       </div>
-
+      {/*ADD ANIMATION HERE IF WE HAVE THE TIME */}
+      <h2 className="center md: text-3xl">Flower Journey</h2>
       <div className="flex flex-col md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-8 ">
         <div className="w-full md:w-[50%]  pt-20 ">
           <h2 className="text-2xl font-bold  uppercase text-center font-custom">
@@ -69,7 +71,6 @@ export default function AboutPage({content, title, secondaryContent}) {
           alt="Your Image"
         />
       </div>
-
       <div className="flex flex-col-reverse md:pl-10 md:pr-10 md:gap-20 md:flex-row w-full p-8 mt-10">
         <img
           className="object-cover md:w-[50%] mt-4"

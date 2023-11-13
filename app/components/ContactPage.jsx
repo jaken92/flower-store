@@ -9,18 +9,29 @@ export default function MyForm() {
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
           Contact Us
         </h2>
-        <p className="mb-2 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+
+        <p className="mb-2  md:mb-3 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
           Want to talk with someone directly? Feel free to call or DM us through
           our social media . Our current hours are Monday - Saturday, 10AM -
           19:00PM.
         </p>
-        <p className="lg:mb-16 font-light  text-gray-500 dark:text-gray-400 sm:text-xl">
-          Number: (+46) 076. 748. 7401
-          <br></br>
-          Location: Göteborg, Sweden Högsbo 41111
-          <br></br>
-          PICK-UP + DELIVERIES: MONDAY - FRIDAY
-        </p>
+        <div className="flex flex-col md:mt-10 md:flex-row md:items-center md:justify-between mb-6">
+          <div className="flex flex-col">
+            <p className="font-light md:text-xl text-gray-500 dark:text-gray-400">
+              Number: (+46) 076. 748. 7401
+            </p>
+            <p className="font-light md:text-xl text-gray-500 dark:text-gray-400">
+              Location: Göteborg, Sweden Högsbo 41111
+            </p>
+            <p className="font-light md:text-xl text-gray-500 dark:text-gray-400">
+              PICK-UP + DELIVERIES: MONDAY - FRIDAY
+            </p>
+          </div>
+          <a href="https://www.instagram.com/mouaflowerswithcause/">
+            <img src="../images/instagram.svg" className="w-8 md:w-10" />
+          </a>
+        </div>
+
         <Form className="space-y-8" method="post">
           <div>
             <label
