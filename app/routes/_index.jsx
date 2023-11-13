@@ -58,7 +58,7 @@ export default function Index() {
         />
         <ImageLinkComponent
           text="Weddings"
-          imageSrc="./images/heroes/weddings.webp"
+          imageSrc="./images/heroes/weddings.jpg"
           linkTo="/pages/weddings"
           alt="a picture of two people that are getting married, the bride is carrying a bouquet of flowers"
           btnText="Learn more"

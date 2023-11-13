@@ -39,25 +39,25 @@ export default function WeddingsPage(secondaryContent) {
         </div>
         <img
           className="  md:w-[40%] md:mt-7 md:h-[30%] h-[500px]  object-cover "
-          src="../images/testwedding.webp"
+          src="../images/weddingCouple.jpg"
           alt="two people getting married, wedding, standing on and in front of a stone-wall holding a wedding-bouqet"
         />
       </div>
       <div className="flex flex-col md:flex-row gap-20 md:pl-20 md:pr-10 p-8">
         <img
           className="  md:w-[40%] md:h-[50%] h-[500px] object-cover "
-          src="../images/testwedding3.png"
+          src="../images/weddingBride.jpg"
           alt="Your Image"
         />
         <div className="flex md:w-[50%] md:h-[50%] gap-12 flex-col md:flex-col">
           <img
             className="  md:h-[40%] h-[500px]  object-cover "
-            src="../images/weddingtest2.webp"
+            src="../images/weddingCar.jpg"
             alt=""
           />
           <img
             className=" hidden md:flex md:w-[900px] md:h-[400px] h-[500px]  object-cover "
-            src="../images/testbouqet.webp"
+            src="../images/bridalbouquet.jpg"
             alt="Your Image"
           />
         </div>
