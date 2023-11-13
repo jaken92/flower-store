@@ -57,7 +57,7 @@ export default function WeddingsPage(secondaryContent) {
           />
           <img
             className=" hidden md:flex md:w-[900px] md:h-[400px] h-[500px]  object-cover "
-            src="../images/bridalbouquet.jpg"
+            src="../images/BridalBouquet.jpg"
             alt="Your Image"
           />
         </div>
