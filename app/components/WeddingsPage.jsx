@@ -39,7 +39,7 @@ export default function WeddingsPage(secondaryContent) {
         </div>
         <img
           className="  md:w-[40%] md:mt-7 md:h-[30%] h-[500px]  object-cover "
-          src="../images/weddingCouple.jpg"
+          src="../images/WeddingCouple.jpg"
           alt="two people getting married, wedding, standing on and in front of a stone-wall holding a wedding-bouqet"
         />
       </div>
