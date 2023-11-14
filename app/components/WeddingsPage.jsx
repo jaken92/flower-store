@@ -6,7 +6,7 @@ export default function WeddingsPage(secondaryContent) {
       <section className="md:w-full gap-4">
         <img
           className="md:w-full md:h-screen object-cover"
-          src="../images/heroes/weddinghero.webp"
+          src="../images/heroes/WeddingHero.jpg"
           alt="hero-image for weddingpage, a copule smiling with a flowerbouqeut in their hands"
         ></img>
       </section>

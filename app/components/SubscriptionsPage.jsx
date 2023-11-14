@@ -6,7 +6,7 @@ export default function SubscriptionsPage() {
       <section className="md:w-full gap-4">
         <img
           className="md:w-full md:h-screen object-cover"
-          src="../images/heroes/testherosubscription.webp"
+          src="../images/heroes/subscriptionsHero.jpg"
           alt="subscriptionpage-hero, flowers in different shapes and colors"
         ></img>
       </section>
