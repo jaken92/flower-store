@@ -7,6 +7,7 @@ export default function WeddingsPage(secondaryContent) {
         <img
           className="md:w-full md:h-screen object-cover"
           src="../images/heroes/weddinghero.webp"
+          alt="hero-image for weddingpage, a copule smiling with a flowerbouqeut in their hands"
         ></img>
       </section>
 
@@ -76,9 +77,14 @@ export default function WeddingsPage(secondaryContent) {
         <img
           className="md:w-full md:h-screen object-cover"
           src="../images/bigweddingtest.webp"
+          alt="wedding, a couple holding hands with a flowerbouqet"
         ></img>
         <div className="absolute md:top-[20%] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <Button linkTo="/pages/contact" text="GET IN CONTACT"></Button>
+          <Button
+            linkTo="/pages/contact"
+            text="GET IN CONTACT"
+            aria-label="go to the contact-page"
+          ></Button>
         </div>
       </section>
     </>

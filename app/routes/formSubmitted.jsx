@@ -3,7 +3,11 @@ import {Link} from '@remix-run/react';
 export default function formSubmitted() {
   return (
     <div className="w-screen flex flex-col items-center mt-[100px]">
-      <img className="w-1/3 h-1/2" src="../images/MouaLogo.png"></img>
+      <img
+        className="w-1/3 h-1/2"
+        src="../images/MouaLogo.png"
+        alt="moua-logo"
+      ></img>
       <h2>Your form was succesfully sent!</h2>
       <h2> Thank you for considering Mouaflowers!</h2>
       <h2>We will make sure to answer your request as soon as possible!</h2>

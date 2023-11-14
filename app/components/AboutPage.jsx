@@ -5,6 +5,7 @@ export default function AboutPage({content, title, secondaryContent}) {
         <img
           className="w-full h-screen object-cover"
           src="../images/heroes/flowerHero.jpg"
+          alt="hero for about-page"
         ></img>
       </section>
       <h2>{secondaryContent}</h2>
@@ -12,8 +13,7 @@ export default function AboutPage({content, title, secondaryContent}) {
         <img
           className=" md:w-[60%] w-[100%] h-[300px] rounded-full md:h-[400px] object-cover "
           src="../images/mouaAbtImg2.webp"
-          alt="
-          Your Image"
+          alt="person arranging a flowerbouqet on a table in a nice setting"
         />
 
         <div className="w-full md:pt-15 pt-10 ">
@@ -68,14 +68,14 @@ export default function AboutPage({content, title, secondaryContent}) {
         <img
           className=" md:w-[50%] md:mt-7 md:h-[500px] h-[300px] object-cover "
           src="../images/mouaAbtImg2.webp"
-          alt="Your Image"
+          alt=""
         />
       </div>
       <div className="flex flex-col-reverse md:pl-10 md:pr-10 md:gap-20 md:flex-row w-full p-8 mt-10">
         <img
           className="object-cover md:w-[50%] mt-4"
           src="../images/example.webp"
-          alt="Your Image"
+          alt="white and orange flowers"
         />
         <div className="w-full md:w-[40%]  justify-center ">
           <h1 className="text-2xl uppercase  font-bold mb-4 md:mt-4 text-center font-custom">
