@@ -7,6 +7,7 @@ export default function SubscriptionsPage() {
         <img
           className="md:w-full md:h-screen object-cover"
           src="../images/heroes/testherosubscription.webp"
+          alt="subscriptionpage-hero, flowers in different shapes and colors"
         ></img>
       </section>
       <h2 className="font-custom text-2xl uppercase text-center mb-5 mt-5 md:mt-10">
@@ -33,12 +34,7 @@ export default function SubscriptionsPage() {
           </div>
         </div>
       </section>
-      <div className="flex justify-center md:pt-10">
-        {/* <Button
-          linkTo="/pages/contact"
-          text="Contact us to learn more"
-        ></Button> */}
-      </div>
+      <div className="flex justify-center md:pt-10"></div>
       <div className="flex flex-col md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-8 ">
         <div className="w-full md:w-[50%]  md:pt-20 ">
           <h2 className="text-2xl font-bold text-center uppercase font-custom">
@@ -64,7 +60,7 @@ export default function SubscriptionsPage() {
           <img
             className="w-full h-full object-cover"
             src="../images/testsubscription.webp"
-            alt="Your Image"
+            alt="White and pink flowers with green stems"
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <Button linkTo="/pages/contact" text="INQUIRE" />
@@ -76,7 +72,7 @@ export default function SubscriptionsPage() {
           <img
             className="w-full h-full object-cover"
             src="../images/testsubscription2.webp"
-            alt="Your Image"
+            alt="Orange flowers"
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <Button linkTo="/pages/contact" text="INQUIRE" />

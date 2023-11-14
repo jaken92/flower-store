@@ -32,17 +32,15 @@ export default function Collection() {
   const {collection} = useLoaderData();
   return (
     <>
-      <header className="grid w-full gap-8 py-8 justify-items-start">
+      <header className="grid w-full gap-8 py-4 mt-20 justify-items-center">
         <h1 className="text-4xl whitespace-pre-wrap font-bold inline-block">
           {collection.title}
         </h1>
 
         {collection.description && (
-          <div className="flex items-baseline justify-between w-full">
-            <div>
-              <p className="max-w-md whitespace-pre-wrap inherit text-copy inline-block">
-                {collection.description}
-              </p>
+          <div className="flex justify-center p-4 w-full">
+            <div className="max-w-4xl">
+              <p className="whitespace">{collection.description}</p>
             </div>
           </div>
         )}

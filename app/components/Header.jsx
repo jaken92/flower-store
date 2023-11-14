@@ -1,10 +1,10 @@
-import {Await, Link, NavLink, useMatches} from '@remix-run/react';
+import {Await, NavLink, useMatches} from '@remix-run/react';
 import {Suspense} from 'react';
 import {useState, useEffect} from 'react';
 import ScrollTracker from '~/components/ScrollTracker';
 
 export function Header({header, isLoggedIn, cart}) {
-  const {shop, menu} = header;
+  const {menu} = header;
   const [whiteHeader, setWhiteHeader] = useState(false);
 
   //updating the WhiteHeader state to apply/remove css class to header-element.
@@ -121,14 +121,10 @@ export function HeaderMenu({menu, viewport}) {
   );
 }
 
-function HeaderCtas({isLoggedIn, cart}) {
+function HeaderCtas({cart}) {
   return (
     <nav className="header-ctas" role="navigation">
       <HeaderMenuMobileToggle />
-      {/* <NavLink prefetch="intent" to="/account" style={activeLinkStyle}>
-        {isLoggedIn ? 'Account' : 'Sign in'}
-      </NavLink> */}
-      {/* <SearchToggle /> */}
       <CartToggle cart={cart} />
     </nav>
   );

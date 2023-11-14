@@ -23,7 +23,7 @@ export default function Collections() {
         {collections.nodes.map((collection) => {
           return (
             <Link to={`/collections/${collection.handle}`} key={collection.id}>
-              <div className="grid gap-4">
+              <div className="grid gap-4 p-8">
                 {collection?.image && (
                   <Image
                     className="object-cover h-96 w-96"

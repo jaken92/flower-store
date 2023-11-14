@@ -27,8 +27,15 @@ export default function MyForm() {
               PICK-UP + DELIVERIES: MONDAY - FRIDAY
             </p>
           </div>
-          <a href="https://www.instagram.com/mouaflowerswithcause/">
-            <img src="../images/instagram.svg" className="w-8 md:w-10" />
+          <a
+            href="https://www.instagram.com/mouaflowerswithcause/"
+            aria-label="go to our instagram"
+          >
+            <img
+              src="../images/instagram.svg"
+              className="w-8 md:w-10"
+              alt="instagram-logo"
+            />
           </a>
         </div>
 

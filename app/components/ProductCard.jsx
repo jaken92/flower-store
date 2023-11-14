@@ -15,8 +15,10 @@ export default function ProductCard({product}) {
             </label>
           )}
           <Image
+            className="object-cover"
             data={product.variants.nodes[0].image}
             alt={product.title}
+            style={{height: '300px'}}
           />
         </div>
         <div className="grid gap-1">

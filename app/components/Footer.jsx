@@ -46,11 +46,25 @@ function FooterMenu({menu}) {
         })}
       </nav>
       <div className="footer-container gap-4 md:m-10 m-4 md:w[50%]">
-        <a href="https://www.instagram.com/mouaflowerswithcause/">
-          <img src="../images/instagram.svg" className="w-8 md:w-10" />
+        <a
+          href="https://www.instagram.com/mouaflowerswithcause/"
+          aria-label="go to instagram-page"
+        >
+          <img
+            src="../images/instagram.svg"
+            className="w-8 md:w-10"
+            alt="instagram-logo"
+          />
         </a>
-        <a href="https://www.facebook.com/mouaflowerswithcause">
-          <img src="../images/facebook.png" className=" w-8 md:w-10 " />
+        <a
+          href="https://www.facebook.com/mouaflowerswithcause"
+          aria-label="Go to facebook-page"
+        >
+          <img
+            src="../images/facebook.png"
+            className=" w-8 md:w-10 "
+            alt="facebook-logo"
+          />
         </a>
       </div>
     </>

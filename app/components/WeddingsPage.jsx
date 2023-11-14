@@ -7,6 +7,7 @@ export default function WeddingsPage(secondaryContent) {
         <img
           className="md:w-full md:h-screen object-cover"
           src="../images/heroes/weddinghero.webp"
+          alt="hero-image for weddingpage, a copule smiling with a flowerbouqeut in their hands"
         ></img>
       </section>
 
@@ -38,14 +39,14 @@ export default function WeddingsPage(secondaryContent) {
           </p>
         </div>
         <img
-          className="  md:w-[40%] md:mt-7 md:h-[30%] h-[500px]  object-cover "
+          className="  md:w-[40%] md:mt-7 md:h-[30%] h-[400px] mt-8 object-cover "
           src="../images/WeddingCouple.jpg"
           alt="two people getting married, wedding, standing on and in front of a stone-wall holding a wedding-bouqet"
         />
       </div>
-      <div className="flex flex-col md:flex-row gap-20 md:pl-20 md:pr-10 p-8">
+      <div className="flex flex-col md:flex-row gap-20 md:mt-10 md:pl-20 md:pr-10 p-8">
         <img
-          className="  md:w-[40%] md:h-[50%] h-[500px] object-cover "
+          className="  md:w-[40%] md:h-[50%] h-[400px] object-cover "
           src="../images/weddingBride.jpg"
           alt="Your Image"
         />
@@ -56,7 +57,7 @@ export default function WeddingsPage(secondaryContent) {
             alt=""
           />
           <img
-            className=" hidden md:flex md:w-[900px] md:h-[400px] h-[500px]  object-cover "
+            className=" hidden md:flex md:w-[900px] md:h-[300px] h-[300px]  object-cover "
             src="../images/BridalBouquet.jpg"
             alt="Your Image"
           />
@@ -76,9 +77,14 @@ export default function WeddingsPage(secondaryContent) {
         <img
           className="md:w-full md:h-screen object-cover"
           src="../images/bigweddingtest.webp"
+          alt="wedding, a couple holding hands with a flowerbouqet"
         ></img>
         <div className="absolute md:top-[20%] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <Button linkTo="/pages/contact" text="GET IN CONTACT"></Button>
+          <Button
+            linkTo="/pages/contact"
+            text="GET IN CONTACT"
+            aria-label="go to the contact-page"
+          ></Button>
         </div>
       </section>
     </>
