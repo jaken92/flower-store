@@ -279,19 +279,19 @@ export function CartEmpty({hidden = false, layout = 'aside'}) {
 //   );
 // }
 
-function UpdateDiscountForm({discountCodes, children}) {
-  return (
-    <CartForm
-      route="/cart"
-      action={CartForm.ACTIONS.DiscountCodesUpdate}
-      inputs={{
-        discountCodes: discountCodes || [],
-      }}
-    >
-      {children}
-    </CartForm>
-  );
-}
+// function UpdateDiscountForm({discountCodes, children}) {
+//   return (
+//     <CartForm
+//       route="/cart"
+//       action={CartForm.ACTIONS.DiscountCodesUpdate}
+//       inputs={{
+//         discountCodes: discountCodes || [],
+//       }}
+//     >
+//       {children}
+//     </CartForm>
+//   );
+// }
 
 function CartLineUpdateButton({children, lines}) {
   return (
