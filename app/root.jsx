@@ -95,7 +95,7 @@ export async function loader({context}) {
 export const handle = {
   seo: {
     title: 'Mouaflowers',
-    titleTemplate: 'A flower shop',
+    titleTemplate: 'Moua flower shop',
     description:
       'Mouaflowers delivers custom made, lush, airy and beautiful flower arrangements for events or delivery.',
   },
