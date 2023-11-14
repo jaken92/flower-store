@@ -91,6 +91,15 @@ export async function loader({context}) {
     {headers},
   );
 }
+// global seo
+export const handle = {
+  seo: {
+    title: 'Mouaflowers',
+    titleTemplate: 'A flower shop',
+    description:
+      'Mouaflowers delivers custom made, lush, airy and beautiful flower arrangements for events or delivery.',
+  },
+};
 
 export default function App() {
   const nonce = useNonce();
@@ -101,10 +110,10 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta
+        {/* <meta
           name="description"
           content="'A graduation work creating a shopify store with Hydrogen"
-        />
+        /> */}
         <Seo />
         <Meta />
         <Links />

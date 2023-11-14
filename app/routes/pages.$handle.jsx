@@ -6,6 +6,13 @@ import SubscriptionsPage from '~/components/SubscriptionsPage';
 import ContactPage from '~/components/ContactPage';
 
 //action called from contactPage component upon form submission.
+const seo = ({data}) => ({
+  title: data?.page?.seo?.title,
+  description: data?.page?.seo?.description,
+});
+export const handle = {
+  seo,
+};
 
 export async function action({request, context}) {
   const apiKey = context.env.PUBLIC_MAILJET_API_KEY;
@@ -27,9 +34,9 @@ export async function action({request, context}) {
         Subject: 'Inquiry from contact form',
         TextPart: `name: ${name} email: ${email} phone: ${phonenumber} message: ${message}`,
         HTMLPart: `
-          <h3>Message from: ${name}</p>
-          <h3>Email: ${email}</p>
-          <h3>Phone-number: ${phonenumber}</p>
+          <h3>Message from: ${name}</h3>
+          <h3>Email: ${email}</h3>
+          <h3>Phone-number: ${phonenumber}</h3>
           <p>Message: ${message}</p>
 
         `,

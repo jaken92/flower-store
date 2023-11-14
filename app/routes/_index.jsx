@@ -1,12 +1,12 @@
 import ImageLinkComponent from '~/components/LinkCard';
 import Carousel from '~/components/Carousel';
 
-export function meta() {
-  return [
-    {title: 'Maouflowers'},
-    {description: 'A graduation work creating a shopify store with Hydrogen'},
-  ];
-}
+// export function meta() {
+//   return [
+//     {title: 'Maouflowers'},
+//     {description: 'A graduation work creating a shopify store with Hydrogen'},
+//   ];
+// }
 
 const reviews = [
   {
