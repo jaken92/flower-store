@@ -39,14 +39,14 @@ export default function WeddingsPage(secondaryContent) {
           </p>
         </div>
         <img
-          className="  md:w-[40%] md:mt-7 md:h-[30%] h-[500px]  object-cover "
+          className="  md:w-[40%] md:mt-7 md:h-[30%] h-[400px] mt-8 object-cover "
           src="../images/WeddingCouple.jpg"
           alt="two people getting married, wedding, standing on and in front of a stone-wall holding a wedding-bouqet"
         />
       </div>
-      <div className="flex flex-col md:flex-row gap-20 md:pl-20 md:pr-10 p-8">
+      <div className="flex flex-col md:flex-row gap-20 md:mt-10 md:pl-20 md:pr-10 p-8">
         <img
-          className="  md:w-[40%] md:h-[50%] h-[500px] object-cover "
+          className="  md:w-[40%] md:h-[50%] h-[400px] object-cover "
           src="../images/weddingBride.jpg"
           alt="Your Image"
         />
@@ -57,7 +57,7 @@ export default function WeddingsPage(secondaryContent) {
             alt=""
           />
           <img
-            className=" hidden md:flex md:w-[900px] md:h-[400px] h-[500px]  object-cover "
+            className=" hidden md:flex md:w-[900px] md:h-[300px] h-[300px]  object-cover "
             src="../images/BridalBouquet.jpg"
             alt="Your Image"
           />
