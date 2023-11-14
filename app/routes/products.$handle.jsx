@@ -75,13 +75,13 @@ export default function ProductHandle() {
             data={selectedVariant.price}
             className="text-xl font-semibold mb-2"
           />
-          {selectedVariant.availableForSale && (
+          {/* {selectedVariant.availableForSale && (
             <ShopPayButton
               storeDomain={shop.primaryDomain.url}
               variantIds={[selectedVariant?.id]}
               width={'400px'}
             />
-          )}
+          )} */}
           <CartForm
             route="/cart"
             inputs={{
@@ -113,8 +113,7 @@ export default function ProductHandle() {
               </>
             )}
           </CartForm>
-          {/* Delete this after verifying */}
-          {/* <p>Selected Variant: {product.selectedVariant?.id}</p> */}
+
           <div
             className="prose border-t border-gray-200 pt-6 text-black text-md"
             dangerouslySetInnerHTML={{__html: product.descriptionHtml}}

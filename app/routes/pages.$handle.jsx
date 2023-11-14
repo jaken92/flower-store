@@ -6,6 +6,15 @@ import SubscriptionsPage from '~/components/SubscriptionsPage';
 import ContactPage from '~/components/ContactPage';
 
 //action called from contactPage component upon form submission.
+// const seo = ({data}) => ({
+//   title: data?.page?.title,
+//   description: data?.page?.description,
+// });
+// console.log(data);
+
+// export const handle = {
+//   seo,
+// };
 
 export async function action({request, context}) {
   const apiKey = context.env.PUBLIC_MAILJET_API_KEY;
