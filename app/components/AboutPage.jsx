@@ -3,7 +3,7 @@ export default function AboutPage({secondaryContent}) {
     <>
       <section className="w-full gap-4">
         <img
-          className="w-full h-screen object-cover"
+          className="md:w-full md:h-screen object-cover"
           src="../images/heroes/flowerHero.jpg"
           alt="hero for about-page"
         ></img>
@@ -17,14 +17,14 @@ export default function AboutPage({secondaryContent}) {
         />
 
         <div className="w-full md:pt-15 pt-10 ">
-          <h2 className="md:text-4xl text-3xl font-bold uppercase text-center font-custom">
+          <h2 className="md:text-3xl text-2xl font-bold uppercase text-center font-custom">
             Ana Laura Galicia
           </h2>
-          <p className="font-custom mb-1 text-center md:text-3xl text-2xl uppercase ">
+          <p className="font-custom mb-1 text-center md:text-2xl text-1xl uppercase ">
             Founder/designer
           </p>
           <div className="flex">
-            <p className="font-custom md:pt-6  text-gray-500 md:pl-10 md:pr-10 text-center text-lg md:text-2xl">
+            <p className="font-custom md:pt-6   text-gray-500 md:pl-10 md:pr-10 text-center text-lg md:text-1xl">
               Hey! My name is Ana and im the creator of Moua flowers with a
               cause. Flowers fill my soul & I passionatly design arrangment
               hoping to make you feel a sense of elegance, beauty and simplicity
@@ -34,11 +34,10 @@ export default function AboutPage({secondaryContent}) {
           </div>
         </div>
       </div>
-      {/*ADD ANIMATION HERE IF WE HAVE THE TIME */}
-      <h2 className="center heading  md:text-3xl">Flower Journey</h2>
+      <div className="border-b-4"></div>
       <div className="flex flex-col md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-8 ">
-        <div className="w-full md:w-[50%]  pt-20 ">
-          <h2 className="text-2xl font-bold  uppercase text-center font-custom">
+        <div className="w-full md:w-[50%]  md:pt-20 ">
+          <h2 className="md:text-2xl  text-1xl font-bold  uppercase text-center font-custom">
             Flower Journey
           </h2>
           <p className="text-gray-500 text-lg font-custom mt-2">
@@ -71,7 +70,7 @@ export default function AboutPage({secondaryContent}) {
           alt=""
         />
       </div>
-      <div className="flex flex-col-reverse md:pl-10 md:pr-10 md:gap-20 md:flex-row w-full p-8 mt-10">
+      <div className="flex flex-col-reverse md:pl-10 md:pr-10 md:gap-20 md:flex-row w-full p-8 md:mt-10">
         <img
           className="object-cover md:w-[50%] mt-4"
           src="../images/example.webp"

@@ -85,7 +85,6 @@ function CartLineItem({layout, line}) {
         <CartLinePrice line={line} as="span" />
 
         {!selectedOptions.some((option) => option.name == 'Title') && (
-          //temporary solution, implementing check on name for title, since its the default name for products without options.
           <ul className="font-custom">
             {selectedOptions.map((option) => (
               <li key={option.name}>
@@ -125,12 +124,10 @@ export function CartSummary({cost, layout, children = null}) {
 
   return (
     <div aria-labelledby="cart-summary" className={className}>
-      {/* <h4 className="font-custom">Totals: </h4> */}
       <div className="cart-subtotal ">
         <div className="font-custom ml-3" style={{whiteSpace: 'pre-wrap'}}>
           Total:{' '}
         </div>
-        {/* ändrade från p tag till div tag pga många felmeddelande consolen, verkar funka likadnt */}
         <div className="font-custom">
           {cost?.subtotalAmount?.amount ? (
             <Money data={cost?.subtotalAmount} />
