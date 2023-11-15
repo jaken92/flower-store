@@ -541,3 +541,26 @@ aside li {
 .noteOnScreen{
   left: -
 } */
+
+@keyframes slideInLeft {
+  from {
+    transform:translateX(-300px);
+  }
+
+  to{ 
+    transform: translateX(600px);
+  }
+}
+
+.heading {
+  animation-name: slideInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in ;
+  animation-delay: 0s ;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+}
+ 
+

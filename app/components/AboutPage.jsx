@@ -1,4 +1,4 @@
-export default function AboutPage({content, title, secondaryContent}) {
+export default function AboutPage({secondaryContent}) {
   return (
     <>
       <section className="w-full gap-4">
@@ -35,7 +35,7 @@ export default function AboutPage({content, title, secondaryContent}) {
         </div>
       </div>
       {/*ADD ANIMATION HERE IF WE HAVE THE TIME */}
-      <h2 className="center md: text-3xl">Flower Journey</h2>
+      <h2 className="center heading  md:text-3xl">Flower Journey</h2>
       <div className="flex flex-col md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-8 ">
         <div className="w-full md:w-[50%]  pt-20 ">
           <h2 className="text-2xl font-bold  uppercase text-center font-custom">
