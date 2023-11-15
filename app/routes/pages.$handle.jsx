@@ -5,7 +5,6 @@ import WeddingsPage from '~/components/WeddingsPage';
 import SubscriptionsPage from '~/components/SubscriptionsPage';
 import ContactPage from '~/components/ContactPage';
 
-//action called from contactPage component upon form submission.
 const seo = ({data}) => ({
   title: data?.page?.seo?.title,
   description: data?.page?.seo?.description,
@@ -13,14 +12,14 @@ const seo = ({data}) => ({
 export const handle = {
   seo,
 };
-
+//action called from contactPage component upon form submission.
 export async function action({request, context}) {
   const apiKey = context.env.PUBLIC_MAILJET_API_KEY;
   const secretKey = context.env.SECRET_MAILJET_KEY;
 
   const formData = await request.formData();
 
-  //trimming inputs
+  //trimming whitespace in inputs
   const name = formData.get('name').trim();
   const email = formData.get('email').trim();
   const phonenumber = formData.get('phonenumber').trim();
@@ -63,7 +62,6 @@ export async function action({request, context}) {
   return Response.redirect('http://localhost:3000/formSubmitted');
 }
 
-//dont forget to send SEO(see collections)
 export async function loader({params, context}) {
   const {handle} = params;
   const {page} = await context.storefront.query(PAGE_QUERY, {
