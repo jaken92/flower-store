@@ -13,7 +13,7 @@ import {
   ScrollRestoration,
   isRouteErrorResponse,
 } from '@remix-run/react';
-import favicon from '../public/favicon.svg';
+import favicon from '../public/favicon.png';
 // import resetStyles from './styles/reset.css';
 import appStyles from './styles/app.css';
 import {Layout} from '~/components/Layout';
@@ -110,10 +110,7 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        {/* <meta
-          name="description"
-          content="'A graduation work creating a shopify store with Hydrogen"
-        /> */}
+
         <Seo />
         <Meta />
         <Links />

@@ -1,4 +1,4 @@
-import ImageLinkComponent from '~/components/LinkCard';
+import LinkCard from '~/components/LinkCard';
 import Carousel from '~/components/Carousel';
 
 // export function meta() {
@@ -42,28 +42,28 @@ export default function Index() {
             alt="hero image with flowers on a table"
           ></img>
           <img
-            className="md:h-[580px] md:w-580px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+            className="md:h-[580px] w-[300px] md:w-[580px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
             src="../images/WhiteLogoNoBackground.png"
             alt="Moua flowers with a cause"
           />
         </div>
       </section>
       <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 sm:grid-cols-3 mt-6 mb-6 px-8 bg-white ">
-        <ImageLinkComponent
+        <LinkCard
           text="Order Flowers"
           imageSrc="./images/heroes/collections.jpeg"
           linkTo="/collections"
           alt="flowers in a vase"
           btnText="Order now"
         />
-        <ImageLinkComponent
+        <LinkCard
           text="Weddings"
           imageSrc="./images/heroes/weddings.jpg"
           linkTo="/pages/weddings"
           alt="a picture of two people that are getting married, the bride is carrying a bouquet of flowers"
           btnText="Learn more"
         />
-        <ImageLinkComponent
+        <LinkCard
           text="Subscriptions"
           imageSrc="./images/heroes/subscriptions.webp"
           linkTo="/pages/subscriptions"

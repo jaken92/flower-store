@@ -47,10 +47,10 @@ export default function ProductHandle() {
   const {shop, product, selectedVariant} = useLoaderData();
   console.log(product);
   return (
-    <section className="w-full gap-4 md:gap-8 grid px-6 md:px-8 lg:px-12">
+    <section className="w-full gap-4 md:mt-28 md:mb-10 md:gap-8 grid px-6 md:px-8 lg:px-12">
       <div className="grid items-start gap-6 lg:gap-20 md:grid-cols-2 lg:grid-cols-3">
-        <div className="grid md:grid-flow-row  md:p-0 md:overflow-x-hidden md:grid-cols-2 md:w-full lg:col-span-2">
-          <div className="md:col-span-2 snap-center card-image aspect-square md:w-full w-[80vw] shadow rounded">
+        <div className="grid md:grid-flow-row  justify-center  md:p-0 md:overflow-x-hidden md:grid-cols-2 md:w-full lg:col-span-2">
+          <div className="md:col-span-2 card-image aspect-square md:w-full w-[80vw] shadow rounded">
             <Image
               className={`w-full h-full aspect-square object-cover`}
               data={product.selectedVariant?.image || product.featuredImage}

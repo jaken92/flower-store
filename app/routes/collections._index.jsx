@@ -23,10 +23,7 @@ export async function loader({context}) {
 export default function Collections() {
   const {collections} = useLoaderData();
   return (
-    <section className="w-full gap-4">
-      <h2 className="whitespace-pre-wrap max-w-prose font-bold text-lead">
-        Collections
-      </h2>
+    <section className="w-full md:mt-28 gap-4">
       <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 sm:grid-cols-3">
         {collections.nodes.map((collection) => {
           return (
