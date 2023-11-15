@@ -1,7 +1,7 @@
 import {CartForm, Image, Money} from '@shopify/hydrogen';
 import {Link} from '@remix-run/react';
 import {useVariantUrl} from '~/utils';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 
 export function CartMain({layout, cart}) {
   const linesCount = Boolean(cart?.lines?.nodes?.length || 0);
@@ -310,6 +310,30 @@ function NoteForm() {
   const [positionLeft, setPositionLeft] = useState(`${6000}px`);
   const [showNote, setShowNote] = useState(false);
   const [saveNote, setSaveNote] = useState(false);
+  const [noteUpdated, setNoteUpdated] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    if (isVisible) {
+      timerRef.current = setTimeout(() => {
+        setIsVisible(false);
+      }, 4000);
+    }
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (noteUpdated) {
+      setIsVisible(true);
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+      timerRef.current = setTimeout(() => {
+        setIsVisible(false);
+        setNoteUpdated(false);
+      }, 4000);
+    }
+  }, [noteUpdated]);
 
   //Workaround for "window is not defined error"
   if (typeof window !== 'undefined') {
@@ -354,6 +378,7 @@ function NoteForm() {
 
   function saveNoteMessage() {
     setSaveNote(true);
+    setNoteUpdated(true);
   }
 
   return (
@@ -368,6 +393,7 @@ function NoteForm() {
       >
         {saveNote ? 'Edit Message' : 'Add Message'}
       </button>
+      {isVisible && <p className="success">Note updated successfully!</p>}
       <div
         style={{
           position: 'fixed',
@@ -387,14 +413,6 @@ function NoteForm() {
             action={CartForm.ACTIONS.NoteUpdate}
           >
             <div className="flex flex-col ">
-              <div className="flex flex-row-reverse">
-                <button
-                  className="p-3 bg-white rounded-md"
-                  onClick={closeNoteForm}
-                >
-                  X
-                </button>
-              </div>
               <p className="font-custom">
                 Provide a short message for the gift tag:
               </p>
@@ -405,7 +423,10 @@ function NoteForm() {
 
               <div className="flex justify-center">
                 <button
-                  onClick={saveNoteMessage}
+                  onClick={() => {
+                    saveNoteMessage();
+                    closeNoteForm();
+                  }}
                   className="rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3 shadow-md active:shadow-none"
                 >
                   Update note
