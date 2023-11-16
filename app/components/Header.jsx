@@ -7,6 +7,7 @@ import {useLocation} from '@remix-run/react';
 export function Header({header, isLoggedIn, cart}) {
   const {menu} = header;
   const [whiteHeader, setWhiteHeader] = useState(false);
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   //updating the WhiteHeader state to apply/remove css class to header-element.
   function headerColorChanger(trueOrFalse) {
@@ -14,7 +15,11 @@ export function Header({header, isLoggedIn, cart}) {
   }
 
   return (
-    <header className={`header ${whiteHeader ? 'white-header' : ''}`}>
+    <header
+      className={`header ${
+        whiteHeader || isDropdownVisible ? 'white-header' : ''
+      }`}
+    >
       <ScrollTracker headerColorChanger={headerColorChanger} />
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
         <img
@@ -23,17 +28,26 @@ export function Header({header, isLoggedIn, cart}) {
           alt="cart-logo"
         ></img>
       </NavLink>
-      <HeaderMenu menu={menu} viewport="desktop" />
+      <HeaderMenu
+        isDropdownVisible={isDropdownVisible}
+        setIsDropdownVisible={setIsDropdownVisible}
+        menu={menu}
+        viewport="desktop"
+      />
       <HeaderCtas isLoggedIn={isLoggedIn} cart={cart} />
     </header>
   );
 }
 
-export function HeaderMenu({menu, viewport}) {
+export function HeaderMenu({
+  menu,
+  viewport,
+  setIsDropdownVisible,
+  isDropdownVisible,
+}) {
   const [root] = useMatches();
   const publicStoreDomain = root?.data?.publicStoreDomain;
   const className = `header-menu-${viewport}`;
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   function closeAside(event) {
     if (viewport === 'mobile') {
