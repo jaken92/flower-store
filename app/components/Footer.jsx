@@ -45,27 +45,69 @@ function FooterMenu({menu}) {
           );
         })}
       </nav>
-      <div className="footer-container gap-4 md:m-10 m-4 md:w[50%]">
-        <a
-          href="https://www.instagram.com/mouaflowerswithcause/"
-          aria-label="go to instagram-page"
-        >
+      <div className="flex justify-between md:mt-10 md:pl-10 md:pr-10 ">
+        <div className="flex  items-center justify-center gap-1 py-4">
           <img
-            src="../images/instagram.svg"
-            className="w-8 md:w-10"
-            alt="instagram-logo"
+            src="../images/icons/google-pay.svg"
+            alt="google pay"
+            className="object-cover w-10 md:w-14"
           />
-        </a>
-        <a
-          href="https://www.facebook.com/mouaflowerswithcause"
-          aria-label="Go to facebook-page"
-        >
           <img
-            src="../images/facebook.png"
-            className=" w-8 md:w-10 "
-            alt="facebook-logo"
+            src="../images/icons/apple-pay.svg"
+            alt="applepay-logo"
+            className="object-cover w-6 md:w-8"
           />
-        </a>
+          <img
+            src="../images/icons/klarna.svg"
+            alt="Klarna-logo"
+            className="object-cover w-8 md:w-12"
+          />
+          <img
+            src="../images/icons/maestro.svg"
+            alt="Maestro-logo"
+            className="object-cover w-12 md:w-16"
+          />
+          <img
+            src="../images/icons/mastercard.svg"
+            alt="Mastercard-logo"
+            className="object-cover w-8 md:w-12"
+          />
+          <img
+            src="../images/icons/visa.svg"
+            alt="Visa-logo"
+            className="object-cover w-8 md:w-12"
+          />
+          <img
+            src="../images/icons/shoppay.svg"
+            alt="Shoppay-logo"
+            className="object-cover w-10  md:w-14"
+          />
+        </div>
+        <div
+          className="flex justify-end gap-4 mr-5 
+        md:mb-6 md:mr-10 pt-4 "
+        >
+          <a
+            href="https://www.instagram.com/mouaflowerswithcause/"
+            aria-label="go to instagram-page"
+          >
+            <img
+              src="../images/instagram.svg"
+              className="w-6 md:w-8"
+              alt="instagram-logo"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com/mouaflowerswithcause"
+            aria-label="Go to facebook-page"
+          >
+            <img
+              src="../images/facebook.png"
+              className=" w-6 md:w-8 "
+              alt="facebook-logo"
+            />
+          </a>
+        </div>
       </div>
     </>
   );
