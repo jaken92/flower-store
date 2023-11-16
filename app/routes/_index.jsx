@@ -29,6 +29,16 @@ const reviews = [
       'Again, your flower arrangements is so unique and all flowers you choose have lovely color and beautiful unique shape. It is a joy to look at them.',
     client: 'Xiaoyang',
   },
+  {
+    review:
+      'Incredible attention and service, punctual delivery and a super beautiful design! Thank you very much for making this surprise possible !!!',
+    client: 'Lourdes',
+  },
+  {
+    review:
+      'She was absolutely in love with the bouquet & it made her so happy. She also immediately wanted to know where we got it from because it put all the bouquets she had ever gotten before to shame, so im sure you will have a new costumer now as well.',
+    client: 'Zhudi',
+  },
 ];
 
 export default function Index() {

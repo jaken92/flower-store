@@ -46,31 +46,31 @@ function FooterMenu({menu}) {
         })}
       </nav>
       <div className="flex justify-between border-t-2 border-blue md:mt-5 md:pl-10 md:pr-10 ">
-        <div className="flex  items-center justify-center gap-1 py-4">
+        <div className="flex h-14 items-center justify-center gap-3 py-4">
           <img
             src="../images/icons/google-pay.svg"
             alt="google pay"
-            className="object-cover w-10 md:w-14"
+            className="object-cover w-10 md:h-10 md:w-16"
           />
           <img
             src="../images/icons/apple-pay.svg"
             alt="applepay-logo"
-            className="object-cover w-6 md:w-8"
+            className="object-cover pr-2 w-8 md:w-12"
           />
           <img
             src="../images/icons/klarna.svg"
             alt="Klarna-logo"
-            className="object-cover w-8 md:w-12"
+            className="object-cover md:h-6 w-8 md:w-12"
           />
           <img
             src="../images/icons/maestro.svg"
             alt="Maestro-logo"
-            className="object-cover w-12 md:w-16"
+            className="md:h-12 w-12 md:w-16"
           />
           <img
             src="../images/icons/mastercard.svg"
             alt="Mastercard-logo"
-            className="object-cover w-8 md:w-12"
+            className="object-cover h-auto w-8 md:w-12"
           />
           <img
             src="../images/icons/visa.svg"

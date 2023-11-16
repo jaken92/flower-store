@@ -23,12 +23,12 @@ export async function loader({context}) {
 export default function Collections() {
   const {collections} = useLoaderData();
   return (
-    <section className="w-full md:mt-28 gap-4">
-      <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 sm:grid-cols-3">
+    <section className="w-full mt-10 gap-4">
+      <div className="grid-flow-row grid gap-2 md:gap-2 p-20 grid-cols-1 md:grid-cols-3">
         {collections.nodes.map((collection) => {
           return (
             <Link to={`/collections/${collection.handle}`} key={collection.id}>
-              <div className="grid gap-4 p-8">
+              <div className="grid pl-4 pr-4 md:p-8 relative">
                 {collection?.image && (
                   <Image
                     className="object-cover h-96 w-96"
@@ -39,8 +39,10 @@ export default function Collections() {
                     crop="center"
                   />
                 )}
-                <h2 className="whitespace-pre-wrap max-w-prose font-medium text-copy">
-                  {collection.title}
+                <h2 className="absolute inset-0 text-white flex items-center justify-center whitespace-pre-wrap max-w-prose text-xl text-copy">
+                  <span className="bg-black bg-opacity-30 p-2 rounded text-white">
+                    {collection.title}
+                  </span>
                 </h2>
               </div>
             </Link>
