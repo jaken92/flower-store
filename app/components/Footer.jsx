@@ -45,7 +45,7 @@ function FooterMenu({menu}) {
           );
         })}
       </nav>
-      <div className="flex justify-between md:mt-10 md:pl-10 md:pr-10 ">
+      <div className="flex justify-between border-t-2 border-blue md:mt-5 md:pl-10 md:pr-10 ">
         <div className="flex  items-center justify-center gap-1 py-4">
           <img
             src="../images/icons/google-pay.svg"
@@ -84,8 +84,8 @@ function FooterMenu({menu}) {
           />
         </div>
         <div
-          className="flex justify-end gap-4 mr-5 
-        md:mb-6 md:mr-10 pt-4 "
+          className="flex justify-end mr-2 gap-2 md:gap-4 
+        md:mb-6 pt-4 "
         >
           <a
             href="https://www.instagram.com/mouaflowerswithcause/"
@@ -108,6 +108,12 @@ function FooterMenu({menu}) {
             />
           </a>
         </div>
+      </div>
+      <div className="flex justify-end md:pb-4 pb-2 pr-2 md:pr-6">
+        <p className="md:text-sm text-xs">
+          © Copyright Moua Flowers,{' '}
+          <a href="https://www.shopify.com/">Powered by Shopify</a>
+        </p>
       </div>
     </>
   );
