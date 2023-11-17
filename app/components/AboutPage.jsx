@@ -23,8 +23,8 @@ export default function AboutPage({secondaryContent}) {
           ></img>
         </div>
       </section>
-      <h2>{secondaryContent}</h2>
-      <div className="flex flex-col md:flex-wrap justify-center items-center md:flex-row w-full p-8 ">
+      {/* <h2>{secondaryContent}</h2> */}
+      <div className="flex flex-col md:flex-wrap bg-pink justify-center items-center md:flex-row w-full p-8 ">
         <img
           className=" md:w-[60%] w-[100%] h-[300px] rounded-full md:h-[400px] object-cover "
           src="../images/mouaAbtImg2.webp"

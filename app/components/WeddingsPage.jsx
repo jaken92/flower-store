@@ -70,7 +70,7 @@ export default function WeddingsPage(secondaryContent) {
           />
         </div>
       </div>
-      <div className="p-8">
+      <div className="p-8 bg-pink">
         <h3 className="font-custom md:text-2xl text-center uppercase">
           Planning a Wedding or Event?
         </h3>
