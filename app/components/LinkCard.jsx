@@ -3,9 +3,9 @@ import {Link} from '@remix-run/react';
 //component to render the three link-cards that are displayed in the _index.jsx
 export default function LinkCard({text, btnText, imageSrc, linkTo}) {
   return (
-    <div className="relative">
+    <div className="relative md:mt-10">
       <img
-        className="md:h-[500px] md:w-[500px] object-cover"
+        className="md:h-[450px] w-[300px] h-[350px] md:w-[400px] object-cover img-zoom"
         src={imageSrc}
         alt={text}
       />

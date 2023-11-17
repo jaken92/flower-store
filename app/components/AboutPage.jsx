@@ -1,4 +1,12 @@
+import {useInView} from 'react-intersection-observer';
 export default function AboutPage({secondaryContent}) {
+  const {ref: ref1, inView: inView1} = useInView({
+    triggerOnce: true,
+  });
+
+  const {ref: ref2, inView: inView2} = useInView({
+    triggerOnce: true,
+  });
   return (
     <>
       <section className="w-full gap-4">
@@ -35,7 +43,12 @@ export default function AboutPage({secondaryContent}) {
         </div>
       </div>
       <div className="border-b-4"></div>
-      <div className="flex flex-col md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-8 ">
+      <div
+        className={`flex flex-col md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-8 ${
+          inView1 ? 'fadeIn' : ''
+        }`}
+        ref={ref1}
+      >
         <div className="w-full md:w-[50%]  md:pt-20 ">
           <h2 className="md:text-2xl  text-1xl font-bold  uppercase text-center font-custom">
             Flower Journey
@@ -70,7 +83,12 @@ export default function AboutPage({secondaryContent}) {
           alt=""
         />
       </div>
-      <div className="flex flex-col-reverse md:pl-10 md:pr-10 md:gap-20 md:flex-row w-full p-8 md:mt-10">
+      <div
+        className={`flex flex-col-reverse md:pl-10 md:pr-10 md:gap-20 md:flex-row w-full p-8 md:mt-10 ${
+          inView2 ? 'fadeIn' : ''
+        }`}
+        ref={ref2}
+      >
         <img
           className="object-cover md:w-[50%] mt-4"
           src="../images/example.webp"

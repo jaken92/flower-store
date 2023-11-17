@@ -3,6 +3,7 @@ import Button from './ButtonContact';
 import {useInView} from 'react-intersection-observer';
 
 export default function SubscriptionsPage() {
+  //Two Intersection Observers or two different divs, inView boolean to decide if the div is in view or not
   const {ref: ref1, inView: inView1} = useInView({
     triggerOnce: true,
   });
@@ -65,7 +66,7 @@ export default function SubscriptionsPage() {
             the week before - no clutter for you!
           </p>
           <p className="text-gray-500 text-lg font-custom mt-2">
-            Interested in signing up? Inquire below, we will reach out to you to
+            Interested in signing up? Inquire here, we will reach out to you to
             discuss your subscription details.
           </p>
         </div>
@@ -110,7 +111,7 @@ export default function SubscriptionsPage() {
             designers looking to compliment their work with fresh flowers.
           </p>
           <p className="text-gray-500 text-lg font-custom mt-2">
-            Interested in signing up? Inquire below, we will reach out to you to
+            Interested in signing up? Inquire here, we will reach out to you to
             discuss your subscription details.
           </p>
         </div>

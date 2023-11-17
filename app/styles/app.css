@@ -358,6 +358,15 @@ aside li {
 * routes/__index
 * --------------------------------------------------
 */
+.img-zoom {
+  transition: transform 1s ease-in-out;
+ }
+ 
+
+ .relative:hover .img-zoom {
+  transform: scale(1.1);
+ }
+
 .featured-collection {
   display: block;
   margin-bottom: 2rem;
@@ -552,6 +561,8 @@ aside li {
 .fadeIn {
   animation: fadeIn 1.5s ease-in;
 }
+
+
 
 
  
