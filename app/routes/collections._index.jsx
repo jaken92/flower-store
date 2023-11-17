@@ -24,14 +24,14 @@ export default function Collections() {
   const {collections} = useLoaderData();
   return (
     <section className="w-full mt-10 gap-4">
-      <div className="grid-flow-row grid gap-2 md:gap-2 p-20 md:mb-8 grid-cols-1 md:grid-cols-3">
+      <div className="grid-flow-row grid gap-2 md:gap-2 p-20 md:mb-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {collections.nodes.map((collection) => {
           return (
             <Link to={`/collections/${collection.handle}`} key={collection.id}>
-              <div className="grid pl-4 pr-4 md:p-8 relative">
+              <div className="grid p-2 md:p-8 relative">
                 {collection?.image && (
                   <Image
-                    className="object-cover h-96 w-96"
+                    className="object-cover h-96 w-96 img-zoom"
                     alt={`Image of ${collection.title}`}
                     data={collection.image}
                     key={collection.id}
@@ -39,8 +39,8 @@ export default function Collections() {
                     crop="center"
                   />
                 )}
-                <h2 className="absolute inset-0 text-white flex items-center justify-center whitespace-pre-wrap max-w-prose text-xl text-copy">
-                  <span className="bg-black bg-opacity-30 p-2 rounded text-white">
+                <h2 className="absolute inset-0 text-white flex items-center justify-center whitespace-pre-wrap max-w-prose  md:text-lg text-copy">
+                  <span className="bg-black bg-opacity-40 p-2 rounded text-white">
                     {collection.title}
                   </span>
                 </h2>

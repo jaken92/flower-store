@@ -13,7 +13,7 @@ export default function LinkCard({text, btnText, imageSrc, linkTo}) {
         <p className="text-white  p-1 bg-black rounded bg-opacity-30 font-custom ">
           {text}
         </p>
-        <button className="bg-pink hover:bg-transparent hover:text-white text-black font-custom  border-2  border-pink font-bold py-2 px-4 rounded">
+        <button className="bg-white hover:bg-transparent hover:text-white text-black font-custom  border-2  border-white font-bold py-2 px-4 rounded">
           <Link to={linkTo}> {btnText}</Link>
         </button>
       </div>
