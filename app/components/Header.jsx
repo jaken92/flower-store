@@ -7,19 +7,15 @@ import {useLocation} from '@remix-run/react';
 export function Header({header, isLoggedIn, cart}) {
   const {menu} = header;
   const [whiteHeader, setWhiteHeader] = useState(false);
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   //updating the WhiteHeader state to apply/remove css class to header-element.
   function headerColorChanger(trueOrFalse) {
+    console.log('function triggered');
     setWhiteHeader(trueOrFalse);
   }
 
   return (
-    <header
-      className={`header ${
-        whiteHeader || isDropdownVisible ? 'white-header' : ''
-      }`}
-    >
+    <header className={`header ${whiteHeader ? 'white-header' : ''}`}>
       <ScrollTracker headerColorChanger={headerColorChanger} />
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
         <img
@@ -29,10 +25,9 @@ export function Header({header, isLoggedIn, cart}) {
         ></img>
       </NavLink>
       <HeaderMenu
-        isDropdownVisible={isDropdownVisible}
-        setIsDropdownVisible={setIsDropdownVisible}
         menu={menu}
         viewport="desktop"
+        // headerColorChanger={headerColorChanger}
       />
       <HeaderCtas isLoggedIn={isLoggedIn} cart={cart} />
     </header>
@@ -42,9 +37,11 @@ export function Header({header, isLoggedIn, cart}) {
 export function HeaderMenu({
   menu,
   viewport,
-  setIsDropdownVisible,
-  isDropdownVisible,
+  // headerColorChanger,
+  // setIsDropdownVisible,
+  // isDropdownVisible,
 }) {
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const [root] = useMatches();
   const publicStoreDomain = root?.data?.publicStoreDomain;
   const className = `header-menu-${viewport}`;
@@ -81,8 +78,14 @@ export function HeaderMenu({
           item.items && item.items.length > 0 ? (
             // Render a div if item has sub-items
             <div
-              className="header-menu-item"
-              onClick={() => setIsDropdownVisible(!isDropdownVisible)}
+              className="header-menu-item sub-key"
+              onClick={() => {
+                if (viewport === 'mobile') {
+                  setIsDropdownVisible(!isDropdownVisible);
+                }
+
+                // headerColorChanger(true);
+              }}
               key={item.id}
             >
               <h2>{item.title + `${isDropdownVisible ? ' -' : ' +'}`}</h2>

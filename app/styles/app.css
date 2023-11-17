@@ -149,9 +149,9 @@ aside li {
 * components/Header
 * --------------------------------------------------
 */
-.header-sub:hover {
+/* .header-sub:hover {
   cursor: pointer;
-}
+} */
 .submenu-wrapper {
   position: absolute;
   display: flex;
@@ -165,7 +165,7 @@ aside li {
   background-color: #fff;
 }
 
-/* When submenu is visible, translate it back to its original position (0%) */
+/* Shown class applied when submenu is clicked in mobile version. */
 .shown {
   visibility: visible;
   opacity: 1;
@@ -215,6 +215,19 @@ aside li {
 .header:hover .header-menu-desktop .header-menu-item {
   color: black;
 }
+
+/* Hover effetct showing submenus while in desktop */
+.header-menu-desktop .sub-key:hover .submenu-wrapper {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* .header-menu-desktop .header-menu-item:active .header {
+  background: #fff;
+  color: black;
+  border-bottom: 0.5px solid #796f6e;
+
+} */
 .header-menu-mobile-toggle {
   display: none;
   @media (max-width: 768px) {
@@ -360,12 +373,11 @@ aside li {
 */
 .img-zoom {
   transition: transform 0.8s ease-in-out;
- }
- 
+}
 
- .relative:hover .img-zoom {
+.relative:hover .img-zoom {
   transform: scale(1.05);
- }
+}
 
 .featured-collection {
   display: block;
@@ -554,16 +566,16 @@ aside li {
 } */
 
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(100%); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fadeIn {
   animation: fadeIn 1.5s ease-in;
 }
-
-
-
-
- 
-
