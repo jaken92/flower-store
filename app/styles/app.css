@@ -266,6 +266,7 @@ aside li {
 .footer {
   margin-top: auto;
   background-color: #fff3f2;
+  z-index: 1;
 }
 
 .footer-menu-missing {
