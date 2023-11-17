@@ -1,6 +1,15 @@
 import Button from './ButtonContact';
 
+import {useInView} from 'react-intersection-observer';
+
 export default function SubscriptionsPage() {
+  const {ref: ref1, inView: inView1} = useInView({
+    triggerOnce: true,
+  });
+
+  const {ref: ref2, inView: inView2} = useInView({
+    triggerOnce: true,
+  });
   return (
     <>
       <section className="md:w-full gap-4">
@@ -34,8 +43,13 @@ export default function SubscriptionsPage() {
           </div>
         </div>
       </section>
-      <div className="flex justify-center md:pt-10"></div>
-      <div className="flex flex-col md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-8 ">
+
+      <div
+        className={`flex flex-col md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-8 ${
+          inView1 ? 'fadeIn' : ''
+        }`}
+        ref={ref1}
+      >
         <div className="w-full md:w-[50%]  md:pt-20 ">
           <h2 className="text-2xl font-bold text-center uppercase font-custom">
             Home subscription
@@ -54,7 +68,6 @@ export default function SubscriptionsPage() {
             Interested in signing up? Inquire below, we will reach out to you to
             discuss your subscription details.
           </p>
-          <div className="flex justify-center mt-4"></div>
         </div>
         <div className="relative md:w-[40%] md:mt-7 md:h-[400px] h-[300px]">
           <img
@@ -67,7 +80,12 @@ export default function SubscriptionsPage() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-8 ">
+      <div
+        className={`flex flex-col-reverse md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-8 ${
+          inView2 ? 'fadeIn' : ''
+        }`}
+        ref={ref2}
+      >
         <div className="relative md:w-[40%] md:mt-7 md:h-[400px] h-[300px]">
           <img
             className="w-full h-full object-cover"
@@ -95,7 +113,6 @@ export default function SubscriptionsPage() {
             Interested in signing up? Inquire below, we will reach out to you to
             discuss your subscription details.
           </p>
-          <div className="flex justify-center mt-4"></div>
         </div>
       </div>
     </>
