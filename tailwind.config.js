@@ -17,6 +17,7 @@ export default {
         custom: ['Playfair Display'],
         customSemiBold: ['Playfair Display SemiBold'],
         customMedium: ['Playfair Display Medium'],
+        customFancy: ['Playpen Sans'],
       },
     },
   },

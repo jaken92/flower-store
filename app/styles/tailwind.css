@@ -20,4 +20,8 @@
     src: local('Playfair Display'),
       url('public/fonts/PlayfairDisplay-Medium.woff2'); /* IE9 Compat Modes */
   }
+  @font-face {
+    font-family: 'Playpen Sans';
+    src: url('public/fonts/DancingScript-Medium.woff2');
+  }
 }

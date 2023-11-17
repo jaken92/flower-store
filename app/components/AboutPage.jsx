@@ -12,7 +12,7 @@ export default function AboutPage({secondaryContent}) {
       <section className="w-full gap-4">
         <div className="relative">
           <div className="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-2 sm:p-3">
-            <h1 className="text-3xl font-custom text-center sm:text-6xl bg-black bg-opacity-30 p-2 rounded text-white">
+            <h1 className="text-3xl font-customFancy text-center sm:text-6xl bg-black bg-opacity-30 p-2 rounded text-white">
               ABOUT
             </h1>
           </div>
