@@ -13,7 +13,7 @@ function FooterMenu({menu}) {
   const publicStoreDomain = root?.data?.publicStoreDomain;
   return (
     <>
-      <nav className="footer-menu" role="navigation">
+      <nav className="footer-menu border-t-2" role="navigation">
         {(menu || FALLBACK_FOOTER_MENU).items.map((item) => {
           if (!item.url) return null;
           // if the url is internal, we strip the domain
@@ -45,7 +45,7 @@ function FooterMenu({menu}) {
           );
         })}
       </nav>
-      <div className="flex justify-between border-t-2 border-blue md:mt-5 md:pl-10 md:pr-10 ">
+      <div className="flex justify-between border-t-2 border-teal md:mt-5 md:pl-10 md:pr-10 ">
         <div className="flex h-14 items-center justify-center gap-3 py-4">
           <img
             src="../images/icons/google-pay.svg"

@@ -22,6 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--color-pink);
 }
 img {
   border-radius: 4px;
@@ -278,7 +279,7 @@ aside li {
 */
 .footer {
   margin-top: auto;
-  background-color: #fff3f2;
+  background-color: var(--color-white);
   z-index: 1;
 }
 
@@ -372,8 +373,9 @@ aside li {
 * --------------------------------------------------
 */
 .img-zoom {
-  transition: transform 0.8s ease-in-out;
-}
+  transition: transform 0.5s ease-in-out;
+ }
+ 
 
 .relative:hover .img-zoom {
   transform: scale(1.05);

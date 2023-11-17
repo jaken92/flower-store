@@ -33,7 +33,7 @@ export default function SubscriptionsPage() {
 
       <section className="flex justify-center  ">
         <div className="flex p-5 md:flex-row flex-col gap-10 ">
-          <div className="flex p-5 md:flex-col md:w-[50%] text-center justify-center border border-black">
+          <div className="flex bg-white p-5 md:flex-col md:w-[50%] text-center justify-center border border-black">
             <p className="font-custom md:text-2xl ">
               10% off your recurring flower offer every time
             </p>
@@ -41,7 +41,7 @@ export default function SubscriptionsPage() {
               10% off on any additional flower order
             </p>
           </div>
-          <div className="flex p-5 md:flex-col md:w-[50%] text-center justify-center border md:p-4 border-black">
+          <div className="flex bg-white p-5 md:flex-col md:w-[50%] text-center justify-center border md:p-4 border-black">
             <p className="font-custom md:text-2xl ">
               Wanna send an arrangment for a special occasion? 10% off
             </p>
@@ -62,17 +62,17 @@ export default function SubscriptionsPage() {
           <h2 className="text-2xl font-bold text-center uppercase font-custom">
             Home subscription
           </h2>
-          <p className="text-gray-500 text-lg font-custom mt-2">
+          <p className="md:text-lg font-custom mt-2">
             Breathe life into your home with one of our beautiful,
             garden-inspired arrangements delivered to your door weekly,
             biweekly, or monthly. Each design is created in a fresh seasonal
             palette that changes every week.
           </p>
-          <p className="text-gray-500 text-lg font-custom mt-2">
+          <p className="md:text-lg font-custom mt-2">
             *With each new floral delivery, we will collect the vessel used from
             the week before - no clutter for you!
           </p>
-          <p className="text-gray-500 text-lg font-custom mt-2">
+          <p className="md:text-lg pb-6 font-custom mt-2">
             Interested in signing up? Inquire here, we will reach out to you to
             discuss your subscription details.
           </p>
@@ -108,16 +108,16 @@ export default function SubscriptionsPage() {
           <h2 className="text-2xl font-bold  uppercase text-center font-custom">
             Business Subscription
           </h2>
-          <p className="text-gray-500 text-lg font-custom mt-2">
+          <p className="md:text-lg font-custom mt-2">
             We offer weekly and biweekly business subscriptions.
           </p>
-          <p className="text-gray-500 text-lg font-custom mt-2">
+          <p className="md:text-lg font-custom mt-2">
             We will waive all local delivery fees (within a 5 mile radius).
             Pricing is unique to each account and is based on your business’
             specifications. We also offer these unique accounts to interior
             designers looking to compliment their work with fresh flowers.
           </p>
-          <p className="text-gray-500 text-lg font-custom mt-2">
+          <p className="md:text-lg pb-6 font-custom mt-2">
             Interested in signing up? Inquire here, we will reach out to you to
             discuss your subscription details.
           </p>
