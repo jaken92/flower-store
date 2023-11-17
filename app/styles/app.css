@@ -359,12 +359,12 @@ aside li {
 * --------------------------------------------------
 */
 .img-zoom {
-  transition: transform 1s ease-in-out;
+  transition: transform 0.8s ease-in-out;
  }
  
 
  .relative:hover .img-zoom {
-  transform: scale(1.1);
+  transform: scale(1.05);
  }
 
 .featured-collection {
