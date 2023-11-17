@@ -4,11 +4,18 @@ export default function WeddingsPage(secondaryContent) {
   return (
     <>
       <section className="md:w-full gap-4">
-        <img
-          className="md:w-full md:h-screen object-cover"
-          src="../images/heroes/WeddingHero.jpg"
-          alt="hero-image for weddingpage, a copule smiling with a flowerbouqeut in their hands"
-        ></img>
+        <div className="relative">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-pinkOpacity ">
+            <h1 className="font-customSemiBold text-4xl p-5">
+              Weddings & Events
+            </h1>
+          </div>
+          <img
+            className="md:w-full md:h-screen object-cover"
+            src="../images/heroes/WeddingHero.jpg"
+            alt="hero-image for weddingpage, a copule smiling with a flowerbouqeut in their hands"
+          ></img>
+        </div>
       </section>
 
       <h2 className="font-custom mt-5 md:mt-10 md:text-3xl text-2xl uppercase text-center">
