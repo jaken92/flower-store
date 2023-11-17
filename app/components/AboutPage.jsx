@@ -2,11 +2,18 @@ export default function AboutPage({secondaryContent}) {
   return (
     <>
       <section className="w-full gap-4">
-        <img
-          className="md:w-full md:h-screen object-cover"
-          src="../images/heroes/flowerHero.jpg"
-          alt="hero for about-page"
-        ></img>
+        <div className="relative">
+          <div className="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-2 sm:p-3">
+            <h1 className="text-3xl font-custom text-center sm:text-6xl bg-black bg-opacity-30 p-2 rounded text-white">
+              ABOUT
+            </h1>
+          </div>
+          <img
+            className="h-[400px] sm:w-full sm:h-screen object-cover"
+            src="../images/heroes/flowerHero.jpg"
+            alt="hero for about-page"
+          ></img>
+        </div>
       </section>
       <h2>{secondaryContent}</h2>
       <div className="flex flex-col md:flex-wrap justify-center items-center md:flex-row w-full p-8 ">

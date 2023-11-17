@@ -11,7 +11,7 @@ export default {
         pink: '#FFF3F2',
         teal: '#E7F9FA',
         white: '#FFFFFF',
-        pinkOpacity: 'rgb(255, 243, 242, 0.99)',
+        pinkOpacity: 'rgb(255, 243, 242, 0.8)',
       },
       fontFamily: {
         custom: ['Playfair Display'],

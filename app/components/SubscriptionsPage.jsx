@@ -13,11 +13,18 @@ export default function SubscriptionsPage() {
   return (
     <>
       <section className="md:w-full gap-4">
-        <img
-          className="md:w-full md:h-screen object-cover"
-          src="../images/heroes/subscriptionsHero.jpg"
-          alt="subscriptionpage-hero, flowers in different shapes and colors"
-        ></img>
+        <div className="relative">
+          <div className="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-pink p-2 sm:p-3">
+            <h1 className="text-3xl font-custom text-center sm:text-6xl">
+              SUBSCRIPTIONS
+            </h1>
+          </div>
+          <img
+            className="h-[400px] sm:w-full sm:h-screen object-cover"
+            src="../images/heroes/subscriptionsHero.jpg"
+            alt="subscriptionpage-hero, flowers in different shapes and colors"
+          ></img>
+        </div>
       </section>
       <h2 className="font-custom text-2xl uppercase text-center mb-5 mt-5 md:mt-10">
         A place for you to get flowers regulary and at a discount

@@ -47,12 +47,12 @@ export default function Index() {
       <section className="md:w-full gap-4">
         <div className="relative">
           <img
-            className="md:w-full md:h-screen object-cover"
+            className="h-[400px] sm:w-full sm:h-screen object-cover"
             src="./images/heroes/flowerHero.jpg"
             alt="hero image with flowers on a table"
           ></img>
           <img
-            className="md:h-[580px] w-[300px] md:w-[580px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+            className="w-[180px] sm:w-[300px] md:w-[580px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
             src="../images/WhiteLogoNoBackground.png"
             alt="Moua flowers with a cause"
           />

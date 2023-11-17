@@ -5,13 +5,13 @@ export default function WeddingsPage(secondaryContent) {
     <>
       <section className="md:w-full gap-4">
         <div className="relative">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-pinkOpacity ">
-            <h1 className="font-customSemiBold text-4xl p-5">
-              Weddings & Events
+          <div className="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-pink p-2 sm:p-3">
+            <h1 className="text-3xl font-custom text-center sm:text-6xl">
+              WEDDINGS
             </h1>
           </div>
           <img
-            className="md:w-full md:h-screen object-cover"
+            className="h-[400px] sm:w-full sm:h-screen object-cover"
             src="../images/heroes/WeddingHero.jpg"
             alt="hero-image for weddingpage, a copule smiling with a flowerbouqeut in their hands"
           ></img>
