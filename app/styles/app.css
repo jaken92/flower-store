@@ -266,6 +266,7 @@ aside li {
 .footer {
   margin-top: auto;
   background-color: #fff3f2;
+  z-index: 1;
 }
 
 .footer-menu-missing {
@@ -357,6 +358,15 @@ aside li {
 * routes/__index
 * --------------------------------------------------
 */
+.img-zoom {
+  transition: transform 1s ease-in-out;
+ }
+ 
+
+ .relative:hover .img-zoom {
+  transform: scale(1.1);
+ }
+
 .featured-collection {
   display: block;
   margin-bottom: 2rem;
@@ -551,6 +561,8 @@ aside li {
 .fadeIn {
   animation: fadeIn 1.5s ease-in;
 }
+
+
 
 
  

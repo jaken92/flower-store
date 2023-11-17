@@ -58,7 +58,7 @@ export default function Index() {
           />
         </div>
       </section>
-      <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 sm:grid-cols-3 mt-6 mb-6 px-8 bg-white ">
+      <div className="grid-flow-row grid  p-6 gap-4 justify-items-center gap-y-6 md:gap-3 grid-cols-1 md:grid-cols-3 mt-6 mb-6">
         <LinkCard
           text="Order Flowers"
           imageSrc="./images/heroes/collections.jpeg"
