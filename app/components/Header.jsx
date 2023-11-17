@@ -10,7 +10,6 @@ export function Header({header, isLoggedIn, cart}) {
 
   //updating the WhiteHeader state to apply/remove css class to header-element.
   function headerColorChanger(trueOrFalse) {
-    console.log('function triggered');
     setWhiteHeader(trueOrFalse);
   }
 
@@ -24,23 +23,13 @@ export function Header({header, isLoggedIn, cart}) {
           alt="cart-logo"
         ></img>
       </NavLink>
-      <HeaderMenu
-        menu={menu}
-        viewport="desktop"
-        // headerColorChanger={headerColorChanger}
-      />
+      <HeaderMenu menu={menu} viewport="desktop" />
       <HeaderCtas isLoggedIn={isLoggedIn} cart={cart} />
     </header>
   );
 }
 
-export function HeaderMenu({
-  menu,
-  viewport,
-  // headerColorChanger,
-  // setIsDropdownVisible,
-  // isDropdownVisible,
-}) {
+export function HeaderMenu({menu, viewport}) {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const [root] = useMatches();
   const publicStoreDomain = root?.data?.publicStoreDomain;
@@ -78,17 +67,20 @@ export function HeaderMenu({
           item.items && item.items.length > 0 ? (
             // Render a div if item has sub-items
             <div
-              className="header-menu-item sub-key"
+              className="header-menu-item sub-toggler"
               onClick={() => {
                 if (viewport === 'mobile') {
                   setIsDropdownVisible(!isDropdownVisible);
                 }
-
-                // headerColorChanger(true);
               }}
               key={item.id}
             >
-              <h2>{item.title + `${isDropdownVisible ? ' -' : ' +'}`}</h2>
+              {viewport === 'mobile' ? (
+                <h2>{item.title + `${isDropdownVisible ? ' -' : ' +'}`}</h2>
+              ) : (
+                <h2>{item.title}</h2>
+              )}
+
               <div
                 className={`submenu-wrapper ${
                   isDropdownVisible ? 'shown' : ''

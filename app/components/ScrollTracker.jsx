@@ -14,7 +14,8 @@ function ScrollLogger({headerColorChanger}) {
         location.pathname !== '/' &&
         location.pathname !== '/pages/about' &&
         location.pathname !== '/pages/weddings' &&
-        location.pathname !== '/pages/subscriptions'
+        location.pathname !== '/pages/subscriptions' &&
+        location.pathname !== '/pages/contact'
       ) {
         headerColorChanger(true);
       } else {

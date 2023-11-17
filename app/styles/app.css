@@ -149,35 +149,8 @@ aside li {
 * --------------------------------------------------
 * components/Header
 * --------------------------------------------------
+
 */
-/* .header-sub:hover {
-  cursor: pointer;
-} */
-.submenu-wrapper {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
-  top: 38px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  background-color: #fff;
-}
-
-/* Shown class applied when submenu is clicked in mobile version. */
-.shown {
-  visibility: visible;
-  opacity: 1;
-}
-
-.header-menu-item {
-  cursor: pointer;
-  position: relative;
-  color: #fff;
-  transition: color 0.8s ease-out;
-}
 
 .header {
   align-items: center;
@@ -197,16 +170,91 @@ aside li {
   border-bottom: 0.5px solid white;
 }
 
-.white-header {
-  background: #fff;
-  color: black;
-  /* border-bottom: 2px solid #fff3f2; */
-  border-bottom: 0.5px solid #796f6e;
-  /* box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5); */
+.header-menu-item {
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  transition: color 0.8s ease-out;
 }
-.white-header .header-menu-desktop .header-menu-item {
-  color: black;
+.submenu-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  top: 38px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  background-color: #fff;
+  cursor: default;
 }
+
+.header-ctas {
+  align-items: center;
+  display: flex;
+  grid-gap: 1rem;
+  margin-left: auto;
+}
+
+/* Changes to header in desktop*/
+
+.header-menu-desktop {
+  display: none;
+  grid-gap: 1rem;
+  @media (min-width: 48em) {
+    display: flex;
+    grid-gap: 1rem;
+    margin: 0 3rem;
+    justify-content: center;
+  }
+}
+
+.header-menu-desktop .sub-toggler {
+  display: flex;
+  justify-content: center;
+}
+.header-menu-desktop .submenu-wrapper {
+  top: 24px;
+  gap: 0px;
+  padding: 10px;
+  width: 140px;
+}
+.header-menu-desktop .submenu-wrapper .submenu-item {
+  padding-top: 5px;
+  padding-left: 0px;
+  margin-left: 7px;
+}
+
+.header-menu-desktop .submenu-wrapper .submenu-item {
+  cursor: pointer;
+}
+
+.header-menu-desktop .header-menu-item:hover {
+  text-decoration: underline;
+}
+
+.header-menu-desktop .header-menu-item .submenu-wrapper h3:hover {
+  background-color: whitesmoke;
+}
+
+/* Hover effetct showing submenus while in desktop */
+.header-menu-desktop .sub-toggler:hover .submenu-wrapper {
+  visibility: visible;
+  opacity: 1;
+}
+.submenu-wrapper:hover .submenu-wrapper {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Shown class applied when submenu is clicked in mobile version. */
+.shown {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* CLasses applied to header conditionally. */
 .header:hover {
   background-color: #fff;
   color: black;
@@ -217,25 +265,22 @@ aside li {
   color: black;
 }
 
-/* Hover effetct showing submenus while in desktop */
-.header-menu-desktop .sub-key:hover .submenu-wrapper {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* .header-menu-desktop .header-menu-item:active .header {
+.white-header {
   background: #fff;
   color: black;
   border-bottom: 0.5px solid #796f6e;
+}
+.white-header .header-menu-desktop .header-menu-item {
+  color: black;
+}
 
-} */
 .header-menu-mobile-toggle {
   display: none;
   @media (max-width: 768px) {
-    display: block; /* or any other styles you want for mobile */
+    display: block;
   }
 }
-
+/*Header-mobile*/
 .header-menu-mobile {
   display: flex;
   flex-direction: column;
@@ -252,24 +297,6 @@ aside li {
 .header-menu-mobile .header-menu-item {
   color: black;
   font-size: 20px;
-}
-
-.header-menu-desktop {
-  display: none;
-  grid-gap: 1rem;
-  @media (min-width: 48em) {
-    display: flex;
-    grid-gap: 1rem;
-    margin: 0 3rem; /* change this value to center? */
-    justify-content: center;
-  }
-}
-
-.header-ctas {
-  align-items: center;
-  display: flex;
-  grid-gap: 1rem;
-  margin-left: auto;
 }
 
 /*
@@ -374,8 +401,7 @@ aside li {
 */
 .img-zoom {
   transition: transform 0.5s ease-in-out;
- }
- 
+}
 
 .relative:hover .img-zoom {
   transform: scale(1.05);
