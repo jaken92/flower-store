@@ -1,6 +1,15 @@
 import Button from './ButtonContact';
 
-export default function WeddingsPage() {
+export default function WeddingsPage({
+  weddings_entry_text,
+  weddings_text,
+  weddings_title,
+  weddings_contact_title,
+  weddings_contact_text,
+}) {
+  //add br for linebreaks
+  const weddings_text_linebreaks = weddings_text.replace(/\n/g, '<br/>');
+
   return (
     <>
       <section className="md:w-full gap-4">
@@ -19,31 +28,17 @@ export default function WeddingsPage() {
       </section>
 
       <h2 className="font-custom mt-5 md:mt-10 md:text-3xl text-2xl uppercase text-center">
-        Wedding floral design
+        {weddings_title}
       </h2>
       <div className="flex flex-col md:pl-20 md:pr-20 justify-center md:gap-20 md:flex-row w-full p-8 ">
         <div className="w-full md:w-[30%]  md:pt-20 ">
           <p className="font-customSemiBold md:mt-10 text-center md:text-2xl ">
-            {' '}
-            We know how special this day is & we would love to be part of your
-            story.{' '}
+            {weddings_entry_text}
           </p>
-          <p className="font-custom mt-4 text-center md:text-lg  ">
-            Focused on delivering a natural luxurious floral aesthetic, we
-            specialize in a timeless garden aesthetic that will provide an
-            elegant feel for your celebration.
-          </p>
-          <p className="font-custom mt-4 text-center md:text-lg ">
-            Specialized in free foam airy designs Moua offers a full floral
-            service: planning + styling+ installation (romantic ceremony
-            settings, bouquets, low & tall centerpieces, floral installations,
-            boutonnieres, floral crowns, corsages, unique candle decor & more)
-          </p>
-          <p className="font-custom mt-4 text-center md:text-lg ">
-            We custom order your premium blooms and provide complete floral
-            design / decor installation for each and every wedding whether
-            intimate or large scale.
-          </p>
+          <p
+            className="font-custom mt-4 text-center md:text-lg  "
+            dangerouslySetInnerHTML={{__html: weddings_text_linebreaks}}
+          ></p>
         </div>
         <img
           className="  md:w-[40%] md:mt-7 md:h-[30%] h-[400px] mt-8 object-cover "
@@ -72,12 +67,10 @@ export default function WeddingsPage() {
       </div>
       <div className="p-8 bg-pink">
         <h3 className="font-custom md:text-2xl text-center uppercase">
-          Planning a Wedding or Event?
+          {weddings_contact_title}
         </h3>
         <p className="font-custom md:text-lg text-center">
-          Get in contact in order for us to be able to send you the initial
-          inquiry form where we will have more information about your special
-          day.
+          {weddings_contact_text}
         </p>
       </div>
       <section className="md:w-full  gap-4 relative">

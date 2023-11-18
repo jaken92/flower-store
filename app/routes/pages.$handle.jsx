@@ -83,6 +83,7 @@ export default function Page() {
   const {page} = useLoaderData();
   const location = useLocation();
 
+  //About-page props
   const founder_name = page.founder_name ? page.founder_name.value : null;
 
   const occupation = page.occupation ? page.occupation.value : null;
@@ -104,6 +105,25 @@ export default function Page() {
   const about_moua_title = page.about_moua_title
     ? page.about_moua_title.value
     : null;
+
+  //Wedding-page props
+
+  const weddings_entry_text = page.weddings_entry_text
+    ? page.weddings_entry_text.value
+    : null;
+
+  const weddings_text = page.weddings_text ? page.weddings_text.value : null;
+
+  const weddings_title = page.weddings_title ? page.weddings_title.value : null;
+
+  const weddings_contact_title = page.weddings_contact_title
+    ? page.weddings_contact_title.value
+    : null;
+
+  const weddings_contact_text = page.weddings_contact_text
+    ? page.weddings_contact_text.value
+    : null;
+
   return (
     <>
       {location.pathname === '/pages/about' ? (
@@ -122,7 +142,15 @@ export default function Page() {
       ) : location.pathname === '/pages/contact' ? (
         <ContactPage content={page.body} title={page.title} />
       ) : location.pathname === '/pages/weddings' ? (
-        <WeddingsPage content={page.body} title={page.title} />
+        <WeddingsPage
+          content={page.body}
+          title={page.title}
+          weddings_entry_text={weddings_entry_text}
+          weddings_text={weddings_text}
+          weddings_title={weddings_title}
+          weddings_contact_title={weddings_contact_title}
+          weddings_contact_text={weddings_contact_text}
+        />
       ) : location.pathname === '/pages/subscriptions' ? (
         <SubscriptionsPage content={page.body} title={page.title} />
       ) : (
@@ -170,6 +198,31 @@ const PAGE_QUERY = `#graphql
           description
         }
         about_moua_title: metafield(namespace: "custom", key: "about_moua_title") {
+          value
+          type
+          description
+        }
+        weddings_entry_text: metafield(namespace: "custom", key: "weddings_entry_text") {
+          value
+          type
+          description
+        }
+        weddings_text: metafield(namespace: "custom", key: "weddings_text") {
+          value
+          type
+          description
+        }
+        weddings_title: metafield(namespace: "custom", key: "weddings_title") {
+          value
+          type
+          description
+        }
+        weddings_contact_title: metafield(namespace: "custom", key: "weddings_contact_title") {
+          value
+          type
+          description
+        }
+        weddings_contact_text: metafield(namespace: "custom", key: "weddings_contact_text") {
           value
           type
           description
