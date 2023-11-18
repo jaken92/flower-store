@@ -83,10 +83,27 @@ export default function Page() {
   const {page} = useLoaderData();
   const location = useLocation();
 
-  const secondaryContent = page.secondaryField
-    ? page.secondaryField.value
+  const founder_name = page.founder_name ? page.founder_name.value : null;
+
+  const occupation = page.occupation ? page.occupation.value : null;
+
+  const intro = page.intro ? page.intro.value : null;
+
+  const journey_title = page.journey_story_title
+    ? page.journey_story_title.value
     : null;
 
+  const journey_text = page.journey_story_text
+    ? page.journey_story_text.value
+    : null;
+
+  const about_moua_text = page.about_moua_text
+    ? page.about_moua_text.value
+    : null;
+
+  const about_moua_title = page.about_moua_title
+    ? page.about_moua_title.value
+    : null;
   return (
     <>
       {location.pathname === '/pages/about' ? (
@@ -94,16 +111,18 @@ export default function Page() {
           content={page.body}
           title={page.title}
           img={page.image}
-          secondaryContent={secondaryContent}
+          founder_name={founder_name}
+          occupation={occupation}
+          intro={intro}
+          journey_title={journey_title}
+          journey_text={journey_text}
+          about_moua_text={about_moua_text}
+          about_moua_title={about_moua_title}
         />
       ) : location.pathname === '/pages/contact' ? (
         <ContactPage content={page.body} title={page.title} />
       ) : location.pathname === '/pages/weddings' ? (
-        <WeddingsPage
-          content={page.body}
-          title={page.title}
-          secondaryContent={secondaryContent}
-        />
+        <WeddingsPage content={page.body} title={page.title} />
       ) : location.pathname === '/pages/subscriptions' ? (
         <SubscriptionsPage content={page.body} title={page.title} />
       ) : (
@@ -120,7 +139,37 @@ const PAGE_QUERY = `#graphql
     query PageDetails($language: LanguageCode, $handle: String!)
     @inContext(language: $language) {
       page(handle: $handle) {
-        secondaryField: metafield(namespace: "custom", key: "secondaryfield") {
+        founder_name: metafield(namespace: "custom", key: "founder_name") {
+          value
+          type
+          description
+        }
+        occupation: metafield(namespace: "custom", key: "occupation") {
+          value
+          type
+          description
+        }
+        journey_story_title: metafield(namespace: "custom", key: "journey_story_title") {
+          value
+          type
+          description
+        }
+        journey_story_text: metafield(namespace: "custom", key: "journey_story_text") {
+          value
+          type
+          description
+        }
+        intro: metafield(namespace: "custom", key: "intro") {
+          value
+          type
+          description
+        }
+        about_moua_text: metafield(namespace: "custom", key: "about_moua_text") {
+          value
+          type
+          description
+        }
+        about_moua_title: metafield(namespace: "custom", key: "about_moua_title") {
           value
           type
           description
