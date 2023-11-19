@@ -1,7 +1,13 @@
 import {Form} from '@remix-run/react';
 import {useEffect, useState} from 'react';
 
-export default function MyForm() {
+export default function MyForm({
+  contact_title,
+  contact_entry_text,
+  contact_phone_number,
+  contact_location_information,
+  contact_delivery_information,
+}) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   return (
     <>
@@ -22,24 +28,22 @@ export default function MyForm() {
       <section className=" md:mt-20 dark:bg-gray-900">
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-            Contact Us
+            {contact_title}
           </h2>
 
           <p className="mb-2  md:mb-3 font-light text-center text-black dark:text-gray-400 sm:text-xl">
-            Want to talk with someone directly? Feel free to call or DM us
-            through our social media . Our current hours are Monday - Saturday,
-            10AM - 19:00PM.
+            {contact_entry_text}
           </p>
           <div className="flex flex-col md:mt-10 md:flex-row md:items-center md:justify-between mb-6">
             <div className="flex flex-col">
               <p className="font-light md:text-xl  dark:text-gray-400">
-                Number: (+46) 076. 748. 7401
+                {contact_phone_number}
               </p>
               <p className="font-light md:text-xl  dark:text-gray-400">
-                Location: Göteborg, Sweden Högsbo 41111
+                {contact_location_information}
               </p>
               <p className="font-light md:text-xl  dark:text-gray-400">
-                PICK-UP + DELIVERIES: MONDAY - FRIDAY
+                {contact_delivery_information}
               </p>
             </div>
             <a

@@ -124,6 +124,62 @@ export default function Page() {
     ? page.weddings_contact_text.value
     : null;
 
+  //Contact-page props
+  const contact_title = page.contact_title ? page.contact_title.value : null;
+
+  const contact_entry_text = page.contact_entry_text
+    ? page.contact_entry_text.value
+    : null;
+
+  const contact_phone_number = page.contact_phone_number
+    ? page.contact_phone_number.value
+    : null;
+
+  const contact_location_information = page.contact_location_information
+    ? page.contact_location_information.value
+    : null;
+
+  const contact_delivery_information = page.contact_delivery_information
+    ? page.contact_delivery_information.value
+    : null;
+  //subscription-page props
+
+  const subscriptions_title = page.subscriptions_title
+    ? page.subscriptions_title.value
+    : null;
+
+  const subscriptions_discount_one = page.subscriptions_discount_one
+    ? page.subscriptions_discount_one.value
+    : null;
+
+  const subscriptions_discount_two = page.subscriptions_discount_two
+    ? page.subscriptions_discount_two.value
+    : null;
+
+  const subscriptions_discount_three = page.subscriptions_discount_three
+    ? page.subscriptions_discount_three.value
+    : null;
+
+  const subscriptions_discount_four = page.subscriptions_discount_four
+    ? page.subscriptions_discount_four.value
+    : null;
+
+  const subscriptions_homesub_title = page.subscriptions_homesub_title
+    ? page.subscriptions_homesub_title.value
+    : null;
+
+  const subscriptions_hometext = page.subscriptions_hometext
+    ? page.subscriptions_hometext.value
+    : null;
+
+  const subscriptions_business_title = page.subscriptions_business_title
+    ? page.subscriptions_business_title.value
+    : null;
+
+  const subscriptions_business_text = page.subscriptions_business_text
+    ? page.subscriptions_business_text.value
+    : null;
+
   return (
     <>
       {location.pathname === '/pages/about' ? (
@@ -140,7 +196,15 @@ export default function Page() {
           about_moua_title={about_moua_title}
         />
       ) : location.pathname === '/pages/contact' ? (
-        <ContactPage content={page.body} title={page.title} />
+        <ContactPage
+          content={page.body}
+          title={page.title}
+          contact_title={contact_title}
+          contact_entry_text={contact_entry_text}
+          contact_phone_number={contact_phone_number}
+          contact_location_information={contact_location_information}
+          contact_delivery_information={contact_delivery_information}
+        />
       ) : location.pathname === '/pages/weddings' ? (
         <WeddingsPage
           content={page.body}
@@ -152,7 +216,19 @@ export default function Page() {
           weddings_contact_text={weddings_contact_text}
         />
       ) : location.pathname === '/pages/subscriptions' ? (
-        <SubscriptionsPage content={page.body} title={page.title} />
+        <SubscriptionsPage
+          content={page.body}
+          title={page.title}
+          subscriptions_title={subscriptions_title}
+          subscriptions_discount_one={subscriptions_discount_one}
+          subscriptions_discount_two={subscriptions_discount_two}
+          subscriptions_discount_three={subscriptions_discount_three}
+          subscriptions_discount_four={subscriptions_discount_four}
+          subscriptions_homesub_title={subscriptions_homesub_title}
+          subscriptions_hometext={subscriptions_hometext}
+          subscriptions_business_title={subscriptions_business_title}
+          subscriptions_business_text={subscriptions_business_text}
+        />
       ) : (
         <div
           dangerouslySetInnerHTML={{__html: page.body}}
@@ -223,6 +299,76 @@ const PAGE_QUERY = `#graphql
           description
         }
         weddings_contact_text: metafield(namespace: "custom", key: "weddings_contact_text") {
+          value
+          type
+          description
+        }
+        contact_title: metafield(namespace: "custom", key: "contact_title") {
+          value
+          type
+          description
+        }
+        contact_entry_text: metafield(namespace: "custom", key: "contact_entry_text") {
+          value
+          type
+          description
+        }
+        contact_phone_number: metafield(namespace: "custom", key: "contact_phone_number") {
+          value
+          type
+          description
+        }
+        contact_location_information: metafield(namespace: "custom", key: "contact_location_information") {
+          value
+          type
+          description
+        }
+        contact_delivery_information: metafield(namespace: "custom", key: "contact_delivery_information") {
+          value
+          type
+          description
+        }
+        subscriptions_title: metafield(namespace: "custom", key: "subscriptions_title") {
+          value
+          type
+          description
+        }
+        subscriptions_discount_one: metafield(namespace: "custom", key: "subscriptions_discount_one") {
+          value
+          type
+          description
+        }
+        subscriptions_discount_two: metafield(namespace: "custom", key: "subscriptions_discount_two") {
+          value
+          type
+          description
+        }
+        subscriptions_discount_three: metafield(namespace: "custom", key: "subscriptions_discount_three") {
+          value
+          type
+          description
+        }
+        subscriptions_discount_four: metafield(namespace: "custom", key: "subscriptions_discount_four") {
+          value
+          type
+          description
+        }
+        subscriptions_homesub_title: metafield(namespace: "custom", key: "subscriptions_homesub_title") {
+          value
+          type
+          description
+        }
+        subscriptions_hometext: metafield(namespace: "custom", key: "subscriptions_hometext") {
+          value
+          type
+          description
+        }
+        subscriptions_business_title: metafield(namespace: "custom", key: "subscriptions_business_title") {
+          value
+          type
+          description
+        }
+        subscriptions_business_text: metafield(namespace: "custom", key: "subscriptions_business_text") {
           value
           type
           description
