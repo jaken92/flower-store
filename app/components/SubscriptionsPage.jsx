@@ -28,16 +28,14 @@ export default function SubscriptionsPage({
     '<br/>',
   );
 
-  const subscriptions_business_text_linebreaks = subscriptions_hometext.replace(
-    /\n/g,
-    '<br/>',
-  );
+  const subscriptions_business_text_linebreaks =
+    subscriptions_business_text.replace(/\n/g, '<br/>');
   return (
     <>
       <section className="md:w-full gap-4">
         <div className="relative">
-          <div className="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-pink p-2 sm:p-3">
-            <h1 className="text-3xl font-custom text-center sm:text-6xl">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-70 p-2 sm:p-3">
+            <h1 className="text-3xl font-customFancy text-center sm:text-6xl text-gray-600">
               SUBSCRIPTIONS
             </h1>
           </div>

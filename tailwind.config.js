@@ -12,6 +12,7 @@ export default {
         teal: '#E7F9FA',
         white: '#FFFFFF',
         pinkOpacity: 'rgb(255, 243, 242, 0.8)',
+        whiteOpcaity: 'rgb(255,255,255, 0.9);',
       },
       fontFamily: {
         custom: ['Playfair Display'],
