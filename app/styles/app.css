@@ -306,9 +306,19 @@ aside li {
 */
 .footer {
   margin-top: auto;
-  background-color: var(--color-white);
+  background-image: url('/images/footer.jpg');
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 15%;
   z-index: 1;
+  @media (max-width: 768px) {
+  background-position: left;
+  }
+
 }
+
+
 
 .footer-menu-missing {
   display: inline-block;
@@ -318,6 +328,7 @@ aside li {
 .footer-menu {
   align-items: center;
   display: flex;
+  justify-content: center;
   grid-gap: 1rem;
   padding: 3rem;
   font-size: 18px;
