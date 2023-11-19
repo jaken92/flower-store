@@ -27,16 +27,16 @@ export default function WeddingsPage({
         </div>
       </section>
 
-      <h2 className="font-custom mt-5 md:mt-10 md:text-3xl text-2xl uppercase text-center">
+      <h2 className="font-custom mt-5 md:mt-10 md:text-3xl text-2xl uppercase text-center text-gray-600">
         {weddings_title}
       </h2>
       <div className="flex flex-col md:pl-20 md:pr-20 justify-center md:gap-20 md:flex-row w-full p-8 ">
         <div className="w-full md:w-[30%]  md:pt-20 ">
-          <p className="font-customSemiBold md:mt-10 text-center md:text-2xl ">
+          <p className="font-customSemiBold md:mt-10 text-center md:text-2xl text-gray-600 ">
             {weddings_entry_text}
           </p>
           <p
-            className="font-custom mt-4 text-center md:text-lg  "
+            className="font-custom mt-4 text-center md:text-lg text-gray-600 "
             dangerouslySetInnerHTML={{__html: weddings_text_linebreaks}}
           ></p>
         </div>
@@ -66,10 +66,10 @@ export default function WeddingsPage({
         </div>
       </div>
       <div className="p-8 bg-pink">
-        <h3 className="font-custom md:text-2xl text-center uppercase">
+        <h3 className="font-custom md:text-2xl text-center uppercase text-gray-600">
           {weddings_contact_title}
         </h3>
-        <p className="font-custom md:text-lg text-center">
+        <p className="font-custom md:text-lg text-center text-gray-600">
           {weddings_contact_text}
         </p>
       </div>
