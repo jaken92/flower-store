@@ -2,7 +2,17 @@ import Button from './ButtonContact';
 
 import {useInView} from 'react-intersection-observer';
 
-export default function SubscriptionsPage() {
+export default function SubscriptionsPage({
+  subscriptions_title,
+  subscriptions_discount_one,
+  subscriptions_discount_two,
+  subscriptions_discount_three,
+  subscriptions_discount_four,
+  subscriptions_homesub_title,
+  subscriptions_hometext,
+  subscriptions_business_title,
+  subscriptions_business_text,
+}) {
   //Two Intersection Observers or two different divs, inView boolean to decide if the div is in view or not
   const {ref: ref1, inView: inView1} = useInView({
     triggerOnce: true,
@@ -11,6 +21,17 @@ export default function SubscriptionsPage() {
   const {ref: ref2, inView: inView2} = useInView({
     triggerOnce: true,
   });
+
+  //using regex to convert linebreaks to br
+  const subscriptions_hometext_linebreaks = subscriptions_hometext.replace(
+    /\n/g,
+    '<br/>',
+  );
+
+  const subscriptions_business_text_linebreaks = subscriptions_hometext.replace(
+    /\n/g,
+    '<br/>',
+  );
   return (
     <>
       <section className="md:w-full gap-4">
@@ -28,25 +49,25 @@ export default function SubscriptionsPage() {
         </div>
       </section>
       <h2 className="font-custom text-2xl uppercase text-center mb-5 mt-5 md:mt-10">
-        A place for you to get flowers regulary and at a discount
+        {subscriptions_title}
       </h2>
 
       <section className="flex justify-center  ">
         <div className="flex p-5 md:flex-row flex-col gap-10 ">
           <div className="flex bg-white p-5 md:flex-col md:w-[50%] text-center justify-center border border-black">
             <p className="font-custom md:text-2xl ">
-              10% off your recurring flower offer every time
+              {subscriptions_discount_one}
             </p>
             <p className="font-custom md:text-2xl md:pt-4">
-              10% off on any additional flower order
+              {subscriptions_discount_two}
             </p>
           </div>
           <div className="flex bg-white p-5 md:flex-col md:w-[50%] text-center justify-center border md:p-4 border-black">
             <p className="font-custom md:text-2xl ">
-              Wanna send an arrangment for a special occasion? 10% off
+              {subscriptions_discount_three}
             </p>
             <p className="font-custom md:text-2xl md:pt-4">
-              10 % off on workshops, events, parties etc.
+              {subscriptions_discount_four}
             </p>
           </div>
         </div>
@@ -60,22 +81,14 @@ export default function SubscriptionsPage() {
       >
         <div className="w-full md:w-[50%]  md:pt-20 ">
           <h2 className="text-2xl font-bold text-center uppercase font-custom">
-            Home subscription
+            {subscriptions_homesub_title}
           </h2>
-          <p className="md:text-lg font-custom mt-2">
-            Breathe life into your home with one of our beautiful,
-            garden-inspired arrangements delivered to your door weekly,
-            biweekly, or monthly. Each design is created in a fresh seasonal
-            palette that changes every week.
-          </p>
-          <p className="md:text-lg font-custom mt-2">
-            *With each new floral delivery, we will collect the vessel used from
-            the week before - no clutter for you!
-          </p>
-          <p className="md:text-lg pb-6 font-custom mt-2">
-            Interested in signing up? Inquire here, we will reach out to you to
-            discuss your subscription details.
-          </p>
+          <p
+            className="md:text-lg font-custom mt-2"
+            dangerouslySetInnerHTML={{
+              __html: subscriptions_hometext_linebreaks,
+            }}
+          ></p>
         </div>
         <div className="relative md:w-[40%] md:mt-7 md:h-[400px] h-[300px]">
           <img
@@ -106,21 +119,14 @@ export default function SubscriptionsPage() {
         </div>
         <div className="w-full md:w-[50%]  md:pt-20 ">
           <h2 className="text-2xl font-bold  uppercase text-center font-custom">
-            Business Subscription
+            {subscriptions_business_title}
           </h2>
-          <p className="md:text-lg font-custom mt-2">
-            We offer weekly and biweekly business subscriptions.
-          </p>
-          <p className="md:text-lg font-custom mt-2">
-            We will waive all local delivery fees (within a 5 mile radius).
-            Pricing is unique to each account and is based on your business’
-            specifications. We also offer these unique accounts to interior
-            designers looking to compliment their work with fresh flowers.
-          </p>
-          <p className="md:text-lg pb-6 font-custom mt-2">
-            Interested in signing up? Inquire here, we will reach out to you to
-            discuss your subscription details.
-          </p>
+          <p
+            className="md:text-lg font-custom mt-2"
+            dangerouslySetInnerHTML={{
+              __html: subscriptions_business_text_linebreaks,
+            }}
+          ></p>
         </div>
       </div>
     </>
