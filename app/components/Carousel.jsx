@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 const Slide = ({review, client}) => (
   <div className="text-center text-black w-[80%] h-40 mx-auto">
-    <p className="md:text-1xl md:pt-4 pt-2 font-custom  text-lg ">{review}</p>
+    <p className="md:text-1xl md:pt-4 font-custom  text-lg ">{review}</p>
     <p className="font-custom md:text-lg ">- {client}</p>
   </div>
 );
@@ -26,12 +26,12 @@ const Carousel = ({reviews}) => {
 
   return (
     <>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center">
         <h2 className="font-customSemiBold  text-1xl md:text-2xl">
           KIND WORDS
         </h2>
       </div>
-      <div className="relative md:w-[70%] h-40 overflow-hidden flex justify-center pb-2 mb-6 items-center mx-auto">
+      <div className="relative md:w-[70%] md:h-40 h-60 overflow-hidden flex justify-center pb-2 mb-4 items-center mx-auto">
         <button onClick={prevSlide} className="p-2" aria-label="PreviousSlide">
           <svg
             xmlns="http://www.w3.org/2000/svg"

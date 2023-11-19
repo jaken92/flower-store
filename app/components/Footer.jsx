@@ -85,7 +85,7 @@ function FooterMenu({menu}) {
         </div>
 
         <div
-          className="flex justify-end mr-2 gap-2 md:gap-4 
+          className="flex justify-end mr-8 gap-2 md:gap-4 
         md:mb-6 pt-4 "
         >
           <a
