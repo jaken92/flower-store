@@ -60,18 +60,18 @@ export default function Index() {
         </div>
       </section>
       <div className="flex flex-col justify-center items-center mt-14">
-        <h2 className="text-2xl md:text-4xl text-gray-600 text-center w-2/3">
+        <h2 className="text-2xl md:text-4xl text-gray-600 text-center w-2/3 mb-5">
           MOUAFLOWERS - GOTHENBURG - SWEDEN
         </h2>
-        <p className="text-4xl text-gray-600">❀</p>
-        <p className="text-lg md:text-1xl text-gray-600 text-center w-1/2">
+        <p className="text-4xl text-gray-600 mb-5">❀</p>
+        <p className="text-lg md:text-1xl text-gray-600 text-center w-1/2 mb-5">
           IN MOUA WE CREATE UNIQUE, ELEGANT & NATURAL STYLE ARRANGEMENTS, FULL
           OF TEXTURES, COLORS & CURVES FOR ANY OCCASION THROUGH WHICH ANYONE CAN
           VIBRATE, HELP & RECONNECT WITH NATURE & ITS BEAUTY BY MERGING OUR TWO
           PASSIONS; THE FLOWERS & THE OCEAN.
         </p>
       </div>
-      <section className="w-full p-6 pt-0 sm:pt-0 lg:pt-0 xl:pt-0 2xl:pt-0 sm:-p-10 lg:p-10 xl:p-20 2xl:p-80">
+      <section className="w-full p-6 pt-0 sm:pt-0 lg:pt-0 xl:pt-0 2xl:pt-0 sm:-px-10 lg:px-10 xl:px-20 2xl:px-80">
         <div className="grid-flow-row grid justify-items-center justify-between gap-y-6 md:gap-6 lg:gap-12 xl:gap-12  grid-cols-1 md:grid-cols-3 mt-6 mb-0">
           <LinkCard
             text="Order Flowers"
