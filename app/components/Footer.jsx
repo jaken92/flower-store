@@ -45,8 +45,8 @@ function FooterMenu({menu}) {
           );
         })}
       </nav>
-      <div className="flex justify-between  border-t-2 border-black md:mt-10 mt-10 md:pl-10 md:pr-10 ">
-        <div className="flex h-14 items-center justify-center gap-3 py-4">
+      <div className="flex justify-between md:flex-row flex-col border-t-2 border-black md:mt-10 mt-10 md:pl-10 md:pr-10 ">
+        <div className="flex h-14 items-center md:mt-10 justify-left gap-1 py-4">
           <img
             src="../images/icons/google-pay.svg"
             alt="google pay"
@@ -55,37 +55,37 @@ function FooterMenu({menu}) {
           <img
             src="../images/icons/apple-pay.svg"
             alt="applepay-logo"
-            className="object-cover pr-2 h-auto w-8 md:w-12"
+            className="object-cover pr-2  w-8 md:w-12"
           />
           <img
             src="../images/icons/klarna.svg"
             alt="Klarna-logo"
-            className="object-cover h-auto md:h-6 w-8 md:w-12"
+            className="object-cover md:h-6 w-8 md:w-12"
           />
           <img
             src="../images/icons/maestro.svg"
             alt="Maestro-logo"
-            className="md:h-12 w-12 h-auto md:w-16"
+            className="md:h-10 w-12   md:w-16"
           />
           <img
             src="../images/icons/mastercard.svg"
             alt="Mastercard-logo"
-            className="object-cover h-auto w-8 md:w-12"
+            className="object-cover md:h-8 w-8 md:w-12"
           />
           <img
             src="../images/icons/visa.svg"
             alt="Visa-logo"
-            className="object-cover h-auto w-8 md:w-12"
+            className="object-cover md:h-8 w-8 md:w-12"
           />
           <img
             src="../images/icons/shoppay.svg"
             alt="Shoppay-logo"
-            className="object-cover h-auto w-10  md:w-14"
+            className="object-cover h-auto md:h-4w-10  md:w-14"
           />
         </div>
 
         <div
-          className="flex justify-end mr-8 gap-2 md:gap-4 
+          className="flex justify-end md:mt-10 mr-2 gap-2 md:gap-4 
         md:mb-6 pt-4 "
         >
           <a
