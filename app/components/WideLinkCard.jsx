@@ -1,9 +1,9 @@
 import {Link} from '@remix-run/react';
 
 //component to render the three link-cards that are displayed in the _index.jsx
-export default function WideLinkCard({text, btnText, imageSrc, linkTo}) {
+export default function LinkCard({text, btnText, imageSrc, linkTo}) {
   return (
-    <div className="relative md:mt-10">
+    <div className="relative w-full p-6">
       <img
         className="md:h-[450px] w-[924px] h-[350px] md:w-[1224px] object-cover img-zoom"
         src={imageSrc}

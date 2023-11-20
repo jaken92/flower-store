@@ -94,7 +94,7 @@ export default function Index() {
           btnText="Inquire"
         />
       </div>
-      <div className="flex justify-center relative mb-12">
+      <div className="flex justify-center relative mb-12 ">
         <WideLinkCard
           text="About"
           imageSrc="./images/rusticBouquet.jpg"
