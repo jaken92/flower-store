@@ -54,7 +54,7 @@ export default function WeddingsPage({
         />
         <div className="flex md:w-[50%] md:h-[50%] gap-12 flex-col md:flex-col">
           <img
-            className="  md:h-[40%] h-[500px]  object-cover "
+            className="  md:h-[40%] md:w-[100%] h-[500px]  object-cover "
             src="../images/weddingCar.jpg"
             alt=""
           />
@@ -79,11 +79,12 @@ export default function WeddingsPage({
           src="../images/bigweddingtest.webp"
           alt="wedding, a couple holding hands with a flowerbouqet"
         ></img>
-        <div className="absolute md:top-[20%] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute  md:top-[20%] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <Button
             linkTo="/pages/contact"
             text="GET IN CONTACT"
             aria-label="go to the contact-page"
+            className="text-sm md:text-lg"
           ></Button>
         </div>
       </section>

@@ -80,7 +80,7 @@ function FooterMenu({menu}) {
           <img
             src="../images/icons/shoppay.svg"
             alt="Shoppay-logo"
-            className="object-cover h-auto md:h-4w-10  md:w-14"
+            className="object-cover h-auto w-12  md:w-14"
           />
         </div>
 
