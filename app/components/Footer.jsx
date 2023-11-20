@@ -45,7 +45,7 @@ function FooterMenu({menu}) {
           );
         })}
       </nav>
-      <div className="flex justify-between  border-t-2 border-black md:mt-24 mt-10 md:pl-10 md:pr-10 ">
+      <div className="flex justify-between  border-t-2 border-black md:mt-10 mt-10 md:pl-10 md:pr-10 ">
         <div className="flex h-14 items-center justify-center gap-3 py-4">
           <img
             src="../images/icons/google-pay.svg"

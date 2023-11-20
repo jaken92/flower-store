@@ -52,7 +52,7 @@ export default function ProductHandle() {
         <div className="grid md:grid-flow-row  justify-center  md:p-0 md:overflow-x-hidden md:grid-cols-2 md:w-full lg:col-span-2">
           <div className="md:col-span-2 card-image aspect-square md:w-full w-[80vw] shadow rounded">
             <Image
-              className={`w-[80%] h-[80%] aspect-square object-cover`}
+              className={`w-full h-full aspect-square object-cover`}
               data={product.selectedVariant?.image || product.featuredImage}
             />
           </div>
