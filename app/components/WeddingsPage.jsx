@@ -75,7 +75,7 @@ export default function WeddingsPage({
       </div>
       <section className="md:w-full  gap-4 relative">
         <img
-          className="md:w-full md:h-screen object-cover"
+          className="md:w-full md:mb-10  md:h-screen object-cover"
           src="../images/bigweddingtest.webp"
           alt="wedding, a couple holding hands with a flowerbouqet"
         ></img>

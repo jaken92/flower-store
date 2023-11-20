@@ -39,7 +39,7 @@ function CartLines({lines, layout}) {
   if (!lines) return null;
 
   return (
-    <div className="custom-font" aria-labelledby="cart-lines">
+    <div className="custom-font  text-gray-600 " aria-labelledby="cart-lines">
       <ul>
         {lines.nodes.map((line) => (
           <CartLineItem key={line.id} line={line} layout={layout} />
@@ -108,7 +108,7 @@ function CartCheckoutActions({checkoutUrl}) {
   return (
     <div>
       <a href={checkoutUrl} target="_self">
-        <button className="rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3 shadow-md">
+        <button className="rounded-2xl font-custom bg-teal border-2  text-gray-600 border-teal p-3 m-3 shadow-md">
           Checkout &rarr;
         </button>
         {/* <p className="font-custom">Continue to Checkout &rarr;</p> */}
@@ -125,10 +125,13 @@ export function CartSummary({cost, layout, children = null}) {
   return (
     <div aria-labelledby="cart-summary" className={className}>
       <div className="cart-subtotal ">
-        <div className="font-custom ml-3" style={{whiteSpace: 'pre-wrap'}}>
+        <div
+          className="font-custom ml-3  text-gray-600"
+          style={{whiteSpace: 'pre-wrap'}}
+        >
           Total:{' '}
         </div>
-        <div className="font-custom">
+        <div className="font-custom  text-gray-600">
           {cost?.subtotalAmount?.amount ? (
             <Money data={cost?.subtotalAmount} />
           ) : (
@@ -380,17 +383,19 @@ function NoteForm() {
 
   return (
     <>
-      <p className="font-custom m-3">
+      <p className="font-custom m-3  text-gray-600">
         Add a message to the gift card or write any special requests for your
         order:{' '}
       </p>
       <button
         onClick={getNoteValues}
-        className="hover:cursor-pointer rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3 shadow-md active:shadow-none"
+        className="hover:cursor-pointer rounded-2xl font-custom text-gray-600  bg-teal border-2 border-teal p-3 m-3 shadow-md active:shadow-none"
       >
         {saveNote ? 'Edit Message' : 'Add Message'}
       </button>
-      {isVisible && <p className="success">Note updated successfully!</p>}
+      {isVisible && (
+        <p className="success m-3  text-gray-600">Note updated successfully!</p>
+      )}
       <div
         style={{
           position: 'fixed',
@@ -410,11 +415,11 @@ function NoteForm() {
             action={CartForm.ACTIONS.NoteUpdate}
           >
             <div className="flex flex-col ">
-              <p className="font-custom">
+              <p className="font-custom  text-gray-600">
                 Provide a short message for the gift tag:
               </p>
               <textarea
-                className="h-[150px] md:h-[300px] rounded-3xl font-custom"
+                className="h-[150px] md:h-[300px] rounded-3xl  text-gray-600 font-custom"
                 name="note"
               />
 
@@ -424,7 +429,7 @@ function NoteForm() {
                     saveNoteMessage();
                     closeNoteForm();
                   }}
-                  className="rounded-2xl font-custom bg-teal border-2 border-teal p-3 m-3 shadow-md active:shadow-none"
+                  className="rounded-2xl font-custom text-gray-600 bg-teal border-2 border-teal p-3 m-3 shadow-md active:shadow-none"
                 >
                   Update note
                 </button>
