@@ -17,7 +17,7 @@ export function Header({header, isLoggedIn, cart}) {
       <ScrollTracker headerColorChanger={headerColorChanger} />
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
         <img
-          className="h-[80px]  w-auto opacity-100"
+          className="h-[80px] w-[80px] opacity-100"
           src="../images/MouaLogo.png"
           alt="cart-logo"
         ></img>

@@ -80,7 +80,7 @@ function FooterMenu({menu}) {
           <img
             src="../images/icons/shoppay.svg"
             alt="Shoppay-logo"
-            className="object-cover h-auto md:h-4w-10  md:w-14"
+            className="object-cover h-auto w-12  md:w-14"
           />
         </div>
 
@@ -94,7 +94,7 @@ function FooterMenu({menu}) {
           >
             <img
               src="../images/instagram.svg"
-              className="w-6 md:w-8"
+              className="w-6 md:h-9 md:w-10"
               alt="instagram-logo"
             />
           </a>
@@ -104,7 +104,7 @@ function FooterMenu({menu}) {
           >
             <img
               src="../images/facebook.png"
-              className=" w-6 md:w-8 "
+              className=" w-6 md:h-9 md:w-9 "
               alt="facebook-logo"
             />
           </a>
