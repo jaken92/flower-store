@@ -1,5 +1,6 @@
 import LinkCard from '~/components/LinkCard';
 import Carousel from '~/components/Carousel';
+import WideLinkCard from '~/components/WideLinkCard';
 
 // export function meta() {
 //   return [
@@ -58,7 +59,19 @@ export default function Index() {
           />
         </div>
       </section>
-      <div className="grid-flow-row grid  p-6 gap-4 justify-items-center gap-y-6 md:gap-3 grid-cols-1 md:grid-cols-3 mt-6 mb-6">
+      <div className="flex flex-col justify-center items-center mt-14">
+        <h2 className="text-4xl text-gray-600">
+          MOUAFLOWERS - GOTHENBURG - SWEDEN
+        </h2>
+        <p className="text-4xl text-gray-600">❀</p>
+        <p className=" text-gray-600 text-center w-1/2">
+          IN MOUA WE CREATE UNIQUE, ELEGANT & NATURAL STYLE ARRANGEMENTS, FULL
+          OF TEXTURES, COLORS & CURVES FOR ANY OCCASION THROUGH WHICH ANYONE CAN
+          VIBRATE, HELP & RECONNECT WITH NATURE & ITS BEAUTY BY MERGING OUR TWO
+          PASSIONS; THE FLOWERS & THE OCEAN.
+        </p>
+      </div>
+      <div className="grid-flow-row grid  p-6  gap-4 justify-items-center gap-y-6 md:gap-3 grid-cols-1 md:grid-cols-3 mt-6 mb-0">
         <LinkCard
           text="Order Flowers"
           imageSrc="./images/heroes/collections.jpeg"
@@ -79,6 +92,14 @@ export default function Index() {
           linkTo="/pages/subscriptions"
           alt="a house with purple flowers covering it"
           btnText="Inquire"
+        />
+      </div>
+      <div className="flex justify-center relative mb-12">
+        <WideLinkCard
+          text="About"
+          imageSrc="./images/rusticBouquet.jpg"
+          linkTo="/pages/about"
+          btnText="Read More"
         />
       </div>
       <Carousel reviews={reviews} />
