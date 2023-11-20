@@ -52,17 +52,17 @@ export default function ProductHandle() {
         <div className="grid md:grid-flow-row  justify-center  md:p-0 md:overflow-x-hidden md:grid-cols-2 md:w-full lg:col-span-2">
           <div className="md:col-span-2 card-image aspect-square md:w-full w-[80vw] shadow rounded">
             <Image
-              className={`w-full h-full aspect-square object-cover`}
+              className={`w-[80%] h-[80%] aspect-square object-cover`}
               data={product.selectedVariant?.image || product.featuredImage}
             />
           </div>
         </div>
         <div className="md:sticky md:mx-auto max-w-xl md:max-w-[24rem] grid gap-2 p-0 md:p-6 md:px-0 top-[6rem] lg:top-[8rem] xl:top-[10rem]">
           <div className="grid gap-2">
-            <h1 className="text-4xl font-bold leading-10 whitespace-normal">
+            <h1 className="text-4xl  text-gray-600 font-bold leading-10 whitespace-normal">
               {product.title}
             </h1>
-            <span className="max-w-prose whitespace-pre-wrap inherit text-copy opacity-50 font-medium">
+            <span className="max-w-prose whitespace-pre-wrap  text-gray-600 inherit text-copy opacity-50 font-medium">
               {/* {product.vendor} */} Mouaflowers
             </span>
           </div>
@@ -73,7 +73,7 @@ export default function ProductHandle() {
           <Money
             withoutTrailingZeros
             data={selectedVariant.price}
-            className="text-xl font-semibold mb-2"
+            className="text-xl   text-gray-600 font-semibold mb-2"
           />
           {/* {selectedVariant.availableForSale && (
             <ShopPayButton
@@ -115,7 +115,7 @@ export default function ProductHandle() {
           </CartForm>
 
           <div
-            className="prose border-t border-gray-200 pt-6 text-black text-md"
+            className="prose border-t border-gray-200 pt-6  text-gray-600 text-md"
             dangerouslySetInnerHTML={{__html: product.descriptionHtml}}
           />
         </div>

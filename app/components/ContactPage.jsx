@@ -27,22 +27,22 @@ export default function MyForm({
       </section>
       <section className=" md:mt-20 dark:bg-gray-900">
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-600 dark:text-white">
             {contact_title}
           </h2>
 
-          <p className="mb-2  md:mb-3 font-light text-center text-black dark:text-gray-400 sm:text-xl">
+          <p className="mb-2  md:mb-3 font-light text-center  text-gray-600 sm:text-xl">
             {contact_entry_text}
           </p>
           <div className="flex flex-col md:mt-10 md:flex-row md:items-center md:justify-between mb-6">
             <div className="flex flex-col">
-              <p className="font-light md:text-xl  dark:text-gray-400">
+              <p className=" text-gray-600 md:text-xl ">
                 {contact_phone_number}
               </p>
-              <p className="font-light md:text-xl  dark:text-gray-400">
+              <p className=" text-gray-600 md:text-xl ">
                 {contact_location_information}
               </p>
-              <p className="font-light md:text-xl  dark:text-gray-400">
+              <p className=" text-gray-600 md:text-xl  ">
                 {contact_delivery_information}
               </p>
             </div>
@@ -62,7 +62,7 @@ export default function MyForm({
             <div>
               <label
                 htmlFor="name"
-                className="block mb-2 text-sm font-medium dark:text-gray-300"
+                className="block  text-gray-600 mb-2 text-sm font-medium"
               >
                 Name
               </label>
@@ -70,7 +70,7 @@ export default function MyForm({
                 id="name"
                 type="name"
                 name="name"
-                className="shadow-sm bg-white border border-black text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                className="shadow-sm bg-white border border-black text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="Firstname Lastname"
                 autoComplete="name"
                 required
@@ -79,7 +79,7 @@ export default function MyForm({
             <div>
               <label
                 htmlFor="email"
-                className="block mb-2 text-sm font-medium dark:text-gray-300"
+                className="block mb-2 text-sm font-medium  text-gray-600"
               >
                 Email *
               </label>
@@ -87,7 +87,7 @@ export default function MyForm({
                 id="email"
                 type="email"
                 name="email"
-                className="shadow-sm bg-white border border-black text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                className="shadow-sm bg-white border border-black text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="name@example.com"
                 autoComplete="email"
                 required
@@ -96,7 +96,7 @@ export default function MyForm({
             <div>
               <label
                 htmlFor="phonenumber"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                className="block mb-2 text-sm font-medium  text-gray-600"
               >
                 Phone number(optional)
               </label>
@@ -104,7 +104,7 @@ export default function MyForm({
                 id="phonenumber"
                 type="tel"
                 name="phonenumber"
-                className="shadow-sm bg-white border border-black text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                className="shadow-sm bg-white border border-black text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="+46-XXX-XXXXXX"
                 pattern="[0-9\-]*"
                 autoComplete="off"
@@ -113,7 +113,7 @@ export default function MyForm({
             <div className="sm:col-span-2">
               <label
                 htmlFor="message"
-                className="block mb-2 text-sm font-medium  dark:text-gray-400"
+                className="block mb-2 text-sm  text-gray-600 font-medium "
               >
                 Your message
               </label>
@@ -124,14 +124,14 @@ export default function MyForm({
                 name="message"
                 required
                 rows="6"
-                className="shadow-sm bg-white border border-black text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                className="shadow-sm bg-white border border-black text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="Leave a comment..."
               ></textarea>
             </div>
             {/* submit goes by default to action in parent */}
             <button
               onClick={() => setIsSubmitted(true)}
-              className="py-3 px-5 hover:bg-white text-sm font-medium text-center border border-black text-black bg-teal rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              className="py-3 px-5 hover:bg-white  text-gray-600 text-sm font-medium text-center border border-black  bg-teal rounded-lg bg-primary-700 sm:w-fit focus:ring-4 focus:outline-none focus:ring-primary-300 "
               type="submit"
             >
               Submit

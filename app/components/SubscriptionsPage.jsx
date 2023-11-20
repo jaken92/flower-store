@@ -13,7 +13,7 @@ export default function SubscriptionsPage({
   subscriptions_business_title,
   subscriptions_business_text,
 }) {
-  //Two Intersection Observers or two different divs, inView boolean to decide if the div is in view or not
+  //Two Intersection Observers of two different divs, inView boolean to decide if the div is in view or not
   const {ref: ref1, inView: inView1} = useInView({
     triggerOnce: true,
   });
@@ -46,21 +46,21 @@ export default function SubscriptionsPage({
           ></img>
         </div>
       </section>
-      <h2 className="font-custom text-2xl uppercase text-center mb-5 mt-5 md:mt-10">
+      <h2 className="font-custom text-2xl  text-gray-600 uppercase text-center mb-5 mt-5 md:mt-10">
         {subscriptions_title}
       </h2>
 
       <section className="flex justify-center  ">
         <div className="flex p-5 md:flex-row flex-col gap-10 ">
-          <div className="flex bg-white p-5 md:flex-col md:w-[50%] text-center justify-center border border-black">
+          <div className="flex bg-white  text-gray-600 p-5 md:flex-col md:w-[50%] text-center justify-center border border-black">
             <p className="font-custom md:text-2xl ">
               {subscriptions_discount_one}
             </p>
-            <p className="font-custom md:text-2xl md:pt-4">
+            <p className="font-custom  md:text-2xl md:pt-4">
               {subscriptions_discount_two}
             </p>
           </div>
-          <div className="flex bg-white p-5 md:flex-col md:w-[50%] text-center justify-center border md:p-4 border-black">
+          <div className="flex bg-white  text-gray-600 p-5 md:flex-col md:w-[50%] text-center justify-center border md:p-4 border-black">
             <p className="font-custom md:text-2xl ">
               {subscriptions_discount_three}
             </p>
@@ -78,11 +78,11 @@ export default function SubscriptionsPage({
         ref={ref1}
       >
         <div className="w-full md:w-[50%]  md:pt-20 ">
-          <h2 className="text-2xl font-bold text-center uppercase font-custom">
+          <h2 className="text-2xl  text-gray-600 font-bold text-center uppercase font-custom">
             {subscriptions_homesub_title}
           </h2>
           <p
-            className="md:text-lg font-custom mt-2"
+            className="md:text-lg   text-gray-600 font-custom mt-2"
             dangerouslySetInnerHTML={{
               __html: subscriptions_hometext_linebreaks,
             }}
@@ -116,11 +116,11 @@ export default function SubscriptionsPage({
           </div>
         </div>
         <div className="w-full md:w-[50%]  md:pt-20 ">
-          <h2 className="text-2xl font-bold  uppercase text-center font-custom">
+          <h2 className="text-2xl font-bold  text-gray-600 uppercase text-center font-custom">
             {subscriptions_business_title}
           </h2>
           <p
-            className="md:text-lg font-custom mt-2"
+            className="md:text-lg   text-gray-600 font-custom mt-2"
             dangerouslySetInnerHTML={{
               __html: subscriptions_business_text_linebreaks,
             }}

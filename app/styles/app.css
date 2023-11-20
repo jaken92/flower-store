@@ -305,18 +305,22 @@ aside li {
 * --------------------------------------------------
 */
 .footer {
-  margin-top: 5rem;
-  background-image: url('/images/footer.jpg');
+  margin-top: auto;
+  /* background-image: url('/images/footer2.jpg');
 
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center 7%;
+  background-position: right 65%;
   z-index: 1;
   @media (max-width: 768px) {
-  background-position: left 0.5%;
+  
+  background-position: center 1%; */
+  background-color: var(--color-white)
+    
+ 
   }
 
-}
+
 
 
 

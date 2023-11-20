@@ -22,11 +22,11 @@ export default function ProductCard({product}) {
           />
         </div>
         <div className="grid gap-1">
-          <h3 className="max-w-prose text-copy w-full overflow-hidden whitespace-nowrap text-ellipsis ">
+          <h3 className="max-w-prose   text-gray-600 text-copy w-full overflow-hidden whitespace-nowrap text-ellipsis ">
             {product.title}
           </h3>
           <div className="flex gap-4">
-            <span className="max-w-prose whitespace-pre-wrap inherit text-copy flex gap-4">
+            <span className="max-w-prose  text-gray-600 whitespace-pre-wrap inherit text-copy flex gap-4">
               <Money withoutTrailingZeros data={price} />
               {isDiscounted && (
                 <Money

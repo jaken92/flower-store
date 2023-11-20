@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 const Slide = ({review, client}) => (
-  <div className="text-center text-black w-[80%] h-40 mx-auto">
+  <div className="text-center text-gray-600 w-[80%] h-40 mx-auto">
     <p className="md:text-1xl md:pt-4 font-custom  text-lg ">{review}</p>
     <p className="font-custom md:text-lg ">- {client}</p>
   </div>
@@ -27,7 +27,7 @@ const Carousel = ({reviews}) => {
   return (
     <>
       <div className="flex justify-center">
-        <h2 className="font-customSemiBold  text-1xl md:text-2xl">
+        <h2 className="font-customSemiBold   text-gray-600 text-1xl md:text-2xl">
           KIND WORDS
         </h2>
       </div>

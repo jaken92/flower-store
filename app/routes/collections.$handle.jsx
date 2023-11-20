@@ -33,14 +33,16 @@ export default function Collection() {
   return (
     <>
       <header className="grid w-full gap-8 py-4 justify-items-center">
-        <h1 className="text-4xl whitespace-pre-wrap mt-28  font-bold inline-block">
+        <h1 className="text-4xl  text-gray-600 whitespace-pre-wrap mt-28  font-bold inline-block">
           {collection.title}
         </h1>
 
         {collection.description && (
           <div className="flex justify-center p-4 w-full">
             <div className="max-w-4xl">
-              <p className="whitespace">{collection.description}</p>
+              <p className="whitespace  text-gray-600">
+                {collection.description}
+              </p>
             </div>
           </div>
         )}

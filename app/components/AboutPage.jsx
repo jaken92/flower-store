@@ -43,14 +43,14 @@ export default function AboutPage({
         />
 
         <div className="w-full md:pt-15 pt-10 ">
-          <h2 className="md:text-3xl text-2xl font-bold uppercase text-center font-custom">
+          <h2 className="md:text-3xl  text-gray-600 text-2xl font-bold uppercase text-center font-custom">
             {founder_name}
           </h2>
-          <p className="font-custom mb-1 text-center md:text-2xl text-1xl uppercase ">
+          <p className="font-custom  text-gray-600  mb-1 text-center md:text-2xl text-1xl uppercase ">
             {occupation}
           </p>
           <div className="flex">
-            <p className="font-custom md:pt-6   text-gray-500 md:pl-10 md:pr-10 text-center text-lg md:text-1xl">
+            <p className="font-custom md:pt-6   text-gray-600 md:pl-10 md:pr-10 text-center text-lg md:text-1xl">
               {intro}
             </p>
           </div>
@@ -64,11 +64,11 @@ export default function AboutPage({
         ref={ref1}
       >
         <div className="w-full md:w-[50%]  md:pt-5 ">
-          <h2 className="md:text-2xl  text-1xl font-bold  uppercase text-center font-custom">
+          <h2 className="md:text-2xl    text-gray-600 text-1xl font-bold  uppercase text-center font-custom">
             {journey_title}
           </h2>
           <p
-            className="md:text-lg font-custom mt-2"
+            className="md:text-lg  text-gray-600 font-custom mt-2"
             dangerouslySetInnerHTML={{__html: jorney_text_linebreaks}}
           ></p>
         </div>
@@ -89,12 +89,12 @@ export default function AboutPage({
           src="../images/example.webp"
           alt="white and orange flowers"
         />
-        <div className="w-full md:w-[40%]  justify-center ">
+        <div className="w-full md:w-[40%]  text-gray-600  justify-center ">
           <h1 className="md:text-2xl text-1xl uppercase  font-bold mb-4 md:mt-4 text-center font-custom">
             {about_moua_title}
           </h1>
           <p
-            className="md:text-lg font-custom mt-2"
+            className="md:text-lg  text-gray-600 font-custom mt-2"
             dangerouslySetInnerHTML={{__html: about_moua_text_linebreaks}}
           ></p>
         </div>
