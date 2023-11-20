@@ -306,7 +306,7 @@ aside li {
 */
 .footer {
   margin-top: auto;
-  background-image: url('/images/footer.jpg');
+  background-image: url('../../public/images/footer.jpg');
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -316,9 +316,6 @@ aside li {
   @media (max-width: 768px) {
   
   background-position: right 15%;
-
-    
- 
   }
 }
 
