@@ -30,7 +30,7 @@ export default function AboutPage({
           </div>
           <img
             className="h-[400px] sm:w-full sm:h-screen object-cover"
-            src="../images/heroes/flowerHero.jpg"
+            src="../images/heroes/aboutHero2.jpg"
             alt="hero for about-page"
           ></img>
         </div>
