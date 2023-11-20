@@ -56,10 +56,10 @@ export async function action({request, context}) {
   console.log(responseData);
 
   //response string for prod url
-  //const url = new URL(request.url);
+  const url = new URL(request.url);
   //`${url.protocol}//${url.hostname}/formSubmitted`
-
-  return Response.redirect('http://localhost:3000/formSubmitted');
+  return Response.redirect(`${url.protocol}//${url.hostname}/formSubmitted`);
+  // return Response.redirect('http://localhost:3000/formSubmitted');
 }
 
 export async function loader({params, context}) {
