@@ -18,7 +18,7 @@ export default function ProductCard({product}) {
             className="object-cover"
             data={product.variants.nodes[0].image}
             alt={product.title}
-            style={{height: '300px'}}
+            style={{width: '500px', height: '500px'}}
           />
         </div>
         <div className="grid gap-1">

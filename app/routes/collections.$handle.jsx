@@ -30,9 +30,10 @@ export async function loader({params, context}) {
 
 export default function Collection() {
   const {collection} = useLoaderData();
+
   return (
     <>
-      <header className="grid w-full gap-8 py-4 justify-items-center">
+      <header className="grid w-full gap-6 py-4 justify-items-center">
         <h1 className="text-4xl  text-gray-600 whitespace-pre-wrap mt-28  font-bold inline-block">
           {collection.title}
         </h1>
@@ -40,9 +41,12 @@ export default function Collection() {
         {collection.description && (
           <div className="flex justify-center p-4 w-full">
             <div className="max-w-4xl">
-              <p className="whitespace  text-gray-600">
-                {collection.description}
-              </p>
+              <p
+                className="whitespace text-gray-600"
+                dangerouslySetInnerHTML={{
+                  __html: collection.description.replace(/\n/g, '<br />'),
+                }}
+              />
             </div>
           </div>
         )}
