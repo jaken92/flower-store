@@ -71,37 +71,40 @@ export default function Index() {
           PASSIONS; THE FLOWERS & THE OCEAN.
         </p>
       </div>
-      <div className="grid-flow-row grid  p-6  gap-4 justify-items-center gap-y-6 md:gap-3 grid-cols-1 md:grid-cols-3 mt-6 mb-0">
-        <LinkCard
-          text="Order Flowers"
-          imageSrc="./images/heroes/collections.jpeg"
-          linkTo="/collections"
-          alt="flowers in a vase"
-          btnText="Order now"
-        />
-        <LinkCard
-          text="Weddings"
-          imageSrc="./images/heroes/weddings.jpg"
-          linkTo="/pages/weddings"
-          alt="a picture of two people that are getting married, the bride is carrying a bouquet of flowers"
-          btnText="Learn more"
-        />
-        <LinkCard
-          text="Subscriptions"
-          imageSrc="./images/heroes/subscriptions.webp"
-          linkTo="/pages/subscriptions"
-          alt="a house with purple flowers covering it"
-          btnText="Inquire"
-        />
-      </div>
-      <div className="flex justify-center relative mb-12 ">
-        <WideLinkCard
-          text="About"
-          imageSrc="./images/rusticBouquet.jpg"
-          linkTo="/pages/about"
-          btnText="Read More"
-        />
-      </div>
+      <section className="w-full p-6 lg:p-40">
+        <div className="grid-flow-row grid  gap-4 justify-items-center gap-y-6 md:gap-3 grid-cols-1 md:grid-cols-3 mt-6 mb-0">
+          <LinkCard
+            text="Order Flowers"
+            imageSrc="./images/heroes/collections.jpeg"
+            linkTo="/collections"
+            alt="flowers in a vase"
+            btnText="Order now"
+          />
+          <LinkCard
+            text="Weddings"
+            imageSrc="./images/heroes/weddings.jpg"
+            linkTo="/pages/weddings"
+            alt="a picture of two people that are getting married, the bride is carrying a bouquet of flowers"
+            btnText="Learn more"
+          />
+          <LinkCard
+            text="Subscriptions"
+            imageSrc="./images/heroes/subscriptions.webp"
+            linkTo="/pages/subscriptions"
+            alt="a house with purple flowers covering it"
+            btnText="Inquire"
+          />
+        </div>
+        <div className="flex justify-center relative mb-12 w-full ">
+          <WideLinkCard
+            text="About"
+            imageSrc="./images/rusticBouquet.jpg"
+            linkTo="/pages/about"
+            btnText="Read More"
+          />
+        </div>
+      </section>
+
       <Carousel reviews={reviews} />
     </>
   );
