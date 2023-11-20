@@ -58,7 +58,7 @@ export async function action({request, context}) {
   //response string for prod url
   const url = new URL(request.url);
   //`${url.protocol}//${url.hostname}/formSubmitted`
-  return Response.redirect(`${url.protocol}//${url.hostname}/formSubmitted`);
+  return Response.redirect('/formSubmitted');
   // return Response.redirect('http://localhost:3000/formSubmitted');
 }
 
