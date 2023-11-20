@@ -1,8 +1,7 @@
 @font-face {
   font-family: 'Playfair Display';
   src: local('Playfair Display'),
-    url('public/fonts/PlayfairDisplay-Regular.woff2')
-    format('woff2');/* IE9 Compat Modes */
+    url('public/fonts/PlayfairDisplay-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: 900;
   font-display: swap;
 }
@@ -313,11 +312,10 @@ aside li {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left 50%;
-  filter: brightness(106%); 
+  filter: brightness(106%);
   z-index: 1;
   @media (max-width: 768px) {
-  
-  background-position: right 15%;
+    background-position: right 15%;
   }
 }
 
@@ -620,8 +618,22 @@ aside li {
   animation: fadeIn 1.5s ease-in;
 }
 
+/* Wide Grid Image in index.jsx  */
+.wideImage {
+  width: 300px;
+  height: 350px;
+}
 
+@media (min-width: 768px) {
+  .wideImage {
+    height: 450px;
+    width: 100%;
+  }
+}
 
-
- 
-
+@media (min-width: 1280px) {
+  .wideImage {
+    height: 550px;
+    width: 100%;
+  }
+}

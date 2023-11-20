@@ -3,10 +3,10 @@ import {Link} from '@remix-run/react';
 //component to render the three link-cards that are displayed in the _index.jsx
 export default function LinkCard({text, btnText, imageSrc, linkTo}) {
   return (
-    <div className="relative w-full pt-6 lg:pt-12 xl:pt-24 flex justify-center flex-1">
+    // className="md:h-[450px] w-[300px] h-[350px] md:w-[400px] xl:w-[500px] xl:h-[550px] object-cover img-zoom"
+    <div className="relative w-full mt-6 lg:mt-12 xl:mt-12 flex justify-center flex-1">
       <img
-        style={{height: '400px', width: '100%'}}
-        className=" object-cover img-zoom"
+        className=" object-cover img-zoom wideImage"
         src={imageSrc}
         alt={text}
       />
