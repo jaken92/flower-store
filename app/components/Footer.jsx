@@ -94,7 +94,7 @@ function FooterMenu({menu}) {
           >
             <img
               src="../images/instagram.svg"
-              className="w-6 md:h-9 md:w-10"
+              className="w-8 md:h-9 md:w-10"
               alt="instagram-logo"
             />
           </a>
@@ -104,14 +104,14 @@ function FooterMenu({menu}) {
           >
             <img
               src="../images/facebook.png"
-              className=" w-6 md:h-9 md:w-9 "
+              className=" w-8 md:h-9 md:w-9 "
               alt="facebook-logo"
             />
           </a>
         </div>
       </div>
       <div className="flex justify-end md:pb-4 pr-2 md:pr-6">
-        <p className="md:text-sm text-xs">
+        <p className="md:text-sm text-xs md:mb-4 mb-2 mt-4">
           © Copyright Moua Flowers,{' '}
           <a href="https://www.shopify.com/">Powered by Shopify</a>
         </p>
