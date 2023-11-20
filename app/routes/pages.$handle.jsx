@@ -4,6 +4,7 @@ import AboutPage from '~/components/AboutPage';
 import WeddingsPage from '~/components/WeddingsPage';
 import SubscriptionsPage from '~/components/SubscriptionsPage';
 import ContactPage from '~/components/ContactPage';
+import {redirect} from '@shopify/remix-oxygen';
 
 const seo = ({data}) => ({
   title: data?.page?.seo?.title,
@@ -59,7 +60,7 @@ export async function action({request, context}) {
   // const url = new URL(request.url);
   //`${url.protocol}//${url.hostname}/formSubmitted`
   // return Response.redirect('/formSubmitted');
-  return Response.redirect('http://mouaflowers.com/formSubmitted');
+  return redirect('http://mouaflowers.com/formSubmitted');
 }
 
 export async function loader({params, context}) {
