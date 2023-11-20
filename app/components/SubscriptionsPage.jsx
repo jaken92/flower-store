@@ -91,7 +91,7 @@ export default function SubscriptionsPage({
         <div className="relative md:w-[40%] md:mt-7 md:h-[400px] h-[300px]">
           <img
             className="w-full h-full object-cover"
-            src="../images/testsubscription.webp"
+            src="../images/subscriptionFlowers.webp"
             alt="White and pink flowers with green stems"
           />
           <div className="absolute inset-0 flex items-center justify-center">
@@ -108,7 +108,7 @@ export default function SubscriptionsPage({
         <div className="relative md:w-[40%] md:mt-7 md:h-[400px] h-[300px]">
           <img
             className="w-full h-full object-cover"
-            src="../images/testsubscription2.webp"
+            src="../images/subscriptionFlowers2.webp"
             alt="Orange flowers"
           />
           <div className="absolute inset-0 flex items-center justify-center">

@@ -2,7 +2,6 @@ import {Await, NavLink, useMatches} from '@remix-run/react';
 import {Suspense} from 'react';
 import {useState, useEffect} from 'react';
 import ScrollTracker from '~/components/ScrollTracker';
-import {useLocation} from '@remix-run/react';
 
 export function Header({header, isLoggedIn, cart}) {
   const {menu} = header;
@@ -18,7 +17,7 @@ export function Header({header, isLoggedIn, cart}) {
       <ScrollTracker headerColorChanger={headerColorChanger} />
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
         <img
-          className="h-[80px] opacity-100"
+          className="h-[80px]  w-auto opacity-100"
           src="../images/MouaLogo.png"
           alt="cart-logo"
         ></img>
@@ -157,7 +156,7 @@ function CartBadge({count}) {
     <a href="#cart-aside">
       <div className="flex flex-row">
         <img
-          className="h-[25px]"
+          className="h-[25px] w-auto"
           src="../images/cartSymbol.png"
           alt="cart-logo"
         ></img>

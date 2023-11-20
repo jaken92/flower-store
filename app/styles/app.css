@@ -1,8 +1,10 @@
 @font-face {
   font-family: 'Playfair Display';
   src: local('Playfair Display'),
-    url('public/fonts/PlayfairDisplay-Regular.woff2'); /* IE9 Compat Modes */
+    url('public/fonts/PlayfairDisplay-Regular.woff2')
+    format('woff2');/* IE9 Compat Modes */
   font-weight: 900;
+  font-display: swap;
 }
 
 :root {

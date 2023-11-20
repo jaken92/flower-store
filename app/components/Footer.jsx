@@ -55,17 +55,17 @@ function FooterMenu({menu}) {
           <img
             src="../images/icons/apple-pay.svg"
             alt="applepay-logo"
-            className="object-cover pr-2 w-8 md:w-12"
+            className="object-cover pr-2 h-auto w-8 md:w-12"
           />
           <img
             src="../images/icons/klarna.svg"
             alt="Klarna-logo"
-            className="object-cover md:h-6 w-8 md:w-12"
+            className="object-cover h-auto md:h-6 w-8 md:w-12"
           />
           <img
             src="../images/icons/maestro.svg"
             alt="Maestro-logo"
-            className="md:h-12 w-12 md:w-16"
+            className="md:h-12 w-12 h-auto md:w-16"
           />
           <img
             src="../images/icons/mastercard.svg"
@@ -75,12 +75,12 @@ function FooterMenu({menu}) {
           <img
             src="../images/icons/visa.svg"
             alt="Visa-logo"
-            className="object-cover w-8 md:w-12"
+            className="object-cover h-auto w-8 md:w-12"
           />
           <img
             src="../images/icons/shoppay.svg"
             alt="Shoppay-logo"
-            className="object-cover w-10  md:w-14"
+            className="object-cover h-auto w-10  md:w-14"
           />
         </div>
 
