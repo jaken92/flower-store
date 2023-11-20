@@ -71,8 +71,8 @@ export default function Index() {
           PASSIONS; THE FLOWERS & THE OCEAN.
         </p>
       </div>
-      <section className="w-full p-6 xl:p-40 2xl:p-80">
-        <div className="grid-flow-row grid justify-items-center justify-between gap-y-6 md:gap-3  grid-cols-1 md:grid-cols-3 mt-6 mb-0">
+      <section className="w-full p-6 sm:-p-10 lg:p-10 xl:p-20 2xl:p-80">
+        <div className="grid-flow-row grid justify-items-center justify-between gap-y-6 md:gap-3 lg:gap-12 xl:gap-24  grid-cols-1 md:grid-cols-3 mt-6 mb-0">
           <LinkCard
             text="Order Flowers"
             imageSrc="./images/heroes/collections.jpeg"
