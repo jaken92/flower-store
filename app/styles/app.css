@@ -311,7 +311,7 @@ aside li {
 */
 .footer {
   margin-top: auto;
-  background-image: url('../../public/images/footer.jpg');
+  background-image: url('../../public/images/footerResized.jpg');
 
   background-size: cover;
   background-repeat: no-repeat;

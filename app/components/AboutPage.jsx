@@ -29,6 +29,7 @@ export default function AboutPage({
             </h1>
           </div>
           <img
+            loading="lazy"
             className="h-[400px] sm:w-full sm:h-screen object-cover"
             src="../images/heroes/aboutHero2.jpg"
             alt="hero for about-page"
@@ -37,6 +38,7 @@ export default function AboutPage({
       </section>
       <div className="flex flex-col md:flex-wrap justify-center items-center md:flex-row w-full p-6 ">
         <img
+          loading="lazy"
           className=" md:w-[60%] w-[100%] h-[300px] rounded-full md:h-[400px] object-cover "
           src="../images/mouaAbtImg2.webp"
           alt="person arranging a flowerbouqet on a table in a nice setting"
@@ -73,6 +75,7 @@ export default function AboutPage({
           ></p>
         </div>
         <img
+          loading="lazy"
           className=" md:w-[50%] md:mt-7 md:h-[500px] h-[300px] object-cover "
           src="../images/aboutImg3.jpeg"
           alt="founder of MouaFlowers arranging pink and yellow flowers"

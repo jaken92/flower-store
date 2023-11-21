@@ -40,6 +40,7 @@ export default function SubscriptionsPage({
             </h1>
           </div>
           <img
+            loading="lazy"
             className="h-[400px] sm:w-full sm:h-screen object-cover"
             src="../images/heroes/subscriptionsHero.jpg"
             alt="subscriptionpage-hero, flowers in different shapes and colors"
@@ -90,6 +91,7 @@ export default function SubscriptionsPage({
         </div>
         <div className="relative md:w-[40%] md:mt-7 md:h-[400px] h-[300px]">
           <img
+            loading="lazy"
             className="w-full h-full object-cover"
             src="../images/subscriptionFlowers.webp"
             alt="White and pink flowers with green stems"
@@ -107,6 +109,7 @@ export default function SubscriptionsPage({
       >
         <div className="relative md:w-[40%]  md:mt-7 md:h-[400px] h-[300px]">
           <img
+            loading="lazy"
             className="w-full h-full object-cover"
             src="../images/subscriptionFlowers2.webp"
             alt="Orange flowers"

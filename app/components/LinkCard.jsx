@@ -5,6 +5,7 @@ export default function LinkCard({text, btnText, imageSrc, linkTo}) {
   return (
     <div className="relative md:mt-10">
       <img
+        loading="lazy"
         className="md:h-[450px] w-[350px] h-[400px] md:w-[400px] xl:w-[500px] xl:h-[550px] object-cover img-zoom"
         src={imageSrc}
         alt={text}

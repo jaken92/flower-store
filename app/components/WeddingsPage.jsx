@@ -20,6 +20,7 @@ export default function WeddingsPage({
             </h1>
           </div>
           <img
+            loading="lazy"
             className="h-[400px] sm:w-full sm:h-screen object-cover"
             src="../images/heroes/WeddingHero.jpg"
             alt="hero-image for weddingpage, a copule smiling with a flowerbouqeut in their hands"
@@ -41,6 +42,7 @@ export default function WeddingsPage({
           ></p>
         </div>
         <img
+          loading="lazy"
           className="  md:w-[40%] md:mt-7 md:h-[30%] h-[400px] mt-8 object-cover "
           src="../images/WeddingCouple.jpg"
           alt="two people getting married, wedding, standing on and in front of a stone-wall holding a wedding-bouqet"
@@ -48,17 +50,20 @@ export default function WeddingsPage({
       </div>
       <div className="flex flex-col md:flex-row gap-20 md:mt-10 md:pl-20 md:pr-10 p-8">
         <img
+          loading="lazy"
           className="  md:w-[40%] md:h-[50%] h-[400px] object-cover "
           src="../images/weddingBride.jpg"
           alt="Wedding-bride with flower bouqet"
         />
         <div className="flex md:w-[50%] md:h-[50%] gap-12 flex-col md:flex-col">
           <img
+            loading="lazy"
             className="  md:h-[40%] md:w-[100%] h-[500px]  object-cover "
             src="../images/weddingCar.jpg"
             alt="Wedding-couple in front of car"
           />
           <img
+            loading="lazy"
             className=" hidden md:flex md:w-[100%]  md:h-[300px] h-[350px] object-cover "
             src="../images/BridalBouquet.jpg"
             alt="Bridal Bouqet"
@@ -75,6 +80,7 @@ export default function WeddingsPage({
       </div>
       <section className="md:w-full  gap-4 relative">
         <img
+          loading="lazy"
           className="md:w-full md:h-screen object-cover"
           src="../images/bigweddingtest.webp"
           alt="wedding, a couple holding hands with a flowerbouqet"

@@ -48,13 +48,14 @@ export default function Index() {
       <section className="md:w-full gap-4">
         <div className="relative">
           <img
+            loading="lazy"
             className="h-[400px] sm:w-full sm:h-screen object-cover"
             src="./images/heroes/flowerHero.jpg"
             alt="hero image with flowers on a table"
           ></img>
           <img
             className="w-[180px] sm:w-[300px] md:w-[580px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
-            src="../images/WhiteLogoNoBackground.png"
+            src="../images/WhiteLogoNoBackgroundResized.png"
             alt="Moua flowers with a cause"
           />
         </div>
@@ -98,7 +99,7 @@ export default function Index() {
         <div className="flex justify-center relative mb-12 w-full ">
           <WideLinkCard
             text="About"
-            imageSrc="./images/rusticBouquet.jpg"
+            imageSrc="./images/rusticBouquetResized.jpg"
             linkTo="/pages/about"
             btnText="Read More"
           />

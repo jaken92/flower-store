@@ -18,7 +18,7 @@ export function Header({header, isLoggedIn, cart}) {
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
         <img
           className="h-[80px] w-auto opacity-100"
-          src="../images/MouaLogo.png"
+          src="../images/icons/smallColorLogo.png"
           alt="cart-logo"
         ></img>
       </NavLink>
