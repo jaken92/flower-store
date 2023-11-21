@@ -620,8 +620,8 @@ aside li {
 
 /* Wide Grid Image in index.jsx  */
 .wideImage {
-  width: 300px;
-  height: 350px;
+  width: 350px;
+  height: 400px;
 }
 
 @media (min-width: 768px) {

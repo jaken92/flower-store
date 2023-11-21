@@ -133,8 +133,8 @@ export function HeaderMenu({menu, viewport}) {
 function HeaderCtas({cart}) {
   return (
     <nav className="header-ctas" role="navigation">
-      <HeaderMenuMobileToggle />
       <CartToggle cart={cart} />
+      <HeaderMenuMobileToggle />
     </nav>
   );
 }
@@ -142,7 +142,7 @@ function HeaderCtas({cart}) {
 function HeaderMenuMobileToggle() {
   return (
     <a className="header-menu-mobile-toggle" href="#mobile-menu-aside">
-      <h3>☰</h3>
+      <h3 className="text-2xl">☰</h3>
     </a>
   );
 }
@@ -160,7 +160,7 @@ function CartBadge({count}) {
           src="../images/cartSymbol.png"
           alt="cart-logo"
         ></img>
-        <p>{count}</p>
+        <p>{`Cart(${count})`}</p>
       </div>
     </a>
   );

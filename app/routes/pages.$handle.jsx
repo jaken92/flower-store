@@ -37,7 +37,7 @@ export async function action({request, context}) {
           <h3>Message from: ${name}</h3>
           <h3>Email: ${email}</h3>
           <h3>Phone-number: ${phonenumber}</h3>
-          <p>Message: ${message}</p>
+          <h3>Message: ${message}</h3>
 
         `,
       },
