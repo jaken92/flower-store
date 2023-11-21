@@ -46,7 +46,7 @@ export default function SubscriptionsPage({
           ></img>
         </div>
       </section>
-      <h2 className="font-custom text-2xl  text-gray-600 uppercase text-center mb-5 mt-5 md:mt-10">
+      <h2 className="font-custom text-2xl  p-4 text-gray-600 uppercase text-center mb-5 mt-5 md:mt-10">
         {subscriptions_title}
       </h2>
 
@@ -72,12 +72,12 @@ export default function SubscriptionsPage({
       </section>
 
       <div
-        className={`flex flex-col md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-8 ${
+        className={`flex flex-col md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-6 ${
           inView1 ? 'fadeIn' : ''
         }`}
         ref={ref1}
       >
-        <div className="w-full md:w-[50%]  md:pt-20 ">
+        <div className="w-full md:w-[50%] pb-4  md:pt-20 ">
           <h2 className="text-2xl  text-gray-600 font-bold text-center uppercase font-custom">
             {subscriptions_homesub_title}
           </h2>
@@ -100,12 +100,12 @@ export default function SubscriptionsPage({
         </div>
       </div>
       <div
-        className={`flex flex-col-reverse md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-8 ${
+        className={`flex flex-col-reverse md:pl-20 md:pr-20 md:gap-20 md:flex-row w-full p-6 ${
           inView2 ? 'fadeIn' : ''
         }`}
         ref={ref2}
       >
-        <div className="relative md:w-[40%] md:mt-7 md:h-[400px] h-[300px]">
+        <div className="relative md:w-[40%]  md:mt-7 md:h-[400px] h-[300px]">
           <img
             className="w-full h-full object-cover"
             src="../images/subscriptionFlowers2.webp"
@@ -115,7 +115,7 @@ export default function SubscriptionsPage({
             <Button linkTo="/pages/contact" text="INQUIRE" />
           </div>
         </div>
-        <div className="w-full md:w-[50%]  md:pt-20 ">
+        <div className="w-full  md:w-[50%]  md:pt-20 ">
           <h2 className="text-2xl font-bold  text-gray-600 uppercase text-center font-custom">
             {subscriptions_business_title}
           </h2>
