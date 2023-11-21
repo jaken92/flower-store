@@ -50,18 +50,18 @@ export default function WeddingsPage({
         <img
           className="  md:w-[40%] md:h-[50%] h-[400px] object-cover "
           src="../images/weddingBride.jpg"
-          alt="Your Image"
+          alt="Wedding-bride with flower bouqet"
         />
         <div className="flex md:w-[50%] md:h-[50%] gap-12 flex-col md:flex-col">
           <img
             className="  md:h-[40%] md:w-[100%] h-[500px]  object-cover "
             src="../images/weddingCar.jpg"
-            alt=""
+            alt="Wedding-couple in front of car"
           />
           <img
-            className=" hidden md:flex md:w-[100%]  md:h-[300px] w-[300px] object-cover "
+            className=" hidden md:flex md:w-[100%]  md:h-[300px] h-[350px] object-cover "
             src="../images/BridalBouquet.jpg"
-            alt="Your Image"
+            alt="Bridal Bouqet"
           />
         </div>
       </div>
