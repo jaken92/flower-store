@@ -224,7 +224,7 @@ aside li {
 .header-menu-desktop .submenu-wrapper .submenu-item {
   padding-top: 5px;
   padding-left: 0px;
-  margin-left: 7px;
+  margin-left: 8px;
 }
 
 .header-menu-desktop .submenu-wrapper .submenu-item {
@@ -266,6 +266,10 @@ aside li {
   color: black;
 }
 
+.header:hover .header-ctas .cartSvg {
+  fill: black !important;
+}
+
 .white-header {
   background: #fff;
   color: black;
@@ -292,7 +296,7 @@ aside li {
   background-color: var(--pink);
 }
 .header-menu-mobile .submenu-wrapper h3 {
-  padding-left: 20px;
+  padding-left: 22px;
 }
 
 .header-menu-mobile .header-menu-item {
