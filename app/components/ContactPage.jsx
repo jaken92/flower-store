@@ -25,9 +25,9 @@ export default function MyForm({
           ></img>
         </div>
       </section>
-      <section className=" md:mt-20 dark:bg-gray-900">
+      <section className=" md:mt-20">
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-600 dark:text-white">
+          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-600">
             {contact_title}
           </h2>
 

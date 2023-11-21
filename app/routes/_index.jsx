@@ -64,7 +64,7 @@ export default function Index() {
           MOUAFLOWERS - GOTHENBURG - SWEDEN
         </h2>
         <p className="text-4xl text-gray-600 mb-5">❀</p>
-        <p className="text-lg md:text-1xl text-gray-600 text-center w-1/2 mb-5">
+        <p className="text-lg md:text-1xl text-gray-600 text-center p-8 md:w-1/2 mb-5">
           IN MOUA WE CREATE UNIQUE, ELEGANT & NATURAL STYLE ARRANGEMENTS, FULL
           OF TEXTURES, COLORS & CURVES FOR ANY OCCASION THROUGH WHICH ANYONE CAN
           VIBRATE, HELP & RECONNECT WITH NATURE & ITS BEAUTY BY MERGING OUR TWO

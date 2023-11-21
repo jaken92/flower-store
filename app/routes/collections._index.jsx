@@ -24,7 +24,7 @@ export default function Collections() {
   const {collections} = useLoaderData();
   return (
     <section className="w-full mt-10 gap-4">
-      <div className="grid-flow-row grid gap-2 md:gap-2 p-20 md:mb-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid-flow-row grid gap-2 md:gap-2 p-8 md:mb-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {collections.nodes.map((collection) => {
           return (
             <Link to={`/collections/${collection.handle}`} key={collection.id}>

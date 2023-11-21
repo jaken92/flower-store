@@ -59,7 +59,7 @@ export default function WeddingsPage({
             alt=""
           />
           <img
-            className=" hidden md:flex md:w-[900px] md:h-[300px] h-[300px]  object-cover "
+            className=" hidden md:flex md:w-[100%]  md:h-[300px] w-[300px] object-cover "
             src="../images/BridalBouquet.jpg"
             alt="Your Image"
           />

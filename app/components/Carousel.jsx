@@ -31,7 +31,7 @@ const Carousel = ({reviews}) => {
           KIND WORDS
         </h2>
       </div>
-      <div className="relative md:w-[70%] md:h-40 h-60 overflow-hidden flex justify-center pb-2 mb-4 items-center mx-auto">
+      <div className="relative md:w-[70%] md:h-40 h-80 overflow-hidden flex justify-center pb-2 mb-2 items-center mx-auto">
         <button onClick={prevSlide} className="p-2" aria-label="PreviousSlide">
           <svg
             xmlns="http://www.w3.org/2000/svg"
