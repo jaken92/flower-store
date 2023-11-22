@@ -79,7 +79,7 @@ export default function SubscriptionsPage({
         ref={ref1}
       >
         <div className="w-full md:w-[50%] pb-4  md:pt-20 ">
-          <h2 className="text-2xl  text-gray-600 font-bold text-center uppercase font-custom">
+          <h2 className="text-2xl  text-gray-600 text-center uppercase font-customSemiBold">
             {subscriptions_homesub_title}
           </h2>
           <p
@@ -119,7 +119,7 @@ export default function SubscriptionsPage({
           </div>
         </div>
         <div className="w-full  md:w-[50%]  md:pt-20 ">
-          <h2 className="text-2xl font-bold  text-gray-600 uppercase text-center font-custom">
+          <h2 className="text-2xl   text-gray-600 uppercase text-center font-customSemiBold">
             {subscriptions_business_title}
           </h2>
           <p
