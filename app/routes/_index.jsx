@@ -76,21 +76,21 @@ export default function Index() {
         <div className="grid-flow-row grid justify-items-center justify-between gap-y-6 md:gap-6 lg:gap-12 xl:gap-12  grid-cols-1 md:grid-cols-3 mt-6 mb-0">
           <LinkCard
             text="Order Flowers"
-            imageSrc="./images/collections.jpeg"
+            imageSrc="../images/collections.jpeg"
             linkTo="/collections"
             alt="flowers in a vase"
             btnText="Order now"
           />
           <LinkCard
             text="Weddings"
-            imageSrc="./images/weddings.jpg"
+            imageSrc="../images/weddings.jpg"
             linkTo="/pages/weddings"
             alt="a picture of two people that are getting married, the bride is carrying a bouquet of flowers"
             btnText="Learn more"
           />
           <LinkCard
             text="Subscriptions"
-            imageSrc="./images/subscriptions.webp"
+            imageSrc="../images/subscriptions.webp"
             linkTo="/pages/subscriptions"
             alt="a house with purple flowers covering it"
             btnText="Inquire"
