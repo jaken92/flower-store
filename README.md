@@ -1,6 +1,6 @@
 # Shopify Hydrogen e-commerce
 
-![From Giphy.com, creature hugging flowers]("https://giphy.com/gifs/funny-cat-swedish-xT4uQjwc72HzGqtxYY")
+![From Giphy.com, jumping in front of flower-tore]("https://giphy.com/gifs/justintimberlake-justin-timberlake-cant-stop-the-feeling-26DN8dSKf0sa6HBf2)
 
 ## Project description
 
