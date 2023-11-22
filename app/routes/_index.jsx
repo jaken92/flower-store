@@ -72,7 +72,9 @@ export default function Index() {
           PASSIONS; THE FLOWERS & THE OCEAN.
         </p>
       </div>
+
       <Carousel reviews={reviews} />
+
       <section className="w-full p-6 pt-0 sm:pt-0 lg:pt-0 xl:pt-0 2xl:pt-0 sm:-px-10 lg:px-10 xl:px-20 2xl:px-80">
         <div className="grid-flow-row grid justify-items-center justify-between gap-y-6 md:gap-6 lg:gap-12 xl:gap-12  grid-cols-1 md:grid-cols-3 mt-6 mb-0">
           <LinkCard

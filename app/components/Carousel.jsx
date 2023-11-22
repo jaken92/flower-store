@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react';
 const Slide = ({review, client}) => (
   <div className="text-center text-gray-600 w-[80%] h-40 mx-auto">
-    <p className="md:text-1xl md:pt-4 font-custom  text-lg ">{review}</p>
-    <p className="font-custom md:text-lg ">- {client}</p>
+    <p className="md:text-lg md:pt-4 font-custom ">{review}</p>
+    <p className="font-custom md:text-lg text-sm ">- {client}</p>
   </div>
 );
 const Carousel = ({reviews}) => {
@@ -32,7 +32,7 @@ const Carousel = ({reviews}) => {
         </h2>
       </div>
 
-      <div className="relative md:w-[70%] h-80 md:h-40 overflow-hidden flex justify-center mb-10 items-center mx-auto">
+      <div className="relative md:w-[70%] h-40 md:h-40 overflow-hidden flex justify-center mb-10 items-center mx-auto">
         <button onClick={prevSlide} className="p-2" aria-label="PreviousSlide">
           <svg
             xmlns="http://www.w3.org/2000/svg"
