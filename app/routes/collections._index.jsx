@@ -1,13 +1,6 @@
 import {useLoaderData, Link} from '@remix-run/react';
 import {Image} from '@shopify/hydrogen';
 
-// export function meta() {
-//   return [
-//     {title: 'Maouflowers'},
-//     {description: 'A graduation work creating a shopify store with Hydrogen'},
-//   ];
-// }
-
 const seo = () => ({
   title: 'Order Flowers',
   description: 'Order Arrangements, Bouquets, Flower boxes and other gifts',

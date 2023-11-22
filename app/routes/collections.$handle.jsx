@@ -11,7 +11,6 @@ export const handle = {
 };
 
 export async function loader({params, context}) {
-  // const {MyContext} = context;
   const {handle} = params;
   const {collection} = await context.storefront.query(COLLECTION_QUERY, {
     variables: {

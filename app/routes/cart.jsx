@@ -1,8 +1,6 @@
 import {CartForm} from '@shopify/hydrogen';
 import {json} from '@shopify/remix-oxygen';
 export async function action({request, context}) {
-  // The Skeleton template already has a cart handler which is passed
-  // to the loader and action context.
   const {cart} = context;
 
   const formData = await request.formData();

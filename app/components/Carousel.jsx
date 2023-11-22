@@ -26,54 +26,59 @@ const Carousel = ({reviews}) => {
 
   return (
     <>
-      <div className="flex justify-center">
-        <h2 className="font-customSemiBold   text-gray-600 text-1xl md:text-2xl">
-          KIND WORDS
+      <div className="flex  flex-col justify-center items-center">
+        <h2 className="font-customSemiBold uppercase justify-center  text-gray-600 text-1xl md:text-2xl">
+          Kind words
         </h2>
-      </div>
-      <div className="relative md:w-[70%] md:h-40 h-[80%] overflow-hidden flex justify-center mb-10 items-center mx-auto">
-        <button onClick={prevSlide} className="p-2" aria-label="PreviousSlide">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="h-6 w-6"
+
+        <div className="relative md:w-[70%] h-80 overflow-hidden flex justify-center mb-10 items-center mx-auto">
+          <button
+            onClick={prevSlide}
+            className="p-2"
+            aria-label="PreviousSlide"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-        {reviews.map(
-          (review, index) =>
-            index === activeIndex && (
-              <Slide
-                key={index}
-                review={review.review}
-                client={review.client}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="h-6 w-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
               />
-            ),
-        )}
-        <button onClick={nextSlide} className="p-2" aria-label="NextSlide">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
+            </svg>
+          </button>
+          {reviews.map(
+            (review, index) =>
+              index === activeIndex && (
+                <Slide
+                  key={index}
+                  review={review.review}
+                  client={review.client}
+                />
+              ),
+          )}
+          <button onClick={nextSlide} className="p-2" aria-label="NextSlide">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="h-6 w-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </>
   );

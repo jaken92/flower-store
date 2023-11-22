@@ -75,13 +75,6 @@ export default function ProductHandle() {
             data={selectedVariant.price}
             className="text-xl   text-gray-600 font-semibold mb-2"
           />
-          {/* {selectedVariant.availableForSale && (
-            <ShopPayButton
-              storeDomain={shop.primaryDomain.url}
-              variantIds={[selectedVariant?.id]}
-              width={'400px'}
-            />
-          )} */}
           <CartForm
             route="/cart"
             inputs={{
