@@ -1,6 +1,6 @@
 # Shopify Hydrogen e-commerce
 
-![From Giphy.com, jumping in front of flower-tore]("https://giphy.com/gifs/justintimberlake-justin-timberlake-cant-stop-the-feeling-26DN8dSKf0sa6HBf2)
+![From tenor, person turning around with flowers]("https://tenor.com/sv/view/audrey-hepburn-funny-face-flowers-gif-14761787)
 
 ## Project description
 
