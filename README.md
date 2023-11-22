@@ -2,13 +2,13 @@
 
 ## Project description
 
-This is a project made by two students in Sweden for a graduationwork. The application is a e-commerce flower store thats in use of a real working Florist. In this application you can buy flowers from the Shopify collection, send in a form to contact Admin and read about the founders services and flower-journey.
+This is a project is made by two students of YRGO´s Web development class 22'. It is our final work before we start our internships. The application is an e-commerce flower store thats in use of a working Florist. In this application you can buy flowers from the Shopify collections, send in a form to contact Admin and read about the founder, her flower-journey and the services.
 
 The technologies used in this application is Shopify, Hydrogen, Remix, React, Mailjet, Tailwind and Oxygen for deployment.
 
-The page thats using this application is : https://www.mouaflowers.com/
+You can find the page utilizing this application here : https://www.mouaflowers.com/
 
-The pictures in the application are copyright and cant be used by others. Please see image-license.md for more information.
+The pictures in this repository are licensed according to Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. Please see image-license.md for more information.
 
 ## Installation
 
