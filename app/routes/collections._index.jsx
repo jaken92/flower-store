@@ -21,7 +21,7 @@ export default function Collections() {
         {collections.nodes.map((collection) => {
           return (
             <Link to={`/collections/${collection.handle}`} key={collection.id}>
-              <div className="grid p-2  md:mt-20 relative">
+              <div className="grid p-2 md:p-6 md:mt-20 relative">
                 {collection?.image && (
                   <Image
                     className="object-cover h-96 w-96 img-zoom"
