@@ -16,12 +16,12 @@ export async function loader({context}) {
 export default function Collections() {
   const {collections} = useLoaderData();
   return (
-    <section className="w-full mt-10 gap-4">
-      <div className="grid-flow-row grid gap-2 md:gap-2 p-8 md:mb-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+    <section className="w-full mt-10 gap-2">
+      <div className="grid-flow-row grid md:gap-2 p-8 md:mb-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {collections.nodes.map((collection) => {
           return (
             <Link to={`/collections/${collection.handle}`} key={collection.id}>
-              <div className="grid p-2 md:p-8 relative">
+              <div className="grid p-2  md:mt-20 relative">
                 {collection?.image && (
                   <Image
                     className="object-cover h-96 w-96 img-zoom"
