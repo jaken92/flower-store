@@ -8,7 +8,7 @@ export default function MyForm({
   contact_location_information,
   contact_delivery_information,
 }) {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [isSubmitted, setIsSubmitted] = useState(false);
   return (
     <>
       <section className="md:w-full gap-4">
@@ -130,7 +130,7 @@ export default function MyForm({
             </div>
             {/* submit goes by default to action in parent */}
             <button
-              onClick={() => setIsSubmitted(true)}
+              // onClick={() => setIsSubmitted(true)}
               className="py-3 px-5 hover:bg-white  text-gray-600 text-sm font-medium text-center border border-black  bg-teal rounded-lg bg-primary-700 sm:w-fit focus:ring-4 focus:outline-none focus:ring-primary-300 "
               type="submit"
             >
