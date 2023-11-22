@@ -27,20 +27,6 @@ export async function action({request, context}) {
       const note = String(formData.get('note') || '');
       result = await cart.updateNote(note);
       break;
-    case CartForm.ACTIONS.DiscountCodesUpdate: {
-      const formDiscountCode = inputs.discountCode;
-
-      // User inputted discount code
-      const discountCodes = formDiscountCode ? [formDiscountCode] : [];
-
-      // Combine discount codes already applied on cart
-      discountCodes.push(...inputs.discountCodes);
-
-      result = await cart.updateDiscountCodes(discountCodes);
-      break;
-    }
-    default:
-      throw new Error(`${action} cart action is not defined`);
   }
 
   const headers = cart.setCartId(result.cart.id);
