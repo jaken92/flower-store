@@ -209,24 +209,7 @@ const FALLBACK_HEADER_MENU = {
       url: '/collections',
       items: [],
     },
-    {
-      id: 'gid://shopify/MenuItem/461609533496',
-      resourceId: null,
-      tags: [],
-      title: 'Blog',
-      type: 'HTTP',
-      url: '/blogs/journal',
-      items: [],
-    },
-    {
-      id: 'gid://shopify/MenuItem/461609566264',
-      resourceId: null,
-      tags: [],
-      title: 'Policies',
-      type: 'HTTP',
-      url: '/policies',
-      items: [],
-    },
+
     {
       id: 'gid://shopify/MenuItem/461609599032',
       resourceId: 'gid://shopify/Page/92591030328',
