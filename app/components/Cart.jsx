@@ -226,12 +226,13 @@ export function CartEmpty({hidden = false, layout = 'aside'}) {
   return (
     <div hidden={hidden}>
       <br />
-      <p>
+      <p className="ml-3 t text-gray-600 ">
         Looks like you haven&rsquo;t added anything yet, let&rsquo;s get you
         started!
       </p>
       <br />
       <Link
+        className="ml-3  text-gray-600 "
         to="/collections"
         onClick={() => {
           if (layout === 'aside') {
