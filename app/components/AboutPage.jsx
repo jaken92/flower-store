@@ -76,8 +76,8 @@ export default function AboutPage({
         </div>
         <img
           loading="lazy"
-          className=" md:w-[50%] md:mt-7 md:h-[500px] h-[300px] object-cover "
-          src="../images/aboutImg3.jpeg"
+          className="object-cover md:w-[50%] mt-4"
+          src="../images/aboutImg2Final.jpg"
           alt="founder of MouaFlowers arranging pink and yellow flowers"
         />
       </div>

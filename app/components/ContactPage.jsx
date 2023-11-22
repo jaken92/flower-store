@@ -1,5 +1,4 @@
 import {Form} from '@remix-run/react';
-import {useEffect, useState} from 'react';
 
 export default function MyForm({
   contact_title,
