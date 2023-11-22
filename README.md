@@ -1,6 +1,6 @@
 # Shopify Hydrogen e-commerce
 
-![From tenor, person turning around with flowers]("https://tenor.com/sv/view/audrey-hepburn-funny-face-flowers-gif-14761787)
+![From tenor, person turning around with flowers]("https://tenor.com/sv/view/audrey-hepburn-funny-face-flowers-gif-14761787")
 
 ## Project description
 
