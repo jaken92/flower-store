@@ -4,7 +4,7 @@ import {Link} from '@remix-run/react';
 export default function LinkCard({text, btnText, imageSrc, linkTo}) {
   return (
     // className="md:h-[450px] w-[300px] h-[350px] md:w-[400px] xl:w-[500px] xl:h-[550px] object-cover img-zoom"
-    <div className="relative w-full mt-6 lg:mt-12 xl:mt-12 flex justify-center flex-1">
+    <div className="relative w-full flex justify-center flex-1">
       <img
         loading="lazy"
         className=" object-cover img-zoom wideImage"

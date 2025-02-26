@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        pink: '#FFF3F2',
+        pink: '#ffe8e6',
         teal: '#E7F9FA',
         white: '#FFFFFF',
         pinkOpacity: 'rgb(255, 243, 242, 0.8)',

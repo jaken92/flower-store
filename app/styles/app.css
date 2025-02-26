@@ -11,24 +11,29 @@
   --cart-aside-summary-height-with-discount: 300px;
   --cart-aside-summary-height: 250px;
   --grid-item-width: 355px;
-  --header-height: 100px;
-  --color-dark: #000;
+  --header-height: 80px;
+  --color-dark: #4b5563;
   --color-white: #ffffff;
   --color-teal: #e7f9fa;
-  --color-pink: #fff3f2;
+  --color-pink: #ffe8e6;
   font-family: 'Playfair Display';
+  font-size: 14px;
+  /* letter-spacing: 2px; */
 }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--color-pink);
+  background-color: var(--color-white);
 }
 img {
   border-radius: 4px;
 }
 
+.social-img {
+  filter: invert(34%) sepia(6%) saturate(1503%) hue-rotate(176deg);
+}
 @media screen and (max-width: 768px) {
   :root {
     --aside-width: 100vw;
@@ -64,6 +69,7 @@ aside header {
 
 aside header h3 {
   margin: 0;
+  color: var(--color-dark);
 }
 
 aside header .close {
@@ -169,6 +175,8 @@ aside li {
   transition: background-color 0.4s ease-out, color 0.4s ease-out,
     border-bottom 0.4s ease-out;
   border-bottom: 0.5px solid white;
+  letter-spacing: 2px;
+  /* text-transform: uppercase; */
 }
 
 .header-menu-item {
@@ -187,7 +195,7 @@ aside li {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  background-color: #fff;
+  background-color: var(--color-pink);
   cursor: default;
 }
 
@@ -236,7 +244,7 @@ aside li {
 }
 
 .header-menu-desktop .header-menu-item .submenu-wrapper h3:hover {
-  background-color: whitesmoke;
+  background-color: #fff3f2;
 }
 
 /* Hover effetct showing submenus while in desktop */
@@ -257,26 +265,29 @@ aside li {
 
 /* CLasses applied to header conditionally. */
 .header:hover {
-  background-color: #fff;
-  color: black;
-  border-bottom: 0.5px solid #796f6e;
+  background-color: var(--color-pink);
+  color: #4b5563;
+  /* border-bottom: 0.5px solid #796f6e; */
+  border-bottom: 0.5px solid var(--pink);
 }
 
 .header:hover .header-menu-desktop .header-menu-item {
-  color: black;
+  color: #4b5563;
 }
 
 .header:hover .header-ctas .cartSvg {
-  fill: black !important;
+  fill: #4b5563 !important;
 }
 
 .white-header {
-  background: #fff;
-  color: black;
-  border-bottom: 0.5px solid #796f6e;
+  background: var(--color-pink);
+  color: #4b5563;
+  /* border-bottom: 0.5px solid #796f6e; */
+  border-bottom: 0.5px solid var(--pink);
 }
 .white-header .header-menu-desktop .header-menu-item {
-  color: black;
+  color: #4b5563;
+  background-color: var(pink);
 }
 
 .header-menu-mobile-toggle {
@@ -289,7 +300,8 @@ aside li {
 .header-menu-mobile {
   display: flex;
   flex-direction: column;
-  grid-gap: 1rem;
+  gap: 1.5rem;
+  margin-left: 5px;
 }
 
 .header-menu-mobile .submenu-wrapper {
@@ -300,8 +312,9 @@ aside li {
 }
 
 .header-menu-mobile .header-menu-item {
-  color: black;
-  font-size: 20px;
+  color: var(--color-dark);
+  font-size: 16px;
+  letter-spacing: 2px;
 }
 
 /*
@@ -311,15 +324,17 @@ aside li {
 */
 .footer {
   margin-top: auto;
-  background-image: url('../../public/images/footerResized.jpg');
+  /* background-image: url('../../public/images/footerResized.jpg'); */
+  background-color: var(--color-pink);
+  color: var(--color-dark);
 
-  background-size: cover;
+  /* background-size: cover;
   background-repeat: no-repeat;
-  background-position: left 50%;
-  filter: brightness(106%);
+  background-position: left 50%; */
+  /* filter: brightness(106%); */
   z-index: 1;
   @media (max-width: 768px) {
-    background-position: right 15%;
+    /* background-position: right 15%; */
   }
 }
 
@@ -334,12 +349,12 @@ aside li {
   justify-content: center;
   grid-gap: 1rem;
   padding: 3rem;
-  font-size: 18px;
+  font-size: 14px;
+  letter-spacing: 2px;
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     text-align: left;
-    font-size: 16px;
   }
 }
 
@@ -347,8 +362,11 @@ aside li {
   display: flex;
   flex-direction: row;
   justify-content: right;
+  color: var(--color-dark);
 }
-
+.footer .footer-menu a {
+  color: var(--color-dark) !important;
+}
 .footer a:hover {
   text-decoration: underline;
 }

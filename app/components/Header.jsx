@@ -17,7 +17,7 @@ export function Header({header, isLoggedIn, cart}) {
       <ScrollTracker headerColorChanger={headerColorChanger} />
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
         <img
-          className="h-[80px] w-auto opacity-100"
+          className="h-[70px] w-auto opacity-100"
           src="../images/icons/smallColorLogo.png"
           alt="cart-logo"
         ></img>
@@ -165,7 +165,7 @@ function CartBadge({count, whiteHeader}) {
         >
           <g
             className="cartSvg"
-            fill={`${whiteHeader ? 'black' : 'white'}`}
+            fill={`${whiteHeader ? 'var(--color-dark)' : 'white'}`}
             style={{transition: 'fill 0.3s ease-out'}}
           >
             <path d="m2.08416 2.7512c.13739-.39076.56554-.59617.95631-.45878l.3014.10596c.61652.21673 1.14016.40081 1.55224.60301.44063.2162.81848.48254 1.10266.8984.28198.41264.3984.86536.45213 1.36174.02405.2222.03674.46814.04343.73847h10.63817c1.685 0 3.2018 0 3.6457.57708.444.57709.2704 1.44661-.0767 3.18567l-.4998 2.42475c-.3151 1.5289-.4727 2.2933-1.0244 2.7429s-1.3322.4496-2.8932.4496h-5.3029c-2.78892 0-4.18337 0-5.04977-.9138-.86641-.9139-.92964-1.8846-.92964-4.8262v-2.60168c0-.73995-.00102-1.23516-.04218-1.61537-.03933-.36335-.10903-.54477-.19929-.67686-.08806-.12886-.22173-.24929-.52496-.39807-.32284-.15841-.76159-.31396-1.4292-.54868l-.26121-.09184c-.39077-.13738-.59617-.56553-.45879-.9563z" />

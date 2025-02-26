@@ -13,7 +13,7 @@ function FooterMenu({menu}) {
   const publicStoreDomain = root?.data?.publicStoreDomain;
   return (
     <>
-      <nav className="footer-menu border-t-2" role="navigation">
+      <nav className="footer-menu border-t-2 text-gray-600" role="navigation">
         {(menu || FALLBACK_FOOTER_MENU).items.map((item) => {
           if (!item.url) return null;
           // if the url is internal, we strip the domain
@@ -45,7 +45,7 @@ function FooterMenu({menu}) {
           );
         })}
       </nav>
-      <div className="flex justify-between md:flex-row flex-col border-t-2 border-black md:mt-10 mt-10 md:pl-10 md:pr-10 ">
+      <div className="flex justify-between md:flex-row flex-col border-t border-gray-600 md:mt-10 mt-10 md:pl-10 md:pr-10 ">
         <div className="flex h-14 items-center md:mt-10 justify-left gap-1 py-4">
           <img
             src="../images/icons/google-pay.svg"
@@ -94,7 +94,7 @@ function FooterMenu({menu}) {
           >
             <img
               src="../images/instagram.svg"
-              className="w-8 md:h-9 md:w-10"
+              className="w-8 md:h-9 md:w-10 social-img"
               alt="instagram-logo"
             />
           </a>
@@ -104,7 +104,7 @@ function FooterMenu({menu}) {
           >
             <img
               src="../images/facebook.png"
-              className=" w-8 md:h-9 md:w-9 "
+              className=" w-8 md:h-9 md:w-9 social-img"
               alt="facebook-logo"
             />
           </a>
