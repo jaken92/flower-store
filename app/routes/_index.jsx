@@ -78,7 +78,7 @@ export default function Index() {
       <section className="w-full p-6 pt-0 sm:pt-0 lg:pt-0 xl:pt-0 2xl:pt-0 sm:-px-10 lg:px-10 xl:px-20 2xl:px-80 ">
         <div className="max-w-screen-xl mx-auto">
           {/* Small cards grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 xxl:gap-20 w-full sm:justify-items-center sm:mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full sm:justify-items-center sm:mx-auto">
             <LinkCard
               text="Order Flowers"
               imageSrc="../images/collections.jpeg"
@@ -103,7 +103,7 @@ export default function Index() {
           </div>
 
           {/* Wide card */}
-          <div className="grid grid-cols-1 md:grid-cols-3 w-full mt-6 xxl:mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 w-full mt-6">
             <div className="col-span-1 md:col-span-3">
               <WideLinkCard
                 text="About"
